@@ -3,15 +3,15 @@ import { Text, View, Image, TextInput, Button } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
 
-export default function VisionQ1 ({ navigation }) {
+export default function VisionQ2 () {
 	const [value, onChangeText] = React.useState('');
 
 	return(
 	<View>
-    	<Text h1 style={{fontWeight: "bold"}}>Vision Test</Text>
-    	<Text h2 style={{fontWeight: "bold"}}>Q1</Text>
-    	<Text h2 style={{fontWeight: "bold"}}>What number do you see in the circle below?</Text>
-    	<Image source={require('./images/plate1.png')} 
+    	<Text h1>Vision Test</Text>
+    	<Text h2>Q2</Text>
+    	<Text h2>What number do you see in the circle below?</Text>
+    	<Image source={require('./images/plate2.png')} 
     	 style={{width: 400, height: 400}} />
 
     	<TextInput
@@ -19,7 +19,7 @@ export default function VisionQ1 ({ navigation }) {
 		    onChangeText={text => onChangeText(text)}
 		    value={value}
 	    />
-	    <Button onPress={() => navigation.navigate('VisionQ2')} title="Next" />
+	    <Button onPress={() => navigation.navigate('VisionQ3')} title="Next" />
     </View>
     )
 }
