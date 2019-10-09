@@ -3,7 +3,7 @@ import { Text, View, Image, TextInput, Button } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
 
-export default function VisionQ2 () {
+export default function VisionQ2 ({navigation}) {
 	const [value, onChangeText] = React.useState('');
 
 	return(
@@ -19,7 +19,7 @@ export default function VisionQ2 () {
 		    onChangeText={text => onChangeText(text)}
 		    value={value}
 	    />
-	    <Button onPress={() => navigation.navigate('VisionQ3')} title="Next" />
+	    <Button onPress={() => navigation.navigate('HomeScreen')} title="Next" />
     </View>
     )
 }
