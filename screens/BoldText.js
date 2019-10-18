@@ -75,7 +75,7 @@ export default function BoldText ({ navigation }) {
     	<Text h2 style={{fontWeight: "bold"}}>Q4</Text>
     	<Text h2 style={{fontWeight: "bold"}}>Which do you prefer?</Text>
         <MultipleChoice/>
-	    <Button onPress={() => navigation.navigate('VisionQ2')} title="Next" />
+	    <Button onPress={() => navigation.navigate('VisionQ1')} title="Next" />
     </View>
     )
 }

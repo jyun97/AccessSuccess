@@ -1,0 +1,45 @@
+dependencies: \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/node_modules/react-native/ReactCommon/turbomodule/core/platform/ios/RCTTurboModule.mm \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Target\ Support\ Files/ReactCommon/ReactCommon-prefix.pch \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/node_modules/react-native/ReactCommon/turbomodule/core/platform/ios/RCTTurboModule.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTBridge.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTBridgeDelegate.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTJavaScriptLoader.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTDefines.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTInspectorDevServerHelper.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTPackagerConnection.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTBridgeModule.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTFrameUpdate.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTInvalidating.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTModuleMethod.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTBridgeMethod.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTNullability.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/node_modules/react-native/ReactCommon/jscallinvoker/ReactCommon/JSCallInvoker.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/node_modules/react-native/ReactCommon/turbomodule/core/TurboModule.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-jsi/jsi/jsi.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-jsi/jsi/jsi-inl.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-cxxreact/cxxreact/MessageQueueThread.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTConvert.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTAnimationType.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTBorderStyle.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTLog.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTAssert.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTUtils.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTPointerEvents.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTTextDecorationLineType.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/Yoga/yoga/Yoga.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/Yoga/yoga/YGEnums.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/Yoga/yoga/YGMacros.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/Yoga/yoga/YGValue.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTCxxConvert.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTManagedPointer.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/node_modules/react-native/ReactCommon/turbomodule/core/LongLivedObject.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/node_modules/react-native/ReactCommon/turbomodule/core/TurboModuleUtils.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Folly/folly/Optional.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Folly/folly/Portability.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Folly/folly/portability/Config.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Folly/folly/CPortability.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Folly/folly/Traits.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Folly/folly/Utility.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Folly/folly/lang/Exception.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Folly/folly/CppAttributes.h

@@ -1,0 +1,37 @@
+dependencies: \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/node_modules/react-native/Libraries/FBReactNativeSpec/FBReactNativeSpec/FBReactNativeSpec-generated.mm \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Target\ Support\ Files/FBReactNativeSpec/FBReactNativeSpec-prefix.pch \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/node_modules/react-native/Libraries/FBReactNativeSpec/FBReactNativeSpec/FBReactNativeSpec.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/RCTRequired/RCTRequired/RCTRequired.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/RCTTypeSafety/RCTTypeSafety/RCTConvertHelpers.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/FBLazyVector/FBLazyVector/FBLazyVector.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/FBLazyVector/FBLazyVector/FBLazyIterator.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Folly/folly/Optional.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Folly/folly/Portability.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Folly/folly/portability/Config.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Folly/folly/CPortability.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Folly/folly/Traits.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Folly/folly/Utility.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Folly/folly/lang/Exception.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Folly/folly/CppAttributes.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/RCTTypeSafety/RCTTypeSafety/RCTTypedModuleConstants.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTBridgeModule.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTDefines.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTInspectorDevServerHelper.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTPackagerConnection.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTCxxConvert.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTManagedPointer.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/ReactCommon/ReactCommon/RCTTurboModule.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTBridge.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTBridgeDelegate.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTJavaScriptLoader.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTFrameUpdate.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTInvalidating.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTModuleMethod.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTBridgeMethod.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTNullability.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/ReactCommon/ReactCommon/JSCallInvoker.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/ReactCommon/ReactCommon/TurboModule.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-jsi/jsi/jsi.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-jsi/jsi/jsi-inl.h \
+  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-cxxreact/cxxreact/MessageQueueThread.h

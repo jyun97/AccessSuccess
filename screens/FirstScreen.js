@@ -20,13 +20,13 @@ const FirstScreen = ({ navigation }) => (
         <Text style={styles.baseText}> Welcome to Access Success, the application that finds custom accessibility settings for you!</Text>
             <TouchableOpacity activeOpacity={0.6}
                 style={styles.buttonContainer}
-                onPress={() => navigation.navigate('HomeScreen')}>
+                onPress={() => navigation.navigate('LoginScreen')}>
                 <Text style={styles.buttonText}>Pick an existing account</Text>
             </TouchableOpacity>
 
             <TouchableOpacity activeOpacity={0.6}
                 style={styles.buttonContainer}
-                onPress={() => navigation.navigate('LoginScreen')}>
+                onPress={() => navigation.navigate('FirstScreen')}>
                 <Text style={styles.buttonText}>Create a new account</Text>
             </TouchableOpacity>
         <View style={{flex:2}}/>

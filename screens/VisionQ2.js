@@ -57,7 +57,7 @@ class VisionQ2 extends React.Component {
 
               <TouchableOpacity
               	style={styles.back}
-              	onPress={() => this.props.navigation.navigate('HomeScreen')}
+              	onPress={() => this.props.navigation.navigate('VisionQ1')}
               >
               	<Text style={styles.buttonText}>Back</Text>
               </TouchableOpacity>
