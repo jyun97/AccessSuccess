@@ -1,9 +1,12 @@
 import HomeScreen from './screens/HomeScreen'
 import VisionQ1 from './screens/VisionQ1'
 import VisionQ2 from './screens/VisionQ2'
+import Settings from './screens/Settings'
 import React from 'react';
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
+import { createBottomTabNavigator } from 'react-navigation-tabs';
+
 
 const MainNavigator = createStackNavigator({
   HomeScreen: {
@@ -26,6 +29,16 @@ const MainNavigator = createStackNavigator({
   }
 })
 
-const App = createAppContainer(MainNavigator)
+
+const Tabs = createBottomTabNavigator({
+  Main: {
+    screen: MainNavigator
+  },
+  Settings: {
+    screen: Settings
+  }
+});
+
+const App = createAppContainer(Tabs)
 
 export default App
