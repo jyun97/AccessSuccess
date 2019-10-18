@@ -7,19 +7,21 @@ export const mapResults = async() => {
 
     const keys = await AsyncStorage.getAllKeys();
     const results = await AsyncStorage.multiGet(keys);
+    const total_blind = 0;
+    const red_green = 0;
 
     results.map(result => {
     	//Plate 1
       if (result[0] === "Q1" && result[1] !== "12") {
-      	//no one should get this wrong so idk
+      	total_blind = total_blind + 1;
       }
       //Plate 2
       else if (result[0] === "Q2" && result[1] !== "8") {
       	if (result[1] === "3") {
-      		//red-green blind
+      		red_green = red_green + 1;
       	}
       	else {
-      		//total color blind
+      		total_blind = total_blind + 1;
       	}
       }
       //Plate 3
@@ -28,7 +30,7 @@ export const mapResults = async() => {
       		//red-green blind
       	}
       	else {
-      		//total color blind
+      		total_blind = total_blind + 1;
       	}
       }
       //Plate 4
@@ -37,7 +39,7 @@ export const mapResults = async() => {
       		//red-green blind
       	}
       	else {
-      		//total color blind
+      		total_blind = total_blind + 1;
       	}
       }
       //Plate 5
@@ -46,7 +48,7 @@ export const mapResults = async() => {
       		//red-green blind
       	}
       	else {
-      		//total color blind
+      		total_blind = total_blind + 1;
       	}
       }
       //Plate 6

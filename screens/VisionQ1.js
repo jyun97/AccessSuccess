@@ -38,7 +38,7 @@ class VisionQ1 extends React.Component {
           <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
             <View style={styles.inner}>
               <Text style={styles.header}>Vision Test</Text>
-              <Text style={styles.question}>Q1. What number do you see in the circle below?</Text>
+              <Text style={styles.question}>Q1. What number do you see in the circle below? If you're not sure, enter "0"</Text>
               <Image
               	source={require('./images/plate1.png')} 
     	  				style={styles.image}
