@@ -8,11 +8,16 @@ import { mapResults } from '../screens/Map';
 
 class ResultsScreen extends React.Component {
   constructor(props) {
-      super(props);
-      test = mapResults();
-      this.state = { results: test };
-    //   console.log("~~~~~~~~~~~~~");
-    //   console.log(this.state.results);
+    super(props);
+    this.state = { results: ''};
+
+    mapResults()
+      .then((result) => {
+        this.setState({results: result});
+    })
+      .catch(err => {
+        console.log(err);
+    })
   }
 
   render() {
@@ -25,8 +30,8 @@ class ResultsScreen extends React.Component {
 
                 <View style={styles.ImageContainer}>
                 </View>
-                    <Text style={styles.text}>{'\n'}Accessibility setting(s) to turn on recommendation: </Text>
-                    <Text style={styles.resultText}>{'\n'}1 . Red/Green Filter [Protanopia] </Text>
+                    <Text style={styles.text}>{'\n'}Recommended accessibility setting(s) to turn on: </Text>
+                    <Text style={styles.resultText}>{'\n'}{this.state.results}</Text>
                     
                     <TouchableOpacity activeOpacity={0.6}
                         style={styles.buttonContainer}>
