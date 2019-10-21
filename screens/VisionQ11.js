@@ -37,7 +37,7 @@ class VisionQ11 extends React.Component {
           <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
             <View style={styles.inner}>
               <Text style={styles.header}>Vision Test</Text>
-              <Text style={styles.question}>Q11. How many lines can you trace in the circle below?</Text>
+              <Text style={styles.question}>Q16. How many lines can you trace in the circle below?</Text>
               <Text style={styles.subtext}>(If you are unsure, enter 0)</Text>
               <Image
                 source={require('./images/plate11.png')} 
@@ -47,6 +47,7 @@ class VisionQ11 extends React.Component {
               <TextInput
                 placeholder="Enter number"
                 style={styles.input}
+                padding={10}
                 keyboardType={'numeric'}
                 onChangeText={answer => this.handleAnswer(answer)}
               />
@@ -123,26 +124,30 @@ const styles = StyleSheet.create({
   back: {
     position: 'absolute',
     left: 20,
-    bottom: -10,
-    width: '20%',
+    bottom: -30,
+    width: '25%',
+    height: '10%',
     aspectRatio: 2/1,
     borderWidth: 0.5,
     borderRadius: 15,
     backgroundColor: '#1EB3EA',
     overflow: 'hidden',
     borderColor: '#1EB3EA',
+    justifyContent: 'center',
   },
   next: {
-    position: 'absolute',
+  	position: 'absolute',
     right: 20,
-    bottom: -10,
-    width: '20%',
+    bottom: -30,
+    width: '25%',
+    height: '10%',
     aspectRatio: 2/1,
     borderWidth: 0.5,
     borderRadius: 15,
     backgroundColor: '#1EB3EA',
     overflow: 'hidden',
     borderColor: '#1EB3EA',
+    justifyContent: 'center',
   },
   buttonText:{
     textAlign: 'center',

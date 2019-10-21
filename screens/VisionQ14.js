@@ -42,7 +42,7 @@ class VisionQ14 extends React.Component {
           <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
             <View style={styles.inner}>
               <Text style={styles.header}>Vision Test</Text>
-              <Text style={styles.question}>Q14. How many lines can you trace in the circle below?</Text>
+              <Text style={styles.question}>Q19. How many lines can you trace in the circle below?</Text>
               <Image
                 source={require('./images/plate14.png')} 
                 style={styles.image}
@@ -166,28 +166,32 @@ const styles = StyleSheet.create({
     fontSize: 25,
   },
   back: {
-    position: 'absolute',
+  	position: 'absolute',
     left: 20,
-    bottom: 0,
-    width: '20%',
+    bottom: -30,
+    width: '25%',
+    height: '10%',
     aspectRatio: 2/1,
     borderWidth: 0.5,
     borderRadius: 15,
     backgroundColor: '#1EB3EA',
     overflow: 'hidden',
     borderColor: '#1EB3EA',
+    justifyContent: 'center',
   },
   next: {
-    position: 'absolute',
+  	position: 'absolute',
     right: 20,
-    bottom: 0,
-    width: '20%',
+    bottom: -30,
+    width: '25%',
+    height: '10%',
     aspectRatio: 2/1,
     borderWidth: 0.5,
     borderRadius: 15,
     backgroundColor: '#1EB3EA',
     overflow: 'hidden',
     borderColor: '#1EB3EA',
+    justifyContent: 'center',
   },
   buttonText:{
     textAlign: 'center',
