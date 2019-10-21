@@ -57,117 +57,75 @@ const MainNavigator = createStackNavigator({
   },
   BoldText: {
     screen: BoldText,
-    navigationOptions: {
-      headerTitle: 'BoldText'
-    }
+    // navigationOptions: {
+    //   headerTitle: 'BoldText'
+    // }
   },
   Contrast: {
     screen: Contrast,
-    navigationOptions: {
-      headerTitle: 'Contrast'
-    }
+    // navigationOptions: {
+    //   headerTitle: 'Contrast'
+    // }
   },
   ReduceTransparency: {
     screen: ReduceTransparency,
-    navigationOptions: {
-      headerTitle: 'Transparent'
-    }
+    // navigationOptions: {
+    //   headerTitle: 'Transparent'
+    // }
   },
   ButtonShape: {
     screen: ButtonShape,
-    navigationOptions: {
-      headerTitle: 'ButtonShape'
-    }
+    // navigationOptions: {
+    //   headerTitle: 'ButtonShape'
+    // }
   },
   OnOffLabel: {
     screen: OnOffLabel,
-    navigationOptions: {
-      headerTitle: 'OnOffLabel'
-    }
+    // navigationOptions: {
+    //   headerTitle: 'OnOffLabel'
+    // }
   },  
   VisionQ1: {
     screen: VisionQ1,
-    navigationOptions: {
-      headerTitle: 'Vision Test Q1'
-    }
   },
   VisionQ2: {
     screen: VisionQ2,
-    navigationOptions: {
-      headerTitle: 'Vision Test Q2'
-    }
   },
   VisionQ3: {
     screen: VisionQ3,
-    navigationOptions: {
-      headerTitle: 'Vision Test Q3'
-    }
   },
   VisionQ4: {
     screen: VisionQ4,
-    navigationOptions: {
-      headerTitle: 'Vision Test Q4'
-    }
   },
   VisionQ5: {
     screen: VisionQ5,
-    navigationOptions: {
-      headerTitle: 'Vision Test Q5'
-    }
   },
   VisionQ6: {
     screen: VisionQ6,
-    navigationOptions: {
-      headerTitle: 'Vision Test Q6'
-    }
   },
   VisionQ7: {
     screen: VisionQ7,
-    navigationOptions: {
-      headerTitle: 'Vision Test Q7'
-    }
   },
   VisionQ8: {
     screen: VisionQ8,
-    navigationOptions: {
-      headerTitle: 'Vision Test Q8'
-    }
   },
   VisionQ9: {
     screen: VisionQ9,
-    navigationOptions: {
-      headerTitle: 'Vision Test Q9'
-    }
   },
   VisionQ10: {
     screen: VisionQ10,
-    navigationOptions: {
-      headerTitle: 'Vision Test Q10'
-    }
   },
   VisionQ11: {
     screen: VisionQ11,
-    navigationOptions: {
-      headerTitle: 'Vision Test Q11'
-    }
   },
   VisionQ12: {
     screen: VisionQ12,
-    navigationOptions: {
-      headerTitle: 'Vision Test Q12'
-    }
   },
   VisionQ13: {
     screen: VisionQ13,
-    navigationOptions: {
-      headerTitle: 'Vision Test Q13'
-    }
   },
   VisionQ14: {
     screen: VisionQ14,
-    navigationOptions: {
-      headerTitle: 'Vision Test Q14'
-    }
   },
   ResultsScreen: {
     screen: ResultsScreen,
