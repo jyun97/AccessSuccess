@@ -32,7 +32,6 @@ import DiffScreen from './screens/DiffScreen'
 import React from 'react';
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
-import { createBottomTabNavigator } from 'react-navigation-tabs';
 
 const MainNavigator = createStackNavigator({
   FirstScreen: {
@@ -193,15 +192,8 @@ const MainNavigator = createStackNavigator({
   }
 })
 
-const Tabs = createBottomTabNavigator({
-  Main: {
-    screen: MainNavigator
-  },
-  Settings: {
-    screen: Settings
-  }
-});
 
-const App = createAppContainer(Tabs)
+
+const App = createAppContainer(MainNavigator)
 
 export default App

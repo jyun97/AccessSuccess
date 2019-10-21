@@ -34,8 +34,10 @@
 import React from 'react';
 import { Text, TouchableOpacity, View, Button, SafeAreaView, StyleSheet, Image} from 'react-native';
 import { widthPercentageToDP as wp} from "react-native-responsive-screen"; 
+import { createBottomTabNavigator } from 'react-navigation-tabs';
+import Settings from './Settings'
 
-const HomeScreen = ({ navigation }) => (
+const HomeScreenModule = ({ navigation }) => (
     <SafeAreaView style={{flex:1}}>
     <View style={styles.container}>
 
@@ -104,6 +106,15 @@ const styles = StyleSheet.create({
         color: 'white',
         fontSize: 20
     }
+});
+
+const HomeScreen = createBottomTabNavigator({
+  Main: {
+    screen: HomeScreenModule
+  },
+  Settings: {
+    screen: Settings
+  }
 });
 
 export default HomeScreen
