@@ -101,11 +101,11 @@ const SECTIONS = [
     description: 'If you have color blindness or other vision challenges, you can customize the display settings to make the screen easier to see',
     content: ['a. Bold Text:',
     'Adjust brightness and contrast based on ambient light settings',
-    'Larger text:',
+    'b. Larger text:',
     'Allows you to adjust text size',
-    'Button Shapes',
+    'c. Button Shapes',
     'Underlines text you can tap',
-    'On/off labels',
+    'd. On/off labels',
     'Adds shapes on On/Off labels to make it clear what’s on and off. Indicates switches turned on with “1” and switches turned off with \'0\'']
    },
    {
