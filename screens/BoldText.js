@@ -51,7 +51,7 @@ class SelectButton extends React.Component{
             return(
                 <TouchableOpacity onPress ={() => this.handleChange()}>
                     <Image source={this.props.source}
-                    style={{width: 200, height: 100, borderWidth: 3, borderColor: "#1EB3EA"}}
+                    style={{width: 200, height: 150, borderWidth: 3, borderColor: "#1EB3EA", resizeMode: "contain"}}
                     />
                 </TouchableOpacity>
             );
@@ -59,7 +59,7 @@ class SelectButton extends React.Component{
         return(
             <TouchableOpacity onPress ={() => this.handleChange()}>
                 <Image source={this.props.source}
-                style={{width: 200, height: 100}}
+                style={{resizeMode: "contain", width: 200, height: 150}}
                 />
             </TouchableOpacity>
         );
@@ -70,12 +70,12 @@ export default function BoldText ({ navigation }) {
 	const [value, onChangeText] = React.useState('');
 
 	return(
-	<View>
+	<View style={{alignItems:"center"}}>
     	<Text h1 style={{fontWeight: "bold"}}>Vision Test</Text>
-    	<Text h2 style={{fontWeight: "bold"}}>Q4</Text>
+    	<Text h2 style={{fontWeight: "bold"}}>Q1</Text>
     	<Text h2 style={{fontWeight: "bold"}}>Which do you prefer?</Text>
         <MultipleChoice/>
-	    <Button onPress={() => navigation.navigate('VisionQ1')} title="Next" />
+	    <Button onPress={() => navigation.navigate('Contrast')} title="Next" />
     </View>
     )
 }
