@@ -5,41 +5,6 @@
 	<key>logFormatVersion</key>
 	<integer>10</integer>
 	<key>logs</key>
-	<dict>
-		<key>BD456BFB-6631-4B02-B3CB-605E2E5D36B3</key>
-		<dict>
-			<key>className</key>
-			<string>IDECommandLineBuildLog</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>BD456BFB-6631-4B02-B3CB-605E2E5D36B3.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>Accessibility project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>Accessibility</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Building workspace Accessibility with scheme Accessibility and configuration Debug</string>
-			<key>timeStartedRecording</key>
-			<real>593227216.05685902</real>
-			<key>timeStoppedRecording</key>
-			<real>593227249.42232203</real>
-			<key>title</key>
-			<string>Building workspace Accessibility with scheme Accessibility and configuration Debug</string>
-			<key>uniqueIdentifier</key>
-			<string>BD456BFB-6631-4B02-B3CB-605E2E5D36B3</string>
-		</dict>
-	</dict>
+	<dict/>
 </dict>
 </plist>

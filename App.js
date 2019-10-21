@@ -3,6 +3,10 @@ import FirstScreen from './screens/FirstScreen'
 import LoginScreen from './screens/LoginScreen'
 import Settings from './screens/Settings'
 import BoldText from './screens/BoldText'
+import Contrast from './screens/Contrast'
+import ReduceTransparency from './screens/ReduceTransparency'
+import ButtonShape from './screens/ButtonShape'
+import OnOffLabel from './screens/OnOffLabel'
 import VisionQ1 from './screens/VisionQ1'
 import VisionQ2 from './screens/VisionQ2'
 import VisionQ11 from './screens/VisionQ11'
@@ -46,6 +50,30 @@ const MainNavigator = createStackNavigator({
       headerTitle: 'BoldText'
     }
   },
+  Contrast: {
+    screen: Contrast,
+    navigationOptions: {
+      headerTitle: 'Contrast'
+    }
+  },
+  ReduceTransparency: {
+    screen: ReduceTransparency,
+    navigationOptions: {
+      headerTitle: 'Transparent'
+    }
+  },
+  ButtonShape: {
+    screen: ButtonShape,
+    navigationOptions: {
+      headerTitle: 'ButtonShape'
+    }
+  },
+  OnOffLabel: {
+    screen: OnOffLabel,
+    navigationOptions: {
+      headerTitle: 'OnOffLabel'
+    }
+  },  
   VisionQ1: {
     screen: VisionQ1,
     navigationOptions: {

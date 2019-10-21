@@ -6,88 +6,19 @@
 	<dict>
 		<key>Base.lproj/LaunchScreen.nib/objects-13.0+.nib</key>
 		<data>
-		G9xq9V0PNZvQ2vB5NqAWCjMLANM=
+		xzwIbbYeJFOcW24ucqBoUMjBjRQ=
 		</data>
 		<key>Base.lproj/LaunchScreen.nib/runtime.nib</key>
 		<data>
-		iURF2OACXShbrm/KEPGZUOz27LE=
-		</data>
-		<key>Frameworks/XCTAutomationSupport.framework/Info.plist</key>
-		<data>
-		Zb+apFirYLFzWl3DKgehHpx6d4Y=
-		</data>
-		<key>Frameworks/XCTAutomationSupport.framework/XCTAutomationSupport</key>
-		<data>
-		4YzGccrfZmsK+5vkiTU4eZbJgek=
-		</data>
-		<key>Frameworks/XCTAutomationSupport.framework/_CodeSignature/CodeResources</key>
-		<data>
-		Rfk1cUPoXItLY6FPVnxPdTnn2cg=
-		</data>
-		<key>Frameworks/XCTAutomationSupport.framework/version.plist</key>
-		<data>
-		cX36RXdDl3EMAMV0lOhi0RGEkTc=
-		</data>
-		<key>Frameworks/XCTest.framework/Info.plist</key>
-		<data>
-		MkLBcTrGZP0m49TO8MT9Kpg2XvA=
-		</data>
-		<key>Frameworks/XCTest.framework/XCTest</key>
-		<data>
-		vMfIMwmSj/2qw5EHG3a3JxnndiU=
-		</data>
-		<key>Frameworks/XCTest.framework/_CodeSignature/CodeResources</key>
-		<data>
-		/CDR7ItbsxtlIc2/6/P1CG134lY=
-		</data>
-		<key>Frameworks/XCTest.framework/en.lproj/InfoPlist.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			TuBj57ZP6zBqcL9HttO2Rucaw9E=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>Frameworks/XCTest.framework/version.plist</key>
-		<data>
-		cX36RXdDl3EMAMV0lOhi0RGEkTc=
-		</data>
-		<key>Frameworks/libXCTestBundleInject.dylib</key>
-		<data>
-		fB296Ag0IpaSx1cD5EZR/4MmG7k=
-		</data>
-		<key>Frameworks/libXCTestSwiftSupport.dylib</key>
-		<data>
-		rmWK27yJybEJGDK0ycNnvd6CQAA=
+		pUZ4F11XCMC+495SNjIsVmSVo34=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		u7Xuqel0n9WswdodfPyTA9hJK/I=
+		IW7zILZTIvL5aztQq+br215EBdI=
 		</data>
 		<key>PkgInfo</key>
 		<data>
 		n57qDP4tZfLD1rCS43W0B4LQjzE=
-		</data>
-		<key>PlugIns/AccessibilityTests.xctest.dSYM/Contents/Info.plist</key>
-		<data>
-		VRXFlKRc+ChLw/wmFbJejUf0ev4=
-		</data>
-		<key>PlugIns/AccessibilityTests.xctest.dSYM/Contents/Resources/DWARF/AccessibilityTests</key>
-		<data>
-		LpgJHP7LN/0mSe0rQv/0BExuxxc=
-		</data>
-		<key>PlugIns/AccessibilityTests.xctest/AccessibilityTests</key>
-		<data>
-		timh+5kOH3KT5t8XOCtB4YUskIU=
-		</data>
-		<key>PlugIns/AccessibilityTests.xctest/Info.plist</key>
-		<data>
-		4eOFxUIWymEE4D+hVb+yPQay1Ls=
-		</data>
-		<key>PlugIns/AccessibilityTests.xctest/_CodeSignature/CodeResources</key>
-		<data>
-		/MTxiaAe+L8HVo8Xy2xU7C6OAU8=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -96,200 +27,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			G9xq9V0PNZvQ2vB5NqAWCjMLANM=
+			xzwIbbYeJFOcW24ucqBoUMjBjRQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			jE/jtX9fgBcCcjquW9iNDIbtOA26927Zq2B7j3BBTPs=
+			7CHxha5Cgdl6TpOBIopbZfa7NJw8ty3JX4+lDz5S3bM=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			iURF2OACXShbrm/KEPGZUOz27LE=
+			pUZ4F11XCMC+495SNjIsVmSVo34=
 			</data>
 			<key>hash2</key>
 			<data>
-			sEeW8F3etiKS8qyExhUarSx4kCuqdGFChRcAtl8AB2M=
-			</data>
-		</dict>
-		<key>Frameworks/XCTAutomationSupport.framework/Info.plist</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			Zb+apFirYLFzWl3DKgehHpx6d4Y=
-			</data>
-			<key>hash2</key>
-			<data>
-			mlcCbqQ3H7kz8t6TgQk3KVBU9PhhXAyPDBUnX8OXB24=
-			</data>
-		</dict>
-		<key>Frameworks/XCTAutomationSupport.framework/XCTAutomationSupport</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			4YzGccrfZmsK+5vkiTU4eZbJgek=
-			</data>
-			<key>hash2</key>
-			<data>
-			xlwgvdY0uJcATp76HzTsg6zAqwbDrQIhTLjM00KoOGk=
-			</data>
-		</dict>
-		<key>Frameworks/XCTAutomationSupport.framework/_CodeSignature/CodeResources</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			Rfk1cUPoXItLY6FPVnxPdTnn2cg=
-			</data>
-			<key>hash2</key>
-			<data>
-			k7eZxRWa9BBJKcnLKurg39rmYNdWSb8gJ06lOsWFh0A=
-			</data>
-		</dict>
-		<key>Frameworks/XCTAutomationSupport.framework/version.plist</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			cX36RXdDl3EMAMV0lOhi0RGEkTc=
-			</data>
-			<key>hash2</key>
-			<data>
-			LJGBUe6yDOXNn8XrkeMKS8lRIc3fsgjTGuMvwbVbIMg=
-			</data>
-		</dict>
-		<key>Frameworks/XCTest.framework/Info.plist</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			MkLBcTrGZP0m49TO8MT9Kpg2XvA=
-			</data>
-			<key>hash2</key>
-			<data>
-			uVJpv1942A2T6rNIuittFKQAfVw6Uue3e+F4hxfzvEw=
-			</data>
-		</dict>
-		<key>Frameworks/XCTest.framework/XCTest</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			vMfIMwmSj/2qw5EHG3a3JxnndiU=
-			</data>
-			<key>hash2</key>
-			<data>
-			5aBCak4iD8oHZg40XESOghUyj67gIu31DlPLDInjoqY=
-			</data>
-		</dict>
-		<key>Frameworks/XCTest.framework/_CodeSignature/CodeResources</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			/CDR7ItbsxtlIc2/6/P1CG134lY=
-			</data>
-			<key>hash2</key>
-			<data>
-			FwSmW6fzW8XWsh7LYlQmyUhCY45tdc2BKLzbHBENmT8=
-			</data>
-		</dict>
-		<key>Frameworks/XCTest.framework/en.lproj/InfoPlist.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			TuBj57ZP6zBqcL9HttO2Rucaw9E=
-			</data>
-			<key>hash2</key>
-			<data>
-			89RGkjZaKuewYnjpzwhIswhqfrU8+pcEXqM/DHVrUmo=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>Frameworks/XCTest.framework/version.plist</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			cX36RXdDl3EMAMV0lOhi0RGEkTc=
-			</data>
-			<key>hash2</key>
-			<data>
-			LJGBUe6yDOXNn8XrkeMKS8lRIc3fsgjTGuMvwbVbIMg=
-			</data>
-		</dict>
-		<key>Frameworks/libXCTestBundleInject.dylib</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			fB296Ag0IpaSx1cD5EZR/4MmG7k=
-			</data>
-			<key>hash2</key>
-			<data>
-			RtvoAiXdlzkUNEz1CHmWHKZADzBhy3bp8nZt88RtFFc=
-			</data>
-		</dict>
-		<key>Frameworks/libXCTestSwiftSupport.dylib</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			rmWK27yJybEJGDK0ycNnvd6CQAA=
-			</data>
-			<key>hash2</key>
-			<data>
-			J26tg7W6/N1SB92U5a35RkjGIOa5NLg0AxGShpThn8Y=
-			</data>
-		</dict>
-		<key>PlugIns/AccessibilityTests.xctest.dSYM/Contents/Info.plist</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			VRXFlKRc+ChLw/wmFbJejUf0ev4=
-			</data>
-			<key>hash2</key>
-			<data>
-			L9kAg4YlNVain+dkt6mprIVgIHaqB/Vl3ndJaOQL1PI=
-			</data>
-		</dict>
-		<key>PlugIns/AccessibilityTests.xctest.dSYM/Contents/Resources/DWARF/AccessibilityTests</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			LpgJHP7LN/0mSe0rQv/0BExuxxc=
-			</data>
-			<key>hash2</key>
-			<data>
-			1RBCZHfKGOdZi7vUmRtnUWXwjKw5jrj4WEzB1jdM6h4=
-			</data>
-		</dict>
-		<key>PlugIns/AccessibilityTests.xctest/AccessibilityTests</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			timh+5kOH3KT5t8XOCtB4YUskIU=
-			</data>
-			<key>hash2</key>
-			<data>
-			qTnQRVh06eUsllkbxxuNRqE9XFjznCb2IM4J1wkt0lw=
-			</data>
-		</dict>
-		<key>PlugIns/AccessibilityTests.xctest/Info.plist</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			4eOFxUIWymEE4D+hVb+yPQay1Ls=
-			</data>
-			<key>hash2</key>
-			<data>
-			nAygPea/ixc8DIBZLdFEylk1IY53GrUDH31ybjYRGy0=
-			</data>
-		</dict>
-		<key>PlugIns/AccessibilityTests.xctest/_CodeSignature/CodeResources</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			/MTxiaAe+L8HVo8Xy2xU7C6OAU8=
-			</data>
-			<key>hash2</key>
-			<data>
-			hRsbIUd+4mpIEs0V2GRRYm7qqHPbBJytwcjXqCbkL6k=
+			ymTwUddbgaJHVLEy2KfCbDMiAPp0LFRWFfWDvs14AWM=
 			</data>
 		</dict>
 	</dict>
