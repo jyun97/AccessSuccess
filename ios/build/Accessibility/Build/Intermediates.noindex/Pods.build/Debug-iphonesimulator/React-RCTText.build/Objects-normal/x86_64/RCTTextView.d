@@ -1,29 +1,29 @@
 dependencies: \
-  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/node_modules/react-native/Libraries/Text/Text/RCTTextView.m \
-  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Target\ Support\ Files/React-RCTText/React-RCTText-prefix.pch \
-  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTTextView.h \
-  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTComponent.h \
-  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTUtils.h \
-  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTAssert.h \
-  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTDefines.h \
-  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTInspectorDevServerHelper.h \
-  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTPackagerConnection.h \
-  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/UIView+React.h \
-  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/Yoga/yoga/YGEnums.h \
-  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/Yoga/yoga/YGMacros.h \
-  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTTextShadowView.h \
-  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTShadowView.h \
-  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTLayout.h \
-  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/Yoga/yoga/Yoga.h \
-  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/Yoga/yoga/YGValue.h \
-  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTRootView.h \
-  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTBridge.h \
-  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTBridgeDelegate.h \
-  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTJavaScriptLoader.h \
-  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTBridgeModule.h \
-  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTFrameUpdate.h \
-  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTInvalidating.h \
-  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTBaseTextShadowView.h \
-  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTTextAttributes.h \
-  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTTextDecorationLineType.h \
-  /Users/nmhelton/Desktop/SchoolWork/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTTextTransform.h
+  /Users/raykadevaprasad/AccessSuccess/node_modules/react-native/Libraries/Text/Text/RCTTextView.m \
+  /Users/raykadevaprasad/AccessSuccess/ios/Pods/Target\ Support\ Files/React-RCTText/React-RCTText-prefix.pch \
+  /Users/raykadevaprasad/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTTextView.h \
+  /Users/raykadevaprasad/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTComponent.h \
+  /Users/raykadevaprasad/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTUtils.h \
+  /Users/raykadevaprasad/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTAssert.h \
+  /Users/raykadevaprasad/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTDefines.h \
+  /Users/raykadevaprasad/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTInspectorDevServerHelper.h \
+  /Users/raykadevaprasad/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTPackagerConnection.h \
+  /Users/raykadevaprasad/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/UIView+React.h \
+  /Users/raykadevaprasad/AccessSuccess/ios/Pods/Headers/Public/Yoga/yoga/YGEnums.h \
+  /Users/raykadevaprasad/AccessSuccess/ios/Pods/Headers/Public/Yoga/yoga/YGMacros.h \
+  /Users/raykadevaprasad/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTTextShadowView.h \
+  /Users/raykadevaprasad/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTShadowView.h \
+  /Users/raykadevaprasad/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTLayout.h \
+  /Users/raykadevaprasad/AccessSuccess/ios/Pods/Headers/Public/Yoga/yoga/Yoga.h \
+  /Users/raykadevaprasad/AccessSuccess/ios/Pods/Headers/Public/Yoga/yoga/YGValue.h \
+  /Users/raykadevaprasad/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTRootView.h \
+  /Users/raykadevaprasad/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTBridge.h \
+  /Users/raykadevaprasad/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTBridgeDelegate.h \
+  /Users/raykadevaprasad/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTJavaScriptLoader.h \
+  /Users/raykadevaprasad/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTBridgeModule.h \
+  /Users/raykadevaprasad/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTFrameUpdate.h \
+  /Users/raykadevaprasad/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTInvalidating.h \
+  /Users/raykadevaprasad/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTBaseTextShadowView.h \
+  /Users/raykadevaprasad/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTTextAttributes.h \
+  /Users/raykadevaprasad/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTTextDecorationLineType.h \
+  /Users/raykadevaprasad/AccessSuccess/ios/Pods/Headers/Public/React-Core/React/RCTTextTransform.h

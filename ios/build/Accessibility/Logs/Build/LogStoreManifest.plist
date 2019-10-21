@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>0E2B7CD5-DA2C-4955-8CF8-8F4F6A5F9F77</key>
+		<key>BD456BFB-6631-4B02-B3CB-605E2E5D36B3</key>
 		<dict>
 			<key>className</key>
 			<string>IDECommandLineBuildLog</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>0E2B7CD5-DA2C-4955-8CF8-8F4F6A5F9F77.xcactivitylog</string>
+			<string>BD456BFB-6631-4B02-B3CB-605E2E5D36B3.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -32,47 +32,13 @@
 			<key>signature</key>
 			<string>Building workspace Accessibility with scheme Accessibility and configuration Debug</string>
 			<key>timeStartedRecording</key>
-			<real>593058146.51692903</real>
+			<real>593227216.05685902</real>
 			<key>timeStoppedRecording</key>
-			<real>593058149.30824697</real>
+			<real>593227249.42232203</real>
 			<key>title</key>
 			<string>Building workspace Accessibility with scheme Accessibility and configuration Debug</string>
 			<key>uniqueIdentifier</key>
-			<string>0E2B7CD5-DA2C-4955-8CF8-8F4F6A5F9F77</string>
-		</dict>
-		<key>A8700E6E-E605-4729-8FF1-0E039C44487B</key>
-		<dict>
-			<key>className</key>
-			<string>IDECommandLineBuildLog</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>A8700E6E-E605-4729-8FF1-0E039C44487B.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>Accessibility project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>Accessibility</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Building workspace Accessibility with scheme Accessibility and configuration Debug</string>
-			<key>timeStartedRecording</key>
-			<real>593058338.10172999</real>
-			<key>timeStoppedRecording</key>
-			<real>593058353.93460703</real>
-			<key>title</key>
-			<string>Building workspace Accessibility with scheme Accessibility and configuration Debug</string>
-			<key>uniqueIdentifier</key>
-			<string>A8700E6E-E605-4729-8FF1-0E039C44487B</string>
+			<string>BD456BFB-6631-4B02-B3CB-605E2E5D36B3</string>
 		</dict>
 	</dict>
 </dict>

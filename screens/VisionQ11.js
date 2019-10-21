@@ -24,7 +24,6 @@ class VisionQ11 extends React.Component {
     else {
       this.setState(() => ({ inputError: null }));
       storeAnswer("Q11", this.state.answer);
-      this.props.navigation.navigate('VisionQ12');
     }
   }
 

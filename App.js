@@ -6,23 +6,26 @@ import BoldText from './screens/BoldText'
 import VisionQ1 from './screens/VisionQ1'
 import VisionQ2 from './screens/VisionQ2'
 import VisionQ11 from './screens/VisionQ11'
+import ResultsScreen from './screens/ResultsScreen'
+import ZoomScreen from './screens/ZoomScreen'
+import MagnifierScreen from './screens/MagnifierScreen'
+import DisplayScreen from './screens/DisplayScreen'
+import ReduceScreen from './screens/ReduceScreen'
+import IncreaseScreen from './screens/IncreaseScreen'
+import DiffScreen from './screens/DiffScreen'
 import React from 'react';
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 
-
 const MainNavigator = createStackNavigator({
   FirstScreen: {
     screen: FirstScreen,
-    navigationOptions: {
-      headerTitle: 'FirstScreen'
-    }
   },
   LoginScreen: {
     screen: LoginScreen,
     navigationOptions: {
-      headerTitle: 'LoginScreen'
+      headerTitle: 'Login'
     }
   },
   Settings: {
@@ -60,9 +63,29 @@ const MainNavigator = createStackNavigator({
     navigationOptions: {
       headerTitle: 'Vision Test Q11'
     }
+  },
+  ResultsScreen: {
+    screen: ResultsScreen,
+  },
+  ZoomScreen: {
+    screen: ZoomScreen,
+  },
+  MagnifierScreen: {
+    screen: MagnifierScreen,
+  },
+  DisplayScreen: {
+    screen: DisplayScreen,
+  },
+  ReduceScreen: {
+    screen: ReduceScreen,
+  },
+  IncreaseScreen: {
+    screen: IncreaseScreen,
+  },
+  DiffScreen: {
+    screen: DiffScreen,
   }
 })
-
 
 const Tabs = createBottomTabNavigator({
   Main: {
