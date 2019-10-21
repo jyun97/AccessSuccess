@@ -3,6 +3,7 @@ import { Text, View, Image, TextInput, Button, StyleSheet } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import { widthPercentageToDP as wp} from "react-native-responsive-screen"; 
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import SafeAreaView from 'react-native-safe-area-view';
 
 class MultipleChoice extends React.Component{
     constructor (){
@@ -71,17 +72,29 @@ export default function ReduceTransparency ({ navigation }) {
 	const [value, onChangeText] = React.useState('');
 
 	return(
-    <View style={{alignItems:"center"}}>
-    	<Text h1 style={{fontWeight: "bold"}}>Vision Test</Text>
-    	<Text h2 style={{fontWeight: "bold"}}>Q3</Text>
-    	<Text h2 style={{fontWeight: "bold"}}>Select the screen you prefer.</Text>
+    <SafeAreaView style={{alignItems:"center"}}>
+    	<Text style={styles.header}>Vision Test</Text>
+    	<Text style={styles.question}>Q3. Select the screen you prefer.</Text>
         <MultipleChoice/>
-        <TouchableOpacity activeOpacity={0.6}
-                style={styles.buttonContainer}
-                onPress={() => navigation.navigate('ButtonShape')}>
-                <Text style={styles.buttonText}>Next</Text>
-        </TouchableOpacity>
-    </View>
+
+        <View style={styles.rowContainer}>
+
+            <TouchableOpacity activeOpacity={0.6}
+                    style={styles.buttonContainer}
+                    onPress={() => navigation.navigate('Contrast')}>
+                    <Text style={styles.buttonText}>Back</Text>
+            </TouchableOpacity>
+            
+            <TouchableOpacity activeOpacity={0.6}
+                    style={styles.buttonContainer}
+                    onPress={() => navigation.navigate('ButtonShape')}>
+                    <Text style={styles.buttonText}>Next</Text>
+            </TouchableOpacity>
+
+        </View>
+        
+
+    </SafeAreaView>
     )
 }
 
@@ -104,8 +117,8 @@ const styles = StyleSheet.create({
         margin: 15
     },
     buttonContainer: {
-        width: '60%',
-        aspectRatio: 5/1,
+        width: '50%',
+        aspectRatio: 6/3.5,
         alignItems: 'center',
         justifyContent: 'center',
         borderWidth: 0.5,
@@ -115,8 +128,24 @@ const styles = StyleSheet.create({
         borderColor: '#1EB3EA',
         margin: 20,
     },
+    rowContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginLeft: 65
+    },
     buttonText:{
         color: 'white',
-        fontSize: 20
+        fontSize: 25
+    },
+    header: {
+        textAlign: 'center',
+        fontWeight: 'bold',
+        fontSize: 25,
+        textDecorationLine: 'underline'
+    },
+    question: {
+        textAlign: 'center',
+        fontWeight: 'bold',
+        fontSize: 30,
     }
 });
