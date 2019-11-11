@@ -10,7 +10,7 @@ class PreferenceInstr extends React.Component {
   }
 
   handleSubmit() {
-      this.props.navigation.navigate('ReduceTransparency');
+      this.props.navigation.navigate('BoldText');
   }
 
   render() {

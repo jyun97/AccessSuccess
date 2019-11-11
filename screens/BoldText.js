@@ -74,7 +74,7 @@ export default function BoldText ({ navigation }) {
     return(
     <SafeAreaView style={{alignItems:"center"}}>
         <Text style={styles.header}>Vision Test</Text>
-        <ProgressViewIOS progressTintColor="red" progress={0.07}/>
+        <ProgressViewIOS progressTintColor="red" progress={0}/>
         <Text style={styles.question}>Q1. Select the keyboard you prefer.</Text>
         <MultipleChoice/>
 
