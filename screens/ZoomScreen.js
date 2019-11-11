@@ -80,9 +80,7 @@ const styles = StyleSheet.create({
     },
     midContainer: {
         width: '90%',
-        height: '90%',
-        // aspectRatio: 4/4,
-        // alignItems: 'center',
+        height: '80%',
         justifyContent: 'center',
         borderWidth: 0.5,
         borderRadius: 15,

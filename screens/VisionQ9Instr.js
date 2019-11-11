@@ -18,7 +18,7 @@ class VisionQ9Instr extends React.Component {
     return(
       <View style={styles.container}>
               <Text style={styles.header}>Vision Test</Text>
-              <Text style={styles.question}>Instructions</Text>
+              <Text style={styles.header}>Part 2 Q14 Instructions</Text>
               <Text style={styles.question}>In the next question, you will be shown a circle.
               Select what you see inside the circle from the given options. </Text>
               <TouchableOpacity

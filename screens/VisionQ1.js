@@ -39,7 +39,7 @@ class VisionQ1 extends React.Component {
             <View style={styles.inner}>
               <Text style={styles.header}>Vision Test</Text>
               <ProgressViewIOS progressTintColor="red" progress={0.36}/>
-              <Text style={styles.question}>Q1. What number do you see in the circle below?</Text>
+              <Text style={styles.question}>Q6. What number do you see in the circle below?</Text>
               <Text style={styles.subtext}>(If you are unsure, enter 0)</Text>
               <Image
               	source={require('./images/plate1.png')} 
@@ -50,6 +50,9 @@ class VisionQ1 extends React.Component {
   							placeholder="Enter number"
                 style={styles.input}
                 keyboardType={'number-pad'}
+                padding={10}
+                textAlign={'center'}
+                justifyContent={'center'}
                 onChangeText={answer => this.handleAnswer(answer)}
               />
               {!!this.state.inputError && (
@@ -125,30 +128,35 @@ const styles = StyleSheet.create({
   back: {
   	position: 'absolute',
     left: 20,
-    bottom: -10,
-    width: '20%',
+    bottom: -30,
+    width: '25%',
+    height: '10%',
     aspectRatio: 2/1,
     borderWidth: 0.5,
     borderRadius: 15,
     backgroundColor: '#1EB3EA',
     overflow: 'hidden',
     borderColor: '#1EB3EA',
+    justifyContent: 'center',
   },
   next: {
   	position: 'absolute',
     right: 20,
-    bottom: -10,
-    width: '20%',
+    bottom: -30,
+    width: '25%',
+    height: '10%',
     aspectRatio: 2/1,
     borderWidth: 0.5,
     borderRadius: 15,
     backgroundColor: '#1EB3EA',
     overflow: 'hidden',
     borderColor: '#1EB3EA',
+    justifyContent: 'center',
   },
   buttonText:{
-  	textAlign: 'center',
+    textAlign: 'center',
+    justifyContent: 'center',
     color: 'white',
     fontSize: 25,
-  }
+  },
 });

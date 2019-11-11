@@ -38,7 +38,7 @@ class VisionQ8 extends React.Component {
           <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
             <View style={styles.inner}>
               <Text style={styles.header}>Vision Test</Text>
-              <Text style={styles.question}>Q8. What number do you see in the circle below?</Text>
+              <Text style={styles.question}>Q13. What number do you see in the circle below?</Text>
               <Text style={styles.subtext}>(If you are unsure, enter 0)</Text>
               <Image
                 source={require('./images/plate8.png')} 
@@ -49,6 +49,7 @@ class VisionQ8 extends React.Component {
                 placeholder="Enter number"
                 style={styles.input}
                 keyboardType={'number-pad'}
+                padding={10}
                 onChangeText={answer => this.handleAnswer(answer)}
               />
               {!!this.state.inputError && (
@@ -122,28 +123,32 @@ const styles = StyleSheet.create({
     fontSize: 25,
   },
   back: {
-    position: 'absolute',
+  	position: 'absolute',
     left: 20,
-    bottom: -10,
-    width: '20%',
+    bottom: -30,
+    width: '25%',
+    height: '10%',
     aspectRatio: 2/1,
     borderWidth: 0.5,
     borderRadius: 15,
     backgroundColor: '#1EB3EA',
     overflow: 'hidden',
     borderColor: '#1EB3EA',
+    justifyContent: 'center',
   },
   next: {
-    position: 'absolute',
+  	position: 'absolute',
     right: 20,
-    bottom: -10,
-    width: '20%',
+    bottom: -30,
+    width: '25%',
+    height: '10%',
     aspectRatio: 2/1,
     borderWidth: 0.5,
     borderRadius: 15,
     backgroundColor: '#1EB3EA',
     overflow: 'hidden',
     borderColor: '#1EB3EA',
+    justifyContent: 'center',
   },
   buttonText:{
     textAlign: 'center',

@@ -34,11 +34,13 @@ class ResultsScreen extends React.Component {
                     <Text style={styles.resultText}>{'\n'}{this.state.results}</Text>
                     
                     <TouchableOpacity activeOpacity={0.6}
-                        style={styles.buttonContainer}>
-                        <Text style={styles.buttonText}>Click here to turn these settings on</Text>
+                        style={styles.buttonContainer}
+                        onPress={() => this.props.navigation.navigate('HomeScreen')}>
+                        {/* <Text style={styles.buttonText}>Click here to turn these settings on</Text> */}
+                        <Text style={styles.buttonText}>Go back to home page</Text>
                     </TouchableOpacity>
 
-                    <Text style={styles.baseText}>{'\n'}{'\n'}{'\n'}For more information on each accessibility setting, go to the Settings tab on the bottom of your screen!</Text>
+                    <Text style={styles.baseText}>{'\n'}{'\n'}For more information on each accessibility setting, go to the Settings tab on the bottom of your screen!</Text>
                 <View style={{flex:2}}/>
                 
             </View>

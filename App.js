@@ -4,10 +4,10 @@ import LoginScreen from './screens/LoginScreen'
 import Settings from './screens/Settings'
 import PreferenceInstr from './screens/PreferenceInstr'
 import BoldText from './screens/BoldText'
-import Contrast from './screens/Contrast'
-import ReduceTransparency from './screens/ReduceTransparency'
-import ButtonShape from './screens/ButtonShape'
-import OnOffLabel from './screens/OnOffLabel'
+import Contrast from './screens/Contrast'
+import ReduceTransparency from './screens/ReduceTransparency'
+import ButtonShape from './screens/ButtonShape'
+import OnOffLabel from './screens/OnOffLabel'
 import VisionQ1Instr from './screens/VisionQ1Instr'
 import VisionQ1 from './screens/VisionQ1'
 import VisionQ2 from './screens/VisionQ2'
@@ -55,105 +55,69 @@ const MainNavigator = createStackNavigator({
   },
   PreferenceInstr: {
     screen: PreferenceInstr,
-    navigationOptions: {
-      headerTitle: 'Preference Test Instructions'
-    }
   },
   BoldText: {
     screen: BoldText,
-    navigationOptions: {
-      headerTitle: 'BoldText'
-    }
+    // navigationOptions: {
+    //   headerTitle: 'BoldText'
+    // }
   },
-  Contrast: {
-    screen: Contrast,
-    navigationOptions: {
-      headerTitle: 'Contrast'
-    }
+  Contrast: {
+    screen: Contrast,
+    // navigationOptions: {
+    //   headerTitle: 'Contrast'
+    // }
   },
-  ReduceTransparency: {
-    screen: ReduceTransparency,
-    navigationOptions: {
-      headerTitle: 'Transparent'
-    }
+  ReduceTransparency: {
+    screen: ReduceTransparency,
+    // navigationOptions: {
+    //   headerTitle: 'Transparent'
+    // }
   },
-  ButtonShape: {
-    screen: ButtonShape,
-    navigationOptions: {
-      headerTitle: 'ButtonShape'
-    }
+  ButtonShape: {
+    screen: ButtonShape,
+    // navigationOptions: {
+    //   headerTitle: 'ButtonShape'
+    // }
   },
-  OnOffLabel: {
-    screen: OnOffLabel,
-    navigationOptions: {
-      headerTitle: 'OnOffLabel'
-    }
-  },
+  OnOffLabel: {
+    screen: OnOffLabel,
+    // navigationOptions: {
+    //   headerTitle: 'OnOffLabel'
+    // }
+  },  
   VisionQ1Instr: {
     screen: VisionQ1Instr,
-    navigationOptions: {
-      headerTitle: 'Colorblind Instructions'
-    }
-  }, 
+  },
   VisionQ1: {
     screen: VisionQ1,
-    navigationOptions: {
-      headerTitle: 'Vision Test Q1'
-    }
   },
   VisionQ2: {
     screen: VisionQ2,
-    navigationOptions: {
-      headerTitle: 'Vision Test Q2'
-    }
   },
   VisionQ3: {
     screen: VisionQ3,
-    navigationOptions: {
-      headerTitle: 'Vision Test Q3'
-    }
   },
   VisionQ4: {
     screen: VisionQ4,
-    navigationOptions: {
-      headerTitle: 'Vision Test Q4'
-    }
   },
   VisionQ5: {
     screen: VisionQ5,
-    navigationOptions: {
-      headerTitle: 'Vision Test Q5'
-    }
   },
   VisionQ6: {
     screen: VisionQ6,
-    navigationOptions: {
-      headerTitle: 'Vision Test Q6'
-    }
   },
   VisionQ7: {
     screen: VisionQ7,
-    navigationOptions: {
-      headerTitle: 'Vision Test Q7'
-    }
   },
   VisionQ8: {
     screen: VisionQ8,
-    navigationOptions: {
-      headerTitle: 'Vision Test Q8'
-    }
-  },
-  VisionQ9: {
-    screen: VisionQ9,
-    navigationOptions: {
-      headerTitle: 'Vision Test Q9'
-    }
   },
   VisionQ9Instr: {
     screen: VisionQ9Instr,
-    navigationOptions: {
-      headerTitle: 'Vision Test Q9 Instructions'
-    }
+  },
+  VisionQ9: {
+    screen: VisionQ9,
   },
   ResultsScreen: {
     screen: ResultsScreen,

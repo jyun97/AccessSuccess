@@ -27,7 +27,7 @@ class VisionQ9 extends React.Component {
     }
     else {
       this.setState(() => ({ inputError: null }));
-      storeAnswer("Q9", this.state.selectedChoice);
+      storeAnswer("Q14", this.state.selectedChoice);
       this.props.navigation.navigate('ResultsScreen');
     }
   }
@@ -42,7 +42,7 @@ class VisionQ9 extends React.Component {
           <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
             <View style={styles.inner}>
               <Text style={styles.header}>Vision Test</Text>
-              <Text style={styles.question}>Q9. How many lines can you trace in the circle below?</Text>
+              <Text style={styles.question}>Q14. How many lines can you trace in the circle below?</Text>
               <Image
                 source={require('./images/plate9.png')} 
                 style={styles.image}
@@ -168,26 +168,30 @@ const styles = StyleSheet.create({
   back: {
     position: 'absolute',
     left: 20,
-    bottom: 0,
-    width: '20%',
+    bottom: -70,
+    width: '25%',
+    height: '10%',
     aspectRatio: 2/1,
     borderWidth: 0.5,
     borderRadius: 15,
     backgroundColor: '#1EB3EA',
     overflow: 'hidden',
     borderColor: '#1EB3EA',
+    justifyContent: 'center',
   },
   next: {
     position: 'absolute',
     right: 20,
-    bottom: 0,
-    width: '20%',
+    bottom: -70,
+    width: '25%',
+    height: '10%',
     aspectRatio: 2/1,
     borderWidth: 0.5,
     borderRadius: 15,
     backgroundColor: '#1EB3EA',
     overflow: 'hidden',
     borderColor: '#1EB3EA',
+    justifyContent: 'center',
   },
   buttonText:{
     textAlign: 'center',

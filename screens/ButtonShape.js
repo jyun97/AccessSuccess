@@ -1,7 +1,9 @@
 import React from 'react';
-import { Text, View, Image, TextInput, Button, ProgressViewIOS } from 'react-native';
+import { Text, View, Image, TextInput, Button, StyleSheet, ProgressViewIOS } from 'react-native';
 import { StackNavigator } from 'react-navigation';
+import { widthPercentageToDP as wp} from "react-native-responsive-screen"; 
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import SafeAreaView from 'react-native-safe-area-view';
 
 class MultipleChoice extends React.Component{
     constructor (){
@@ -67,16 +69,84 @@ class SelectButton extends React.Component{
 }
 
 export default function ButtonShape ({ navigation }) {
-	const [value, onChangeText] = React.useState('');
+    const [value, onChangeText] = React.useState('');
 
-	return(
-    <View style={{alignItems:"center"}}>
-    	<Text h1 style={{fontWeight: "bold"}}>Vision Test</Text>
-    	<Text h2 style={{fontWeight: "bold"}}>Q4</Text>
+    return(
+    <SafeAreaView style={{alignItems:"center"}}>
+        <Text style={styles.header}>Vision Test</Text>
         <ProgressViewIOS progressTintColor="red" progress={0.21}/>
-    	<Text h2 style={{fontWeight: "bold"}}>Which do you prefer?</Text>
+        <Text style={styles.question}>Q4. Select the option you prefer. </Text>
         <MultipleChoice/>
-	    <Button onPress={() => navigation.navigate('OnOffLabel')} title="Next" />
-    </View>
+
+        <View style={styles.rowContainer}>
+
+            <TouchableOpacity activeOpacity={0.6}
+                    style={styles.buttonContainer}
+                    onPress={() => navigation.navigate('ReduceTransparency')}>
+                    <Text style={styles.buttonText}>Back</Text>
+            </TouchableOpacity>
+            
+            <TouchableOpacity activeOpacity={0.6}
+                    style={styles.buttonContainer}
+                    onPress={() => navigation.navigate('OnOffLabel')}>
+                    <Text style={styles.buttonText}>Next</Text>
+            </TouchableOpacity>
+
+        </View>
+
+
+
+    </SafeAreaView>
     )
 }
+const styles = StyleSheet.create({
+    titleText: {
+        fontSize: 40,
+        textAlign: 'center',
+        fontFamily: 'ArialHebrew',
+        color: '#1EB3EA',
+    },
+    baseText: {
+        fontSize: 17,
+        textAlign: 'center',
+        fontFamily: 'ArialHebrew',
+        marginLeft: wp("5%"),
+        marginRight: wp("5%"),
+        lineHeight:25,
+        color: '#676363',
+        marginTop: 15,
+        margin: 15
+    },
+    buttonContainer: {
+        width: '50%',
+        aspectRatio: 6/3.5,
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderWidth: 0.5,
+        borderRadius: 15,
+        backgroundColor: '#1EB3EA',
+        overflow: 'hidden',
+        borderColor: '#1EB3EA',
+        margin: 20,
+    },
+    rowContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginLeft: 65
+    },
+    buttonText:{
+        color: 'white',
+        fontSize: 25
+    },
+    header: {
+        textAlign: 'center',
+        fontWeight: 'bold',
+        fontSize: 25,
+        textDecorationLine: 'underline'
+    },
+    question: {
+        textAlign: 'center',
+        fontWeight: 'bold',
+        fontSize: 30,
+    }
+});
