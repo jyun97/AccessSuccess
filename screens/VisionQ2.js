@@ -48,7 +48,7 @@ class VisionQ2 extends React.Component {
               <TextInput
                 placeholder="Enter number"
                 style={styles.input}
-                keyboardType={'numeric'}
+                keyboardType={'number-pad'}
                 onChangeText={answer => this.handleAnswer(answer)}
               />
               {!!this.state.inputError && (

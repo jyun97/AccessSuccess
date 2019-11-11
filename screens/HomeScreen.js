@@ -46,7 +46,7 @@ const HomeScreenModule = ({ navigation }) => (
 
             <TouchableOpacity activeOpacity={0.6}
                 style={styles.buttonContainer}
-                onPress={() => navigation.navigate('BoldText')}>
+                onPress={() => navigation.navigate('PreferenceInstr')}>
                 <Text style={styles.buttonText}>Take vision test</Text>
             </TouchableOpacity>
 

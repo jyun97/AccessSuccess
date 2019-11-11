@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Text, View, Image, TextInput, Button, StyleSheet, Keyboard, TouchableOpacity,
-	TouchableWithoutFeedback, KeyboardAvoidingView, SafeAreaView } from 'react-native';
+	TouchableWithoutFeedback, KeyboardAvoidingView, SafeAreaView, ProgressViewIOS } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import { storeAnswer } from '../screens/ResultStorage';
 
@@ -38,6 +38,7 @@ class VisionQ1 extends React.Component {
           <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
             <View style={styles.inner}>
               <Text style={styles.header}>Vision Test</Text>
+              <ProgressViewIOS progressTintColor="red" progress={0.36}/>
               <Text style={styles.question}>Q1. What number do you see in the circle below?</Text>
               <Text style={styles.subtext}>(If you are unsure, enter 0)</Text>
               <Image
@@ -48,7 +49,7 @@ class VisionQ1 extends React.Component {
               <TextInput
   							placeholder="Enter number"
                 style={styles.input}
-                keyboardType={'numeric'}
+                keyboardType={'number-pad'}
                 onChangeText={answer => this.handleAnswer(answer)}
               />
               {!!this.state.inputError && (
@@ -57,7 +58,7 @@ class VisionQ1 extends React.Component {
 
               <TouchableOpacity
               	style={styles.back}
-              	onPress={() => this.props.navigation.navigate('BoldText')}
+              	onPress={() => this.props.navigation.navigate('VisionQ1Instr')}
               >
               	<Text style={styles.buttonText}>Back</Text>
               </TouchableOpacity>

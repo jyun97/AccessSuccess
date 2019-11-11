@@ -24,7 +24,7 @@ class VisionQ8 extends React.Component {
     else {
       this.setState(() => ({ inputError: null }));
       storeAnswer("Q8", this.state.answer);
-      this.props.navigation.navigate('VisionQ9');
+      this.props.navigation.navigate('VisionQ9Instr');
     }
   }
 
@@ -48,7 +48,7 @@ class VisionQ8 extends React.Component {
               <TextInput
                 placeholder="Enter number"
                 style={styles.input}
-                keyboardType={'numeric'}
+                keyboardType={'number-pad'}
                 onChangeText={answer => this.handleAnswer(answer)}
               />
               {!!this.state.inputError && (

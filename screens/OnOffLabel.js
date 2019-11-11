@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, Image, TextInput, Button } from 'react-native';
+import { Text, View, Image, TextInput, Button, ProgressViewIOS } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
@@ -73,9 +73,10 @@ export default function OnOffLabel ({ navigation }) {
     <View style={{alignItems:"center"}}>
     	<Text h1 style={{fontWeight: "bold"}}>Vision Test</Text>
     	<Text h2 style={{fontWeight: "bold"}}>Q5</Text>
+        <ProgressViewIOS progressTintColor="red" progress={0.29}/>
     	<Text h2 style={{fontWeight: "bold"}}>Which do you prefer?</Text>
         <MultipleChoice/>
-	    <Button onPress={() => navigation.navigate('VisionQ1')} title="Next" />
+	    <Button onPress={() => navigation.navigate('VisionQ1Instr')} title="Next" />
     </View>
     )
 }
