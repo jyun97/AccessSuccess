@@ -17,9 +17,9 @@ class PreferenceInstr extends React.Component {
     return(
       <View style={styles.container}>
               <Text style={styles.header}>Vision Test</Text>
-              <Text style={styles.header}>Part 1 Instructions</Text>
+              <Text style={styles.header}>Part 1 Instructions {'\n'}</Text>
               <Text style={styles.question}>In the following questions, you will be shown two images of different settings.
-              Select the one you prefer. </Text>
+              Select the one you prefer. {'\n'}</Text>
               <Text style={styles.question}>If you would like to skip this section, click "Skip"</Text>
 
               <TouchableOpacity
@@ -62,8 +62,7 @@ const styles = StyleSheet.create({
   },
   question: {
     textAlign: 'center',
-    fontWeight: 'bold',
-    fontSize: 30,
+    fontSize: 25,
   },
   skip: {
     position: 'absolute',
@@ -73,9 +72,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     width: '40%',
     aspectRatio: 2/1,
-    borderWidth: 0.5,
+    borderWidth: 3,
     borderRadius: 15,
-    backgroundColor: '#147efb',
+    backgroundColor: 'black',
     overflow: 'hidden',
     borderColor: '#147efb',
     justifyContent: 'center',

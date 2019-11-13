@@ -18,9 +18,9 @@ class VisionQ1Instr extends React.Component {
     return(
       <View style={styles.container}>
               <Text style={styles.header}>Vision Test</Text>
-              <Text style={styles.header}>Part 2 Instructions</Text>
+              <Text style={styles.header}>Part 2 Instructions {'\n'}</Text>
               <Text style={styles.question}>In the following questions, you will be shown a circle with a number inside.
-              Enter the number you see. If you are unsure, enter 0. </Text>
+              Enter the number you see. If you are unsure, enter 0.  {'\n'} </Text>
               <Text style={styles.question}>If you would like to skip this section, click "Skip"</Text>
 
               <TouchableOpacity
@@ -63,8 +63,7 @@ const styles = StyleSheet.create({
   },
   question: {
     textAlign: 'center',
-    fontWeight: 'bold',
-    fontSize: 30,
+    fontSize: 25,
   },
   skip: {
     position: 'absolute',
@@ -72,10 +71,11 @@ const styles = StyleSheet.create({
     bottom: 250,
     alignItems: 'center',
     width: '40%',
+    height: '8%',
     aspectRatio: 2/1,
-    borderWidth: 0.5,
+    borderWidth: 3,
     borderRadius: 15,
-    backgroundColor: '#147efb',
+    backgroundColor: 'black',
     overflow: 'hidden',
     borderColor: '#147efb',
     justifyContent: 'center',

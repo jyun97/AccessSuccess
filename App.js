@@ -58,33 +58,18 @@ const MainNavigator = createStackNavigator({
   },
   BoldText: {
     screen: BoldText,
-    // navigationOptions: {
-    //   headerTitle: 'BoldText'
-    // }
   },
   Contrast: {
     screen: Contrast,
-    // navigationOptions: {
-    //   headerTitle: 'Contrast'
-    // }
   },
   ReduceTransparency: {
     screen: ReduceTransparency,
-    // navigationOptions: {
-    //   headerTitle: 'Transparent'
-    // }
   },
   ButtonShape: {
     screen: ButtonShape,
-    // navigationOptions: {
-    //   headerTitle: 'ButtonShape'
-    // }
   },
   OnOffLabel: {
     screen: OnOffLabel,
-    // navigationOptions: {
-    //   headerTitle: 'OnOffLabel'
-    // }
   },  
   VisionQ1Instr: {
     screen: VisionQ1Instr,
