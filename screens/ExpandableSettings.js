@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
       fontSize: 20,
       textAlign: 'center',
       fontFamily: 'ArialHebrew',
-      color: '#1EB3EA',
+      color: '#147efb',
   },
   baseText: {
       fontSize: 15,
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
   },
   container: {
     marginVertical: 10,
-      borderColor: '#1EB3EA',
+      borderColor: '#147efb',
       marginBottom: 10,
       flex:1
   },
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
       alignItems: 'center',
-      backgroundColor: '#1EB3EA',
+      backgroundColor: '#147efb',
       padding: 25,
       marginVertical: 5,
   },

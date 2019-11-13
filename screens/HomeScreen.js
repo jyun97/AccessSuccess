@@ -35,7 +35,7 @@ import React from 'react';
 import { Text, TouchableOpacity, View, Button, SafeAreaView, StyleSheet, Image} from 'react-native';
 import { widthPercentageToDP as wp} from "react-native-responsive-screen"; 
 import { createBottomTabNavigator } from 'react-navigation-tabs';
-import Settings from './Settings'
+import ExpandableSettings from './ExpandableSettings'
 
 const HomeScreenModule = ({ navigation }) => (
     <SafeAreaView style={{flex:1}}>
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         marginRight: 10,
         marginLeft: 10,
-        borderColor: '#1EB3EA',
+        borderColor: '#147efb',
         borderWidth: 1
     },
     buttonContainer: {
@@ -97,9 +97,9 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         borderWidth: 0.5,
         borderRadius: 15,
-        backgroundColor: '#1EB3EA',
+        backgroundColor: '#147efb',
         overflow: 'hidden',
-        borderColor: '#1EB3EA',
+        borderColor: '#147efb',
         margin: 20,
     },
     buttonText:{
@@ -113,7 +113,7 @@ const HomeScreen = createBottomTabNavigator({
     screen: HomeScreenModule
   },
   Settings: {
-    screen: Settings
+    screen: ExpandableSettings
   }
 });
 

@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
         fontSize: 40,
         textAlign: 'center',
         fontFamily: 'ArialHebrew',
-        color: '#1EB3EA',
+        color: '#147efb',
     },
     baseText: {
         fontSize: 17,
@@ -122,9 +122,9 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         borderWidth: 0.5,
         borderRadius: 15,
-        backgroundColor: '#1EB3EA',
+        backgroundColor: '#147efb',
         overflow: 'hidden',
-        borderColor: '#1EB3EA',
+        borderColor: '#147efb',
         margin: 20,
     },
     rowContainer: {

@@ -82,7 +82,7 @@ export default function BoldText ({ navigation }) {
 
         <TouchableOpacity
                 style={styles.buttonContainer}
-                onPress={() => navigation.navigate('Home')}>
+                onPress={() => navigation.navigate('PreferenceInstr')}>
                 <Text style={styles.buttonText}>Back</Text>
         </TouchableOpacity>
 
@@ -123,9 +123,9 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         borderWidth: 0.5,
         borderRadius: 15,
-        backgroundColor: '#1EB3EA',
+        backgroundColor: '#147efb',
         overflow: 'hidden',
-        borderColor: '#1EB3EA',
+        borderColor: '#147efb',
         margin: 20,
     },
     rowContainer: {

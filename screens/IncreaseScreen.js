@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         marginRight: 10,
         marginLeft: 10,
-        borderColor: '#1EB3EA',
+        borderColor: '#147efb',
         borderWidth: 1
     },
     midContainer: {
@@ -62,9 +62,9 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         borderWidth: 0.5,
         borderRadius: 15,
-        backgroundColor: '#1EB3EA',
+        backgroundColor: '#147efb',
         overflow: 'hidden',
-        borderColor: '#1EB3EA',
+        borderColor: '#147efb',
         margin: 5,
     },
     midText:{

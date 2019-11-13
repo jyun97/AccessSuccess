@@ -124,9 +124,9 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         borderWidth: 0.5,
         borderRadius: 15,
-        backgroundColor: '#1EB3EA',
+        backgroundColor: '#147efb',
         overflow: 'hidden',
-        borderColor: '#1EB3EA',
+        borderColor: '#147efb',
         margin: 20,
     },
     rowContainer: {

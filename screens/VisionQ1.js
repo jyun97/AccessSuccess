@@ -134,9 +134,9 @@ const styles = StyleSheet.create({
     aspectRatio: 2/1,
     borderWidth: 0.5,
     borderRadius: 15,
-    backgroundColor: '#1EB3EA',
+    backgroundColor: '#147efb',
     overflow: 'hidden',
-    borderColor: '#1EB3EA',
+    borderColor: '#147efb',
     justifyContent: 'center',
   },
   next: {
@@ -148,9 +148,9 @@ const styles = StyleSheet.create({
     aspectRatio: 2/1,
     borderWidth: 0.5,
     borderRadius: 15,
-    backgroundColor: '#1EB3EA',
+    backgroundColor: '#147efb',
     overflow: 'hidden',
-    borderColor: '#1EB3EA',
+    borderColor: '#147efb',
     justifyContent: 'center',
   },
   buttonText:{
