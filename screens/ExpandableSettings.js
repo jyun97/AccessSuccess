@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
       marginLeft: wp("5%"),
       marginRight: wp("5%"),
       lineHeight:25,
-      color: '#676363',
+      color: 'black',
       marginTop: 15,
   },
   descriptionText: {
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
       marginLeft: wp("5%"),
       marginRight: wp("5%"),
       lineHeight:25,
-      color: '#676363',
+      color: 'black',
       marginTop: 15,
   },
   boldText: {
@@ -43,27 +43,28 @@ const styles = StyleSheet.create({
       marginLeft: wp("5%"),
       marginRight: wp("5%"),
       lineHeight:25,
-      color: '#676363',
+      color: 'black',
       marginTop: 15,
   },
   container: {
     marginVertical: 10,
       borderColor: '#147efb',
       marginBottom: 10,
-      flex:1
+      flex:1,
   },
   ImageContainer: {
       aspectRatio: 1,
       width: '35%',
       alignItems: 'center',
       justifyContent: 'center',
-      marginTop: 15
+      marginTop: 10
   },
   buttonContainer: {
       alignItems: 'center',
       backgroundColor: '#147efb',
       padding: 25,
       marginVertical: 5,
+      borderRadius: 15
   },
   buttonText:{
       color: 'white',

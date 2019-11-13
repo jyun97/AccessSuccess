@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
         fontSize: 30,
         textAlign: 'center',
         fontFamily: 'ArialHebrew',
-        color: '#676363',
+        color: 'black',
         marginBottom: 15,
     },
     baseText: {
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
         marginLeft: wp("5%"),
         marginRight: wp("5%"),
         lineHeight:25,
-        color: '#676363',
+        color: 'black',
         marginTop: 15,
         margin: 15
     },
