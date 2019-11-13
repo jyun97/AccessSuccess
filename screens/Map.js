@@ -5,7 +5,7 @@ import { stringLiteral } from '@babel/types';
 
 export const mapResults = async() => {
   try {
-
+    getAnswer("Brenda")
     const keys = await AsyncStorage.getAllKeys();
     const results = await AsyncStorage.multiGet(keys);
     let totalBlind = 0;
@@ -88,10 +88,10 @@ export const mapResults = async() => {
         //Choice 1: normal, Choice 2: protanopia, choice 3: deuteranopia, choice 4: total
         else if (result[0] === "Q9" && result[1] !== "1") {
           	if (result[1] === "2") {
-    			protanopia = protanopia + 1;
+    			     protanopia = protanopia + 1;
           	}
           	else if (result[1] === "3") {
-    			deuteranopia = deuteranopia + 1;
+    			     deuteranopia = deuteranopia + 1;
           	}
             else if (result[1] === "4") {
                 totalBlind = totalBlind + 1;
@@ -99,29 +99,43 @@ export const mapResults = async() => {
         }
 	})
 
+    //Clear answers so test can be retaken
+    await AsyncStorage.removeItem("Q1")
+    await AsyncStorage.removeItem("Q2")
+    await AsyncStorage.removeItem("Q3")
+    await AsyncStorage.removeItem("Q4")
+    await AsyncStorage.removeItem("Q5")
+    await AsyncStorage.removeItem("Q6")
+    await AsyncStorage.removeItem("Q7")
+    await AsyncStorage.removeItem("Q8")
+    await AsyncStorage.removeItem("Q9")
+
     let rec = '';
     if (protanopia + deuteranopia + tritanopia + totalBlind === 0) {
-        rec = 'No accessibility settings recommended';
+          rec = 'No accessibility settings recommended';
     }
-	else if (protanopia > deuteranopia && protanopia > tritanopia && protanopia > totalBlind){
-        rec = 'Color Filters -> Red/Green Filter [Protanopia]';
-	}
-	else if (deuteranopia > protanopia && deuteranopia > tritanopia && deuteranopia > totalBlind){
-        rec = 'Color Filters -> Green/Red Filter [Deuteranopia]';
-	}
-  else if (tritanopia > protanopia && tritanopia > deuteranopia && tritanopia > totalBlind) {
-        rec = 'Color Filters -> Blue/Yellow Filter [Tritanopia]';
-  }
-	else if (totalBlind > deuteranopia && totalBlind > protanopia && totalBlind > tritanopia){
-        rec = 'Color Filters -> Graysale Filter';
-	}
-	else {
-        // Inconclusive
-		rec = 'Color results inconclusive. Try Color Filters -> Graysale Filter or retake test';
-	}
+  	else if (protanopia > deuteranopia && protanopia > tritanopia && protanopia > totalBlind){
+          rec = 'Color Filters -> Red/Green Filter [Protanopia]';
+  	}
+  	else if (deuteranopia > protanopia && deuteranopia > tritanopia && deuteranopia > totalBlind){
+          rec = 'Color Filters -> Green/Red Filter [Deuteranopia]';
+  	}
+    else if (tritanopia > protanopia && tritanopia > deuteranopia && tritanopia > totalBlind) {
+          rec = 'Color Filters -> Blue/Yellow Filter [Tritanopia]';
+    }
+  	else if (totalBlind > deuteranopia && totalBlind > protanopia && totalBlind > tritanopia){
+          rec = 'Color Filters -> Graysale Filter';
+  	}
+  	else {
+  		rec = 'Color results inconclusive. Try Color Filters -> Graysale Filter or retake test';
+  	}
 
+    //Get username and store recommendation to user
+    const user = await AsyncStorage.getItem("user");
+    storeAnswer(user, rec)
     return rec;
-    } catch (error) {
+
+  } catch (error) {
         console.log(error, "Could not fetch user results")
 	}
 }
