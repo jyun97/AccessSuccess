@@ -12,7 +12,7 @@ const DICT =
   'N': 
   { 
     title: 'No accessibility settings recommended',
-    description: undefined,
+    description: "",
     steps: [],
   },
   'P': 
@@ -43,11 +43,13 @@ const RECS = []
 class ResultsScreen extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { results: [], activeSections: [] };
-
+    this.state = { loading: false,results: [], activeSections: [] };
     mapResults()
       .then((result) => {
-        this.setState({results: result});
+            let match = DICT[result]
+            RECS.push(match)
+            this.setState({loading: true})
+            
     })
       .catch(err => {
         console.log(err);
@@ -83,13 +85,12 @@ class ResultsScreen extends React.Component {
   };
 
   render() {
-        this.state.results.map( rec => {
-            let match = DICT[rec]
-            RECS.push(match)
-        })
-
+    const {loading} = this.state
 		return(
-            <SafeAreaView style={{flex:1}}>
+      <SafeAreaView style={{flex:1}}>
+      {
+        loading &&
+            
             <View style={styles.container}>
             <ScrollView>
 
@@ -119,7 +120,9 @@ class ResultsScreen extends React.Component {
                 <View style={{flex:2}}/>
             </ScrollView>
             </View>
-            </SafeAreaView>
+           
+          }
+           </SafeAreaView>
 	  )
   }
 }
