@@ -38,16 +38,18 @@ const DICT =
   },
 }
 
-const RECS = []
 
 class ResultsScreen extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { loading: false,results: [], activeSections: [] };
+    this.state = { loading: false, recs: [], activeSections: [], noRecs: false };
     mapResults()
       .then((result) => {
+            if (result === 'N') {
+                this.setState({noRecs: true});
+            }
             let match = DICT[result]
-            RECS.push(match)
+            this.state.recs.push(match)
             this.setState({loading: true})
             
     })
@@ -86,6 +88,7 @@ class ResultsScreen extends React.Component {
 
   render() {
     const {loading} = this.state
+    const {noRecs} = this.state
 		return(
       <SafeAreaView style={{flex:1}}>
       {
@@ -99,15 +102,23 @@ class ResultsScreen extends React.Component {
 
                 <View style={styles.ImageContainer}>
                 </View>
-                    <Text style={styles.text}>{'\n'}Recommended accessibility setting(s) to turn on: </Text>
-
+                    {
+                        noRecs === false &&
+                        <Text style={styles.resultText}>{'\n'}No accessibility settings recommended.</Text>
+                    }
+                    {
+                        noRecs &&
+                      <View>
+                      <Text style={styles.text}>{'\n'}Recommended accessibility setting(s) to turn on: </Text>
                       <Accordion
-                          sections={RECS}
+                          sections={this.state.recs}
                           activeSections={this.state.activeSections}
                           renderHeader={this._renderHeader}
                           renderContent={this._renderContent}
                           onChange={this._updateSections}
                       />
+                      </View>
+                    }
                     
                     <TouchableOpacity activeOpacity={0.6}
                         style={styles.buttonContainer}
