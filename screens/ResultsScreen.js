@@ -42,15 +42,17 @@ const DICT =
 class ResultsScreen extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { loading: false, recs: [], activeSections: [], noRecs: false };
+    this.state = {  noRecs: false, loading: false, recs: [], activeSections: [],};
     mapResults()
       .then((result) => {
-            if (result === 'N') {
+            //Alert.alert(JSON.stringify(result))
+            if (result == "N") {
                 this.setState({noRecs: true});
             }
             let match = DICT[result]
             this.state.recs.push(match)
             this.setState({loading: true})
+            //Alert.alert(JSON.stringify(this.state))
             
     })
       .catch(err => {
@@ -103,11 +105,11 @@ class ResultsScreen extends React.Component {
                 <View style={styles.ImageContainer}>
                 </View>
                     {
-                        noRecs === false &&
+                        noRecs &&
                         <Text style={styles.resultText}>{'\n'}No accessibility settings recommended.</Text>
                     }
                     {
-                        noRecs &&
+                        noRecs === false &&
                       <View>
                       <Text style={styles.text}>{'\n'}Recommended accessibility setting(s) to turn on: </Text>
                       <Accordion
