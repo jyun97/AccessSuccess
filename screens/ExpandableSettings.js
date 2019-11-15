@@ -101,7 +101,7 @@ const SECTIONS = [
     title: 'Display & Text Size',
     description: 'If you have color blindness or other vision challenges, you can customize the display settings to make the screen easier to see',
     content: ['a. Bold Text:',
-    'Adjust brightness and contrast based on ambient light settings',
+    'Displays text in boldface characters for increased legibility',
     'b. Larger text:',
     'Allows you to adjust text size',
     'c. Button Shapes',

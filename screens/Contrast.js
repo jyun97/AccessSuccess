@@ -3,6 +3,7 @@ import { Text, View, Image, TextInput, Button, StyleSheet, ProgressViewIOS } fro
 import { StackNavigator } from 'react-navigation';
 import { widthPercentageToDP as wp} from "react-native-responsive-screen"; 
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import { storeAnswer } from '../screens/ResultStorage';
 
 class MultipleChoice extends React.Component{
     constructor (){
@@ -16,6 +17,7 @@ class MultipleChoice extends React.Component{
         }
         else{
             this.setState({selectedChoice: choiceNum})
+            storeAnswer("contrast", choiceNum)
         }
     }
 

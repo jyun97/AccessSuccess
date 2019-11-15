@@ -12,7 +12,33 @@ export const mapResults = async() => {
   	let deuteranopia = 0;
     let tritanopia = 0;
 
+    let rec = [];
+
     results.map(result => {
+        //Bold
+        if (result[0] === "bold" && result[1] === 2) {
+           rec.push("bold")
+        }
+
+        //Contrast
+        if (result[0] === "contrast" && result[1] === 2) {
+           rec.push("contrast")
+        }
+
+        //ReduceTransparency
+        if (result[0] === "trans" && result[1] === 2) {
+           rec.push("trans")
+        }
+
+        //ButtonShape
+        if (result[0] === "button" && result[1] === 2) {
+           rec.push("button")
+        }
+
+        //OnOffLabel
+        if (result[0] === "onOff" && result[1] === 2) {
+           rec.push("onOff")
+        }
 
         //Plate 1
         if (result[0] === "Q1" && result[1] !== "8") {
@@ -100,6 +126,11 @@ export const mapResults = async() => {
 	})
 
     //Clear answers so test can be retaken
+    await AsyncStorage.removeItem("bold")
+    await AsyncStorage.removeItem("contrast")
+    await AsyncStorage.removeItem("trans")
+    await AsyncStorage.removeItem("button")
+    await AsyncStorage.removeItem("onOff")
     await AsyncStorage.removeItem("Q1")
     await AsyncStorage.removeItem("Q2")
     await AsyncStorage.removeItem("Q3")
@@ -110,7 +141,6 @@ export const mapResults = async() => {
     await AsyncStorage.removeItem("Q8")
     await AsyncStorage.removeItem("Q9")
 
-    let rec = [];
     if (protanopia + deuteranopia + tritanopia + totalBlind === 0) {
           rec.push('N');
     }

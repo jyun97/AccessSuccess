@@ -36,6 +36,41 @@ const DICT =
     steps: ['1. Settings > Accessibility > Display & Text Size > Color Filters',
     '2. Slide to turn on Color Filters and select Blue/Yellow Filter']
   },
+  'bold': 
+  { 
+    title: 'Bold Text',
+    description: 'Displays text in boldface characters for increased legibility',
+    steps: ['1. Settings > Accessibility > Display & Text Size',
+    '2. Slide to turn on Bold Text']
+  },
+  'contrast': 
+  { 
+    title: 'Increase Contrast',
+    description: 'Increase color contrast between app foreground and background colors. This setting improves the contrast and legibility by altering color and text styling',
+    steps: ['1. Settings > Accessibility > Display & Text Size',
+    '2. Slide to turn on Increase Contrast']
+  },
+  'trans': 
+  { 
+    title: 'Reduce Transparency',
+    description: 'Improve color contrast between app foreground and background colors. Reduces transparency and blurs on some backgrounds',
+    steps: ['1. Settings > Accessibility > Display & Text Size',
+    '2. Slide to turn on Reduce Transparency']
+  },
+  'button': 
+  { 
+    title: 'Button Shapes',
+    description: 'Underlines text you can tap.',
+    steps: ['1. Settings > Accessibility > Display & Text Size',
+    '2. Slide to turn on Button Shapes']
+  },
+  'onOff': 
+  { 
+    title: 'On/Off Labels',
+    description: 'Adds shapes on On/Off labels to make it clear what’s on and off. Indicates switches turned on with “1” and switches turned off with \'0\'',
+    steps: ['1. Settings > Accessibility > Display & Text Size',
+    '2. Slide to turn on On/Off Labels']
+  },
 }
 
 
@@ -45,7 +80,7 @@ class ResultsScreen extends React.Component {
     this.state = {  noRecs: false, loading: false, recs: [], activeSections: [],};
     mapResults()
       .then((result) => {
-            //Alert.alert(JSON.stringify(result))
+            Alert.alert(JSON.stringify(result))
             if (result == "N") {
                 this.setState({noRecs: true});
             }
