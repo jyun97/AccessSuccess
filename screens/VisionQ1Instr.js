@@ -11,7 +11,7 @@ class VisionQ1Instr extends React.Component {
   }
 
   handleSubmit() {
-      this.props.navigation.navigate('VisionQ1');
+      this.props.navigation.navigate('VisionQ9');
   }
 
   render() {

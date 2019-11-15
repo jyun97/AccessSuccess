@@ -5,7 +5,6 @@ import { stringLiteral } from '@babel/types';
 
 export const mapResults = async() => {
   try {
-    getAnswer("Brenda")
     const keys = await AsyncStorage.getAllKeys();
     const results = await AsyncStorage.multiGet(keys);
     let totalBlind = 0;
@@ -14,6 +13,7 @@ export const mapResults = async() => {
     let tritanopia = 0;
 
     results.map(result => {
+
         //Plate 1
         if (result[0] === "Q1" && result[1] !== "8") {
             if (result[1] === "3") {
@@ -110,29 +110,29 @@ export const mapResults = async() => {
     await AsyncStorage.removeItem("Q8")
     await AsyncStorage.removeItem("Q9")
 
-    let rec = '';
+    let rec = [];
     if (protanopia + deuteranopia + tritanopia + totalBlind === 0) {
-          rec = 'No accessibility settings recommended';
+          rec.push('N');
     }
   	else if (protanopia > deuteranopia && protanopia > tritanopia && protanopia > totalBlind){
-          rec = 'Color Filters -> Red/Green Filter [Protanopia]';
+          rec.push('P');
   	}
   	else if (deuteranopia > protanopia && deuteranopia > tritanopia && deuteranopia > totalBlind){
-          rec = 'Color Filters -> Green/Red Filter [Deuteranopia]';
+          rec.push('D');
   	}
     else if (tritanopia > protanopia && tritanopia > deuteranopia && tritanopia > totalBlind) {
-          rec = 'Color Filters -> Blue/Yellow Filter [Tritanopia]';
+          rec.push('T');
     }
   	else if (totalBlind > deuteranopia && totalBlind > protanopia && totalBlind > tritanopia){
-          rec = 'Color Filters -> Graysale Filter';
+          rec.push('G');
   	}
   	else {
-  		rec = 'Color results inconclusive. Try Color Filters -> Graysale Filter or retake test';
+  		rec.push('I');
   	}
 
     //Get username and store recommendation to user
-    const user = await AsyncStorage.getItem("user");
-    storeAnswer(user, rec)
+    const username = await AsyncStorage.getItem("currentUser");
+    storeAnswer(username, rec)
     return rec;
 
   } catch (error) {
