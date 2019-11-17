@@ -21,6 +21,7 @@ import VisionQ9Instr from './screens/VisionQ9Instr'
 import VisionQ9 from './screens/VisionQ9'
 
 import ResultsScreen from './screens/ResultsScreen'
+import PrevResults from './screens/PrevResults'
 import ZoomScreen from './screens/ZoomScreen'
 import MagnifierScreen from './screens/MagnifierScreen'
 import DisplayScreen from './screens/DisplayScreen'
@@ -52,6 +53,9 @@ const MainNavigator = createStackNavigator({
     navigationOptions: {
     headerTitle: 'Home'
     }
+  },
+  PrevResults: {
+    screen: PrevResults,
   },
   PreferenceInstr: {
     screen: PreferenceInstr,
@@ -106,6 +110,9 @@ const MainNavigator = createStackNavigator({
   },
   ResultsScreen: {
     screen: ResultsScreen,
+    navigationOptions: {
+      headerLeft: null,
+    }
   },
   ZoomScreen: {
     screen: ZoomScreen,

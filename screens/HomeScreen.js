@@ -52,7 +52,7 @@ const HomeScreenModule = ({ navigation }) => (
 
             <TouchableOpacity activeOpacity={0.6}
                 style={styles.buttonContainer}
-                onPress={() => navigation.navigate('HomeScreen')}>
+                onPress={() => navigation.navigate('PrevResults')}>
                 <Text style={styles.buttonText}>View previous results</Text>
             </TouchableOpacity>
         <View style={{flex:2}}/>

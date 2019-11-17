@@ -36,6 +36,13 @@ const DICT =
     steps: ['1. Settings > Accessibility > Display & Text Size > Color Filters',
     '2. Slide to turn on Color Filters and select Blue/Yellow Filter']
   },
+  'G': 
+  { 
+    title: 'Grayscale Color Filter',
+    description: 'Changes screen display to gray instead of color for those with total colorblindness',
+    steps: ['1. Settings > Accessibility > Display & Text Size > Color Filters',
+    '2. Slide to turn on Color Filters and select Grayscale']
+  },
   'bold': 
   { 
     title: 'Bold Text',
@@ -80,15 +87,12 @@ class ResultsScreen extends React.Component {
     this.state = {  noRecs: false, loading: false, recs: [], activeSections: [],};
     mapResults()
       .then((result) => {
-            Alert.alert(JSON.stringify(result))
             if (result == "N") {
                 this.setState({noRecs: true});
             }
             let match = DICT[result]
             this.state.recs.push(match)
-            this.setState({loading: true})
-            //Alert.alert(JSON.stringify(this.state))
-            
+            this.setState({loading: true})   
     })
       .catch(err => {
         console.log(err);
