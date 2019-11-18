@@ -161,7 +161,6 @@ export const mapResults = async() => {
   	}
 
     //Get username and store recommendation to user
-    storeAnswer("currentUser", "Brenda");
     const username = await AsyncStorage.getItem("currentUser");
     storeAnswer(JSON.stringify(username), JSON.stringify(rec));
     return rec;
