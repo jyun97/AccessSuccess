@@ -1,84 +1,92 @@
-import React from 'react'
-import { Text, View, StyleSheet, SafeAreaView, FlatList,TouchableOpacity, Image } from 'react-native';
+import React from 'react';
+import { Text, TouchableOpacity, View, Button, SafeAreaView, StyleSheet, Image} from 'react-native';
 import { widthPercentageToDP as wp} from "react-native-responsive-screen"; 
+import { createBottomTabNavigator } from 'react-navigation-tabs';
+import ExpandableSettings from './ExpandableSettings'
+import { storeAnswer, getAnswer } from '../screens/ResultStorage';
+import AsyncStorage from '@react-native-community/async-storage';
+import { ScrollView } from 'react-native-gesture-handler';
 
-// const people = [
-//     {
-//         id: "1",
-//         title: "Enya Chen",
-//     },
-//     {
-//         id: "2",
-//         title: "Jeremy Yun"
-//     },
-//     {
-//         id: "3",
-//         title: "Jeremy Yun"
-//     },
-//     {
-//         id: "4",
-//         title: "Rayka Devaprasad"
-//     }
-// ];
-
-// function Item({title}) {
-//     return(
-//         <View style={styles.item}>
-//             <Text style={styles.title}>{title}</Text>
-//         </View> 
-//     );
-// }
-
-// export default function App() {
-//     const 
-//     return (
-//       <SafeAreaView style={styles.container2}>
-//         <FlatList
-//           data={people}
-//           renderItem={({ item }) => <Item title={item.title} />}
-//           keyExtractor={item => item.id}
-//         />
-//       </SafeAreaView>
-//     );
-//   }
-
-const LoginScreen = ({ navigation }) => (
-    <SafeAreaView style={{flex:1}}>
-    <View style={styles.container}>
-
-        <View style={{flex:1}}/>
-
-        <Text style={styles.baseText}>Please select an account.</Text>
-            <TouchableOpacity activeOpacity={0.6}
-                style={styles.buttonContainer}
-                onPress={() => navigation.navigate('HomeScreen')}>
-                <Text style={styles.buttonText}>Brenda</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity activeOpacity={0.6}
-                style={styles.buttonContainer}
-                onPress={() => navigation.navigate('HomeScreen')}>
-                <Text style={styles.buttonText}>George</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity activeOpacity={0.6}
-                style={styles.buttonContainer}
-                onPress={() => navigation.navigate('HomeScreen')}>
-                <Text style={styles.buttonText}>Jason</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity activeOpacity={0.6}
-                style={styles.buttonContainer}
-                onPress={() => navigation.navigate('HomeScreen')}>
-                <Text style={styles.buttonText}>Jade</Text>
-            </TouchableOpacity>
-
-        <View style={{flex:2}}/>
+class LoginScreen extends React.Component {
+    async componentDidMount(){
+        const accounts = await AsyncStorage.getItem("existingAccounts");
+        // accounts = "Brenda George Jason Jade"
+        // var accounts = ""
         
-    </View>
-    </SafeAreaView>
-  )
+        var list = accounts.split(" ")
+        list = list.filter(v=>v!='');
 
+        if(list == null || list == ""){
+            this.setState({ noAccounts: 1 })
+        }
+        else{
+            this.setState({accountList: list})
+        }
+    }
+
+    constructor(props) {
+      super(props);
+      this.state = { accountList: [], noAccounts: 0 };
+    }
+
+    async combinedFunctions(data){
+        this.props.navigation.navigate('HomeScreen');
+        data = data.replace(/['"]+/g, '');
+        storeAnswer("currentUser", data);
+    }
+
+    displayText(){
+        if(this.state.noAccounts == 0){
+            return <Text style={styles.baseText}>Please select an account.</Text>
+        }
+    }
+
+    skipSpaces(){
+
+    }
+
+    accList(){
+        if(this.state.noAccounts == 1){
+            return(
+                <View style={styles.innerContainer}>
+                    <Text style={styles.baseText}>No accounts created on this device yet.</Text>
+                    <TouchableOpacity activeOpacity={0.6}
+                        style={styles.buttonContainer}
+                        onPress={() => this.props.navigation.navigate('CreateAccount')}>
+                        <Text style={styles.buttonText}>Create Account</Text>
+                    </TouchableOpacity>
+                </View>
+            )
+        }
+        else{
+            return this.state.accountList.map((data) => {
+                return(
+                    <View style={styles.innerContainer}>
+                    <TouchableOpacity activeOpacity={0.6}
+                        style={styles.buttonContainer}
+                        onPress={() => this.combinedFunctions(JSON.stringify(data))}>
+                        <Text style={styles.buttonText}>{data}</Text>
+                    </TouchableOpacity>
+                    </View>
+                )
+            })
+        }
+    }
+  
+    render() {
+        return(
+        <SafeAreaView style={{flex:1}}>
+            <View style={styles.container}>
+                <View style={{flex:1}}/>
+                        {this.displayText()}
+                        {this.accList()}
+                <View style={{flex:2}}/>
+            </View>
+        </SafeAreaView>
+      )
+    }
+  }
+  
   const styles = StyleSheet.create({
     titleText: {
         fontSize: 40,
@@ -96,6 +104,9 @@ const LoginScreen = ({ navigation }) => (
         color: 'black',
         marginTop: 15,
         margin: 15
+    },
+    innerContainer:{
+        alignItems: 'center',
     },
     container: {
         width: '95%',
@@ -125,97 +136,4 @@ const LoginScreen = ({ navigation }) => (
         fontSize: 20
     }
 });
-
-
-// const styles = StyleSheet.create({
-//     titleText: {
-//         fontSize: 40,
-//         textAlign: 'center',
-//         fontFamily: 'ArialHebrew',
-//         color: '#1EB3EA',
-//     },
-//     baseText: {
-//         fontSize: 17,
-//         textAlign: 'center',
-//         fontFamily: 'ArialHebrew',
-//         marginLeft: wp("5%"),
-//         marginRight: wp("5%"),
-//         lineHeight:25,
-//         color: '#676363',
-//         marginTop: 15,
-//         margin: 15
-//     },
-//     container: {
-//         width: '95%',
-//         height:'100%',
-//         alignItems: 'center',
-//         marginTop: 10,
-//         marginBottom: 10,
-//         marginRight: 10,
-//         marginLeft: 10,
-//         borderColor: '#1EB3EA',
-//         borderWidth: 1
-//     },
-//     container2: {
-//         flex: 1,
-//     },
-//     item: {
-//         backgroundColor: '#f9c2ff',
-//         padding: 20,
-//         marginVertical: 8,
-//         marginHorizontal: 16,
-//     },
-//     title: {
-//         fontSize: 32,
-//     }
-// });
 export default LoginScreen
-
-// import React, { Component } from 'react'
-// import { Text, View, TouchableOpacity, StyleSheet } from 'react-native'
-   
-// class List extends Component {
-//    state = {
-//       names: [
-//          {
-//             id: 0,
-//             name: 'Ben',
-//          },
-//          {
-//             id: 1,
-//             name: 'Susan',
-//          },
-//          {
-//             id: 2,
-//             name: 'Robert',
-//          },
-//          {
-//             id: 3,
-//             name: 'Mary',
-//          }
-//       ]
-//    }
-//    alertItemName = (item) => {
-//       alert(item.name)
-//    }
-
-//    render() {
-//       return (
-//          <View>
-//             {
-//                this.state.names.map((item, index) => (
-//                   <TouchableOpacity
-//                      key = {item.id}
-//                      style = {styles.container}
-//                      onPress = {() => this.alertItemName(item)}>
-//                      <Text style = {styles.text}>
-//                         {item.name}
-//                      </Text>
-//                   </TouchableOpacity>
-//                ))
-//             }
-//          </View>
-//       )
-//    }
-// }
-// export default List

@@ -26,7 +26,7 @@ const FirstScreen = ({ navigation }) => (
 
             <TouchableOpacity activeOpacity={0.6}
                 style={styles.buttonContainer}
-                onPress={() => navigation.navigate('FirstScreen')}>
+                onPress={() => navigation.navigate('CreateAccount')}>
                 <Text style={styles.buttonText}>Create a new account</Text>
             </TouchableOpacity>
         <View style={{flex:2}}/>
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#147efb',
         overflow: 'hidden',
         borderColor: '#147efb',
-        margin: 20,
+        margin: 20
     },
     buttonText:{
         color: 'white',

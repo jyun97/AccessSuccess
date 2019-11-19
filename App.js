@@ -5,6 +5,7 @@ import Settings from './screens/Settings'
 import PreferenceInstr from './screens/PreferenceInstr'
 import BoldText from './screens/BoldText'
 import Contrast from './screens/Contrast'
+import CreateAccount from './screens/CreateAccount'
 import ReduceTransparency from './screens/ReduceTransparency'
 import ButtonShape from './screens/ButtonShape'
 import OnOffLabel from './screens/OnOffLabel'
@@ -51,7 +52,8 @@ const MainNavigator = createStackNavigator({
   HomeScreen: {
     screen: HomeScreen,
     navigationOptions: {
-    headerTitle: 'Home'
+      headerTitle: 'Home',
+      headerLeft: null
     }
   },
   PrevResults: {
@@ -131,6 +133,12 @@ const MainNavigator = createStackNavigator({
   },
   DiffScreen: {
     screen: DiffScreen,
+  },
+  CreateAccount: {
+    screen: CreateAccount,
+    navigationOptions: {
+      headerLeft: null,
+    }
   }
 })
 

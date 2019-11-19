@@ -1,66 +1,97 @@
-// import React from 'react'
-// import { Text, View, Button, StyleSheet } from 'react-native';
-// import { stringLiteral } from '@babel/types';
-
-// const HomeScreen = ({ navigation }) => (
-
-//     <View style={styles.container}>
-//         <Text style={styles.heading}>Welcome Brenda!</Text>
-  
-//         <Button style={styles.buttons}onPress={() => navigation.navigate('BoldText')} title="Take vision test" />
-//         <Button title="View previous results" />
-//     </View>
-//   )
-
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     alignItems: 'center'
-//   },
-//   heading: {
-//   	fontWeight: 'bold',
-//   	fontSize: 20, 
-//   	textAlign: 'center',
-//   	marginTop: 50
-//   },
-//   buttons: {
-//   	marginTop: 90
-//   }
-// })
-
-// export default HomeScreen
 
 import React from 'react';
 import { Text, TouchableOpacity, View, Button, SafeAreaView, StyleSheet, Image} from 'react-native';
 import { widthPercentageToDP as wp} from "react-native-responsive-screen"; 
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import ExpandableSettings from './ExpandableSettings'
+import { storeAnswer, getAnswer } from '../screens/ResultStorage';
+import { StackActions, NavigationActions } from 'react-navigation';
+import AsyncStorage from '@react-native-community/async-storage';
 
-const HomeScreenModule = ({ navigation }) => (
-    <SafeAreaView style={{flex:1}}>
-    <View style={styles.container}>
+class HomeScreenModule extends React.Component {
+    async componentDidMount(){
+        const user = await getAnswer("currentUser")
+        this.setState({userName: user})
+    }
 
-        <View style={{flex:1}}/>
-        <Text style={styles.titleText}>Welcome Brenda!</Text>
+    constructor(props) {
+      super(props);
+      this.state = { userName: ''};
+    }
 
-            <TouchableOpacity activeOpacity={0.6}
-                style={styles.buttonContainer}
-                onPress={() => navigation.navigate('PreferenceInstr')}>
-                <Text style={styles.buttonText}>Take vision test</Text>
-            </TouchableOpacity>
+    async removeItemValue(key) {
+        try{
+            await AsyncStorage.removeItem(key);
+            return true;
+        }
+        catch(exception){
+            return false;
+        }
+    }
 
-            <TouchableOpacity activeOpacity={0.6}
-                style={styles.buttonContainer}
-                onPress={() => navigation.navigate('PrevResults')}>
-                <Text style={styles.buttonText}>View previous results</Text>
-            </TouchableOpacity>
-        <View style={{flex:2}}/>
+   resetStack(){
+    const resetAction = StackActions.reset({
+        index: 0,
+        actions: [NavigationActions.navigate({ routeName: 'FirstScreen' })],
+      });
+
+    this.props.navigation.dispatch(resetAction);
+   }
+
+   async deleteAccount(){
+        const accounts = await AsyncStorage.getItem("existingAccounts");
+        var temp = accounts;
+
+        if(temp != null){
+            if(temp.indexOf(temp) !== -1){
+                temp = temp.replace(this.state.userName, '');
+            }
+            storeAnswer("existingAccounts", temp);
+        }
+
+       this.resetStack();
+   }
+
+    render() {
+          return(
+            <SafeAreaView style={{flex:1}}>
+            <View style={styles.container}>
         
-    </View>
-    </SafeAreaView>
-  )
-const styles = StyleSheet.create({
+                <View style={{flex:1}}/>
+                <Text style={styles.titleText}>Welcome {this.state.userName}!</Text>
+        
+                    <TouchableOpacity activeOpacity={0.6}
+                        style={styles.buttonContainer}
+                        onPress={() => this.props.navigation.navigate('PreferenceInstr')}>
+                        <Text style={styles.buttonText}>Take vision test</Text>
+                    </TouchableOpacity>
+        
+                    <TouchableOpacity activeOpacity={0.6}
+                        style={styles.buttonContainer}
+                        onPress={() => this.props.navigation.navigate('PrevResults')}>
+                        <Text style={styles.buttonText}>View previous results</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity activeOpacity={0.6}
+                        style={styles.logout}
+                        onPress={() => this.resetStack()}>
+                        <Text style={styles.logoutText}>Logout</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity activeOpacity={0.6}
+                        style={styles.delete}
+                        onPress={() => this.deleteAccount()}>
+                        <Text style={styles.logoutText}>Delete Account</Text>
+                    </TouchableOpacity>
+                <View style={{flex:2}}/>
+                
+            </View>
+            </SafeAreaView>
+        )
+    }
+  }
+  
+  const styles = StyleSheet.create({
     titleText: {
         fontSize: 30,
         textAlign: 'center',
@@ -105,7 +136,39 @@ const styles = StyleSheet.create({
     buttonText:{
         color: 'white',
         fontSize: 20
-    }
+    },
+    logout:{
+        width: '50%',
+        height: '7%',
+        aspectRatio: 5/1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderWidth: 0.5,
+        borderRadius: 15,
+        backgroundColor: 'red',
+        overflow: 'hidden',
+        borderColor: 'red',
+        margin: 20,
+        bottom: -140
+    },
+    logoutText:{
+        color: 'white',
+        fontSize: 17
+    },
+    delete:{
+        width: '50%',
+        height: '7%',
+        aspectRatio: 5/1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderWidth: 0.5,
+        borderRadius: 15,
+        backgroundColor: 'black',
+        overflow: 'hidden',
+        borderColor: 'black',
+        margin: 20,
+        bottom: -130
+    },
 });
 
 const HomeScreen = createBottomTabNavigator({
