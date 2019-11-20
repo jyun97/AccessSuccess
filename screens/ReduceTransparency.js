@@ -18,7 +18,7 @@ class MultipleChoice extends React.Component{
         }
         else{
             this.setState({selectedChoice: choiceNum})
-            storeAnswer("trans", choiceNum)
+            storeAnswer("trans", JSON.stringify(choiceNum))
         }
     }
 

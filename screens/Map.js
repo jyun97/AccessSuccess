@@ -16,27 +16,27 @@ export const mapResults = async() => {
 
     results.map(result => {
         //Bold
-        if (result[0] === "bold" && result[1] === 2) {
+        if (result[0] === "bold" && result[1] === "2") {
            rec.push("bold")
         }
 
         //Contrast
-        if (result[0] === "contrast" && result[1] === 2) {
+        if (result[0] === "contrast" && result[1] === "2") {
            rec.push("contrast")
         }
 
         //ReduceTransparency
-        if (result[0] === "trans" && result[1] === 2) {
+        if (result[0] === "trans" && result[1] === "2") {
            rec.push("trans")
         }
 
         //ButtonShape
-        if (result[0] === "button" && result[1] === 2) {
+        if (result[0] === "button" && result[1] === "2") {
            rec.push("button")
         }
 
         //OnOffLabel
-        if (result[0] === "onOff" && result[1] === 2) {
+        if (result[0] === "onOff" && result[1] === "2") {
            rec.push("onOff")
         }
 

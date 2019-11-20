@@ -197,7 +197,7 @@ const styles = StyleSheet.create({
   submit: {
   	position: 'absolute',
     right: -25,
-    bottom: -250,
+    bottom: 0,
     width: '25%',
     height: '20%',
     aspectRatio: 2/1,
