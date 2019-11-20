@@ -92,7 +92,15 @@ class PrevResults extends React.Component {
   async getResults() {
     const username = await AsyncStorage.getItem("currentUser");
     const prevResults = await AsyncStorage.getItem(JSON.stringify(username));
-    JSON.parse(prevResults).map((result) => {
+    //Not taken test yet
+    if (prevResults === null) {
+      this.setState({noRecs: true});
+      this.state.recs.push("N");
+      this.setState({loading: true});
+    }
+    //Else load prev results
+    else {
+        JSON.parse(prevResults).map((result) => {
         if (result == "N") {
             this.setState({noRecs: true});
         }
@@ -102,7 +110,8 @@ class PrevResults extends React.Component {
         let match = DICT[result]
         this.state.recs.push(match)
         this.setState({loading: true})   
-    })
+      })  
+    }
   }
 
    _renderHeader = rec => {
