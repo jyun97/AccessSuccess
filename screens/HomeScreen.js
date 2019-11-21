@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Text, TouchableOpacity, View, Button, SafeAreaView, StyleSheet, Image} from 'react-native';
+import { Text, TouchableOpacity, View, Button, Alert, SafeAreaView, StyleSheet, Image} from 'react-native';
 import { widthPercentageToDP as wp} from "react-native-responsive-screen"; 
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import ExpandableSettings from './ExpandableSettings'
@@ -38,6 +38,18 @@ class HomeScreenModule extends React.Component {
     this.props.navigation.dispatch(resetAction);
    }
 
+   deleteAlert(){
+        Alert.alert(
+            'Alert',
+            'Are you sure you want to delete your account?',
+            [
+            {text: 'OK', onPress: () => this.deleteAccount()},
+            {text: 'Cancel', style: 'cancel'},
+            ],
+            { cancelable: false }
+        )
+   }
+
    async deleteAccount(){
         const accounts = await AsyncStorage.getItem("existingAccounts");
         var temp = accounts;
@@ -49,7 +61,12 @@ class HomeScreenModule extends React.Component {
             storeAnswer("existingAccounts", temp);
         }
 
-       this.resetStack();
+        const username = await AsyncStorage.getItem("currentUser");
+        this.removeItemValue(username);
+        var name = username + "pass";
+        this.removeItemValue(name);
+
+        this.resetStack();
    }
 
     render() {
@@ -80,7 +97,7 @@ class HomeScreenModule extends React.Component {
 
                     <TouchableOpacity activeOpacity={0.6}
                         style={styles.delete}
-                        onPress={() => this.deleteAccount()}>
+                        onPress={() => this.deleteAlert()}>
                         <Text style={styles.logoutText}>Delete Account</Text>
                     </TouchableOpacity>
                 <View style={{flex:2}}/>

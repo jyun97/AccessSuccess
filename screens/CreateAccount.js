@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, Image, TextInput, Button, StyleSheet, Keyboard, TouchableOpacity,
+import { Text, View, Image, TextInput, Button, StyleSheet, Keyboard, TouchableOpacity, Alert,
 	TouchableWithoutFeedback, KeyboardAvoidingView, SafeAreaView, ProgressViewIOS } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import { getAnswer, storeAnswer } from '../screens/ResultStorage';
@@ -8,22 +8,25 @@ import AsyncStorage from '@react-native-community/async-storage';
 class CreateAccount extends React.Component {
   constructor(props) {
   	super(props);
-  	this.state = { name: '', password: '', inputError: ''};
+  	this.state = { name: '', password1: '', password2: '', inputError: ''};
   	this.handleAnswer = this.handleAnswer.bind(this);
-  	this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleAnswer(name) {
     this.setState({ name });
   }
 
-  handlePassword(password){
-    this.setState({ password });
+  handlePassword1(password1){
+    this.setState({ password1 });
+  }
+
+  handlePassword2(password2){
+    this.setState({ password2 });
   }
 
   fetchAllItems = async ()  => {
     const keys = await AsyncStorage.getAllKeys();
-    // console.log(keys)
   }
   
   async removeItemValue(key) {
@@ -37,44 +40,34 @@ class CreateAccount extends React.Component {
   }
 
   async handleSubmit() {
-  	if (this.state.name.trim() === '' || this.state.password.trim == '') {
-      this.setState(() => ({ inputError: "Please fill out both fields." }));
+  	if (this.state.name.trim() === '' || this.state.password2.trim == '' || this.state.password1.trim == '') {
+      this.setState(() => ({ inputError: "Please fill out all fields." }));
+    }
+    else if(this.state.password1 !== this.state.password2){
+      Alert.alert(
+        'Alert',
+        'Passwords do not match, please make sure they are the same.',
+        [
+          {text: 'OK'},
+        ],
+        { cancelable: false }
+      )
     }
     else {
       this.setState(() => ({ inputError: null }));
       storeAnswer("currentUser", this.state.name);
-    
-      const accountList = await AsyncStorage.getItem("existingAccounts");
 
+      const accountList = await AsyncStorage.getItem("existingAccounts");
       var accounts = [];
       if(accountList != null){
         accounts = accountList
       }
       accounts = accounts + " " + [this.state.name]
-
       storeAnswer("existingAccounts", accounts);
 
-      // var dict = []
-      // var userDict = []
-      // var prevResults = []
+      var updatedName = this.state.name + "pass"
+      storeAnswer(updatedName, this.state.password2);
 
-      // userDict.push({
-      //   key: "prevResults",
-      //   value: prevResults
-      // })
-      // userDict.push({
-      //   key: "password",
-      //   value: this.state.password
-      // })
-
-      // dict.push({
-      //   key: this.state.answer,
-      //   value: this.state.password
-      // })
-      // obj = JSON.stringify(dict)
-
-      // storeAnswer(this.state.answer, obj)
-      // storeAnswer(this.state.name, this.state.password)
       this.props.navigation.navigate('HomeScreen');
     }
    }
@@ -95,7 +88,7 @@ class CreateAccount extends React.Component {
                             <TextInput
                             placeholder="Enter name"
                             style={styles.input}
-                            keyboardType={'number-pad'}
+                            maxLength={20}
                             padding={10}
                             textAlign={'center'}
                             justifyContent={'center'}
@@ -104,12 +97,24 @@ class CreateAccount extends React.Component {
 
                             <TextInput
                             placeholder="Enter password"
+                            maxLength={20}
                             style={styles.input}
-                            keyboardType={'number-pad'}
+                            secureTextEntry={true}
                             padding={10}
                             textAlign={'center'}
                             justifyContent={'center'}
-                            onChangeText={password => this.handlePassword(password)}
+                            onChangeText={password1 => this.handlePassword1(password1)}
+                            />
+
+                            <TextInput
+                            placeholder="Confirm password"
+                            maxLength={20}
+                            style={styles.input}
+                            secureTextEntry={true}
+                            padding={10}
+                            textAlign={'center'}
+                            justifyContent={'center'}
+                            onChangeText={password2 => this.handlePassword2(password2)}
                             />
 
                             {!!this.state.inputError && (<Text style={styles.error}>{this.state.inputError}</Text>)}
@@ -177,15 +182,15 @@ const styles = StyleSheet.create({
   error: {
   	color: "red",
   	position: 'absolute',
-  	bottom: 80,
+  	bottom: -20, // add scrollviews to every thing
   	fontSize: 25,
   },
   cancel: {
   	position: 'absolute',
     left: -25,
-    bottom: -250,
+    bottom: -200,
     width: '25%',
-    height: '20%',
+    height: '15%',
     aspectRatio: 2/1,
     borderWidth: 0.5,
     borderRadius: 15,
@@ -197,9 +202,9 @@ const styles = StyleSheet.create({
   submit: {
   	position: 'absolute',
     right: -25,
-    bottom: 0,
+    bottom: -200,
     width: '25%',
-    height: '20%',
+    height: '15%',
     aspectRatio: 2/1,
     borderWidth: 0.5,
     borderRadius: 15,
@@ -214,4 +219,8 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 20,
   },
+  passStyle:{
+    borderBottomColor: 'black',
+    borderBottomWidth: 1,
+  }
 });

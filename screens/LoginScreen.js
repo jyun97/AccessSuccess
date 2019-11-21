@@ -1,8 +1,6 @@
 import React from 'react';
-import { Text, TouchableOpacity, View, Button, SafeAreaView, StyleSheet, Image} from 'react-native';
+import { Text, TouchableOpacity, View, Button, SafeAreaView, StyleSheet, Alert, AlertIOS} from 'react-native';
 import { widthPercentageToDP as wp} from "react-native-responsive-screen"; 
-import { createBottomTabNavigator } from 'react-navigation-tabs';
-import ExpandableSettings from './ExpandableSettings'
 import { storeAnswer, getAnswer } from '../screens/ResultStorage';
 import AsyncStorage from '@react-native-community/async-storage';
 import { ScrollView } from 'react-native-gesture-handler';
@@ -10,39 +8,99 @@ import { ScrollView } from 'react-native-gesture-handler';
 class LoginScreen extends React.Component {
     async componentDidMount(){
         const accounts = await AsyncStorage.getItem("existingAccounts");
-        // accounts = "Brenda George Jason Jade"
-        // var accounts = ""
-        
-        var list = accounts.split(" ")
-        list = list.filter(v=>v!='');
-
-        if(list == null || list == ""){
+    
+        if(accounts == null){
             this.setState({ noAccounts: 1 })
         }
         else{
-            this.setState({accountList: list})
+            var list = accounts.split(" ")
+            list = list.filter(v=>v!='');
+    
+            if(list == null || list == ""){
+                this.setState({ noAccounts: 1 })
+            }
+            else{
+                this.setState({accountList: list})
+            }
         }
     }
 
     constructor(props) {
       super(props);
-      this.state = { accountList: [], noAccounts: 0 };
+      this.state = { accountList: [], noAccounts: 0, pass: '' };
     }
 
-    async combinedFunctions(data){
-        this.props.navigation.navigate('HomeScreen');
+    async removeItemValue(key) {
+        try{
+            await AsyncStorage.removeItem(key);
+            return true;
+        }
+        catch(exception){
+            return false;
+        }
+    }
+
+    async handleSubmit(password, data){
         data = data.replace(/['"]+/g, '');
-        storeAnswer("currentUser", data);
+        var name = data + "pass"
+        const realPassword = await AsyncStorage.getItem(name);
+
+        if(realPassword == null){
+            Alert.alert(
+                'Alert',
+                'Something went wrong.',
+                [
+                  {text: 'OK', onPress: () => this.props.navigation.navigate('FirstScreen')},
+                ],
+                { cancelable: false }
+              )
+        }
+        else{
+            var realPass = realPassword.replace(/['"]+/g, '');
+
+            if(realPassword !== password){
+                Alert.alert(
+                    'Alert',
+                    'Passwords do not match, please make sure they are the same.',
+                    [
+                      {text: 'OK', onPress: () => this.confirmPassword(data)},
+                    ],
+                    { cancelable: false }
+                  )
+            }
+            else{
+                data = data.replace(/['"]+/g, '');
+                storeAnswer("currentUser", data);
+                this.props.navigation.navigate('HomeScreen');
+            }
+        }
+    }
+
+    async confirmPassword(data){
+        // const keys = await AsyncStorage.getAllKeys();
+        // console.log(keys)
+
+        Alert.prompt(
+            'Please enter your password',
+            '',
+            [
+              {
+                text: 'Cancel',
+                style: 'cancel',
+              },
+              {
+                text: 'Submit',
+                onPress: (password) => this.handleSubmit(password, data),
+              },
+            ],
+            'secure-text'
+          );
     }
 
     displayText(){
         if(this.state.noAccounts == 0){
             return <Text style={styles.baseText}>Please select an account.</Text>
         }
-    }
-
-    skipSpaces(){
-
     }
 
     accList(){
@@ -64,7 +122,7 @@ class LoginScreen extends React.Component {
                     <View style={styles.innerContainer}>
                     <TouchableOpacity activeOpacity={0.6}
                         style={styles.buttonContainer}
-                        onPress={() => this.combinedFunctions(JSON.stringify(data))}>
+                        onPress={() => this.confirmPassword(JSON.stringify(data))}>
                         <Text style={styles.buttonText}>{data}</Text>
                     </TouchableOpacity>
                     </View>
@@ -77,11 +135,14 @@ class LoginScreen extends React.Component {
         return(
         <SafeAreaView style={{flex:1}}>
             <View style={styles.container}>
-                <View style={{flex:1}}/>
-                        {this.displayText()}
-                        {this.accList()}
-                <View style={{flex:2}}/>
+                <ScrollView>
+                    <View style={{flex:1}}/>
+                            {this.displayText()}
+                            {this.accList()}
+                    <View style={{flex:2}}/>
+                </ScrollView>
             </View>
+
         </SafeAreaView>
       )
     }
