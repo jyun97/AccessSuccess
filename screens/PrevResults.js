@@ -107,7 +107,7 @@ class PrevResults extends React.Component {
         if (result == "N" && count == 0) {
             this.setState({noRecs: true});
         }
-        else if (result == "I") {
+        else if (result == "I" && count == 0) {
             this.setState({inconcl: true});
         }
         let match = DICT[result]

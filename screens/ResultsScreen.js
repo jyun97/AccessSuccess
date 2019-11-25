@@ -86,7 +86,7 @@ const DICT =
 class ResultsScreen extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {  noRecs: false, loading: false, recs: [], activeSections: [],};
+    this.state = {  noRecs: false, inconcl: false, loading: false, recs: [], activeSections: [],};
     // console.log(Object.keys(DICT))
     mapResults()
       .then((results) => {
@@ -95,6 +95,9 @@ class ResultsScreen extends React.Component {
           console.log(result)
             if (result == "N" && count == 0) {
                 this.setState({noRecs: true});
+            }
+            else if (result == "I" && count == 0) {
+              this.setState({inconcl: true});
             }
             console.log("result", result)
             let match = DICT[result]
@@ -142,6 +145,7 @@ class ResultsScreen extends React.Component {
   render() {
     const {loading} = this.state
     const {noRecs} = this.state
+    const {inconcl} = this.state
 		return(
       <SafeAreaView style={{flex:1}}>
       {
@@ -158,6 +162,10 @@ class ResultsScreen extends React.Component {
                     {
                         noRecs &&
                         <Text style={[styles.resultText, {color: this.props.global.textTheme}]}>{'\n'}No accessibility settings recommended.</Text>
+                    }
+                    {
+                        inconcl &&
+                        <Text style={[styles.resultText, {color: this.props.global.textTheme}]}>{'\n'}Test results inconclusive. We recommend retaking the test.</Text>
                     }
                     {
                         noRecs === false &&
