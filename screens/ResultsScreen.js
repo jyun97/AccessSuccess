@@ -90,16 +90,18 @@ class ResultsScreen extends React.Component {
     // console.log(Object.keys(DICT))
     mapResults()
       .then((results) => {
+        let count = 0;
         results.map(result => { 
-          //consoleß.log(result)
-            if (result == "N") {
+          console.log(result)
+            if (result == "N" && count == 0) {
                 this.setState({noRecs: true});
             }
             console.log("result", result)
             let match = DICT[result]
             this.state.recs.push(match)
-            // console.log(match)
-            this.setState({loading: true})   
+            console.log(match)
+            this.setState({loading: true})
+            count = count + 1   
         })
     })
       .catch(err => {
