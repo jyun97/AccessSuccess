@@ -92,7 +92,7 @@ class HomeScreenModule extends React.Component {
                     </TouchableOpacity>
 
                     <TouchableOpacity activeOpacity={0.6}
-                        style={styles.buttonContainer}
+                        style={styles.toggle}
                         onPress={() => this.props.global.toggleTheme()}>
                         <Text style={styles.buttonText}>Toggle Light/Dark Mode</Text>
                     </TouchableOpacity>
@@ -174,11 +174,25 @@ class HomeScreenModule extends React.Component {
         overflow: 'hidden',
         borderColor: 'red',
         margin: 20,
-        bottom: -140
+        bottom: -100
     },
     logoutText:{
         color: 'white',
         fontSize: 17
+    },
+    toggle:{
+        width: '50%',
+        height: '8%',
+        aspectRatio: 5/1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderWidth: 0.5,
+        borderRadius: 15,
+        backgroundColor: '#838383',
+        borderColor: '#838383',
+        overflow: 'hidden',
+        margin: 20,
+        bottom: -20
     },
     delete:{
         width: '50%',
@@ -190,9 +204,10 @@ class HomeScreenModule extends React.Component {
         borderRadius: 15,
         backgroundColor: 'black',
         overflow: 'hidden',
-        borderColor: 'black',
+        borderColor: 'grey',
+        borderWidth: 1.5,
         margin: 20,
-        bottom: -130
+        bottom: -70
     },
 });
 

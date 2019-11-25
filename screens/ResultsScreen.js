@@ -185,7 +185,9 @@ class ResultsScreen extends React.Component {
                         style={styles.buttonContainer}
                         onPress={() => this.props.navigation.navigate('HomeScreen')}>
                         {/* <Text style={styles.buttonText}>Click here to turn these settings on</Text> */}
+                     
                         <Text style={styles.buttonText}>Go back to home page</Text>
+               
                     </TouchableOpacity>
 
                     <Text style={[styles.baseText, {color: this.props.global.textTheme}]}>{'\n'}{'\n'}For more information on each accessibility setting, go to the Settings tab on the bottom of your screen!</Text>
@@ -243,6 +245,7 @@ const styles = StyleSheet.create({
     descriptionText: {
       fontSize: 18,
       fontFamily: 'ArialHebrew',
+      alignItems: 'center',
       marginLeft: wp("5%"),
       marginRight: wp("5%"),
       lineHeight:25,
@@ -253,6 +256,10 @@ const styles = StyleSheet.create({
         width: '95%',
         height:'100%',
         alignItems: 'center',
+        alignContent: 'center',
+        textAlign: 'center',
+        alignSelf: 'center',
+        justifyContent: 'center',
         marginTop: 10,
         marginBottom: 10,
         marginRight: 10,
@@ -265,12 +272,14 @@ const styles = StyleSheet.create({
         aspectRatio: 4/1,
         alignItems: 'center',
         justifyContent: 'center',
+        alignContent: 'center',
         borderWidth: 0.5,
         borderRadius: 15,
         backgroundColor: '#147efb',
         overflow: 'hidden',
         borderColor: '#147efb',
-        margin: 20,
+        margin: 53,
+        flexDirection: 'row'
     },
     buttonText:{
         color: 'white',

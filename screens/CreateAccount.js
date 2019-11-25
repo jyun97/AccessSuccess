@@ -88,7 +88,7 @@ class CreateAccount extends React.Component {
                             <TextInput
                             placeholder="Enter name"
                             style={styles.input}
-                            maxLength={20}
+                            maxLength={15}
                             padding={10}
                             textAlign={'center'}
                             justifyContent={'center'}
@@ -97,7 +97,7 @@ class CreateAccount extends React.Component {
 
                             <TextInput
                             placeholder="Enter password"
-                            maxLength={20}
+                            maxLength={15}
                             style={styles.input}
                             secureTextEntry={true}
                             padding={10}
@@ -108,7 +108,7 @@ class CreateAccount extends React.Component {
 
                             <TextInput
                             placeholder="Confirm password"
-                            maxLength={20}
+                            maxLength={15}
                             style={styles.input}
                             secureTextEntry={true}
                             padding={10}
@@ -159,7 +159,6 @@ const styles = StyleSheet.create({
   },
   inner: {
 	justifyContent: 'flex-end',
-    alignItems: 'center',
   },
   header: {
     fontSize: 35,
