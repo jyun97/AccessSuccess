@@ -134,7 +134,7 @@ class PrevResults extends React.Component {
               <Text style={styles.descriptionText}>To turn on:</Text>
                 {
                   rec.steps.map(item => 
-                    item[1]==='.' ? <Text style={styles.boldText}>{item}</Text> : <Text style={styles.baseText}>{item}</Text>
+                    item[1]==='.' ? <Text style={[styles.boldText, {color: this.props.global.textTheme}]}>{item}</Text> : <Text style={[styles.baseText, {color: this.props.global.textTheme}]}>{item}</Text>
                   )
                 }
           </View>
@@ -192,7 +192,7 @@ class PrevResults extends React.Component {
                         <Text style={styles.buttonText}>Go back to home page</Text>
                     </TouchableOpacity>
 
-                    <Text style={styles.baseText}>{'\n'}{'\n'}For more information on each accessibility setting, go to the Settings tab on the bottom of your screen!</Text>
+                    <Text style={[styles.baseText, {color: this.props.global.textTheme}]}>{'\n'}{'\n'}For more information on each accessibility setting, go to the Settings tab on the bottom of your screen!</Text>
                 <View style={{flex:2}}/>
             </ScrollView>
             </View>

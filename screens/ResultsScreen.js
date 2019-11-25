@@ -127,7 +127,7 @@ class ResultsScreen extends React.Component {
               <Text style={styles.descriptionText}>To turn on:</Text>
                 {
                   rec.steps.map(item => 
-                    item[1]==='.' ? <Text style={[styles.boldText, {color: this.props.global.textTheme}]}>{item}</Text> : <Text style={styles.baseText}>{item}</Text>
+                    item[1]==='.' ? <Text style={[styles.boldText, {color: this.props.global.textTheme}]}>{item}</Text> : <Text style={[styles.baseText, {color: this.props.global.textTheme}]}>{item}</Text>
                   )
                 }
           </View>
