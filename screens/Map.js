@@ -163,7 +163,9 @@ export const mapResults = async() => {
           rec.push('G');
   	}
   	else {
-  		rec.push('I');
+      if (pref === 0) {
+  		    rec.push('I');
+      }
   	}
 
     //Get username and store recommendation to user
