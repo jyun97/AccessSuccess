@@ -3,6 +3,7 @@ import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import SafeAreaView from 'react-native-safe-area-view';
 import { StackNavigator } from 'react-navigation';
 import { storeAnswer } from '../screens/ResultStorage';
+import {withGlobalContext} from './Context'
 
 var Sound = require('react-native-sound');
 
@@ -75,11 +76,11 @@ class LeftSound extends React.Component {
   	}
   	render() {
     	return(
-            <View style={styles.container}>
-                <Text style={styles.header}>Audio Test Q2</Text>
-                <Text style={styles.question}>Press the "Play Sound" button and do NOT adjust your volume{'\n'}</Text>
-                <Text style={styles.question}>Click "Next" if you can still hear the sound comfortably{'\n'}</Text>
-                <Text style={styles.question}>If you can't hear it without adjusting your sound, then click "Can't Hear Comfortably" {'\n'}</Text>
+			<View style={[styles.container, {backgroundColor: this.props.global.theme}]}>
+			<Text style={[styles.header, {color: this.props.global.textTheme}]}>Audio Test Q2</Text>
+                <Text style={[styles.question, {color: this.props.global.textTheme}]}>Press the "Play Sound" button and do NOT adjust your volume{'\n'}</Text>
+                <Text style={[styles.question, {color: this.props.global.textTheme}]}>Click "Next" if you can still hear the sound comfortably{'\n'}</Text>
+                <Text style={[styles.question, {color: this.props.global.textTheme}]}>If you can't hear it without adjusting your sound, then click "Can't Hear Comfortably" {'\n'}</Text>
                 <TouchableOpacity
                     style={styles.play}
                     onPress={() => this.handlePress()}
@@ -134,7 +135,7 @@ class PlayButton extends Component {
     }
 }
 
-export default LeftSound;
+export default withGlobalContext(LeftSound);
 
 const styles = StyleSheet.create({
   container: {

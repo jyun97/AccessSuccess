@@ -169,7 +169,7 @@ const styles = StyleSheet.create({
   back: {
     position: 'absolute',
     left: 20,
-    bottom: -20,
+    bottom: -70,
     width: '25%',
     height: '10%',
     aspectRatio: 2/1,
@@ -183,7 +183,7 @@ const styles = StyleSheet.create({
   next: {
     position: 'absolute',
     right: 20,
-    bottom: -20,
+    bottom: -70,
     width: '25%',
     height: '10%',
     aspectRatio: 2/1,

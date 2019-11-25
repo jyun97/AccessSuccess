@@ -87,6 +87,20 @@ const DICT =
     steps: ['1. Settings > Accessibility > Display & Text Size',
     '2. Slide to turn on On/Off Labels']
   },
+  'Subtitles':
+  {
+    title: 'Closed Captions + SDH',
+    description: 'Display closed captioning or subtitles for the deaf and hard of hearing when available',
+    steps: ['1. Settings > Accessibility > Hearing > Subtitles & Captioning',
+    '2. Slide to turn on Closed Captions + SDH']
+  },
+  'MonoAudio':
+  {
+    title: 'Mono Audio',
+    description: 'Make the left and right speakers play the same content',
+    steps: ['1. Settings > Accessibility > Hearing > Audio/Visual',
+    '2. Slide to turn on Mono Audio']
+  }
 }
 
 
@@ -271,16 +285,18 @@ const styles = StyleSheet.create({
         borderWidth: 1
     },
     buttonContainer: {
-        width: '70%',
+		width: '70%',
         aspectRatio: 4/1,
         alignItems: 'center',
         justifyContent: 'center',
+        alignContent: 'center',
         borderWidth: 0.5,
         borderRadius: 15,
         backgroundColor: '#147efb',
         overflow: 'hidden',
         borderColor: '#147efb',
-        margin: 20,
+        margin: 53,
+        flexDirection: 'row'
     },
     buttonText:{
         color: 'white',

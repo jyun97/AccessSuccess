@@ -64,9 +64,9 @@ class HomeScreenModule extends React.Component {
         }
 
         const username = await AsyncStorage.getItem("currentUser");
-        this.removeItemValue(username);
+        this.removeItemValue(JSON.stringify(username));
         var name = username + "pass";
-        this.removeItemValue(name);
+		this.removeItemValue(name);
 
         this.resetStack();
    }
@@ -82,7 +82,7 @@ class HomeScreenModule extends React.Component {
                     <TouchableOpacity activeOpacity={0.6}
                         style={styles.buttonContainer}
                         onPress={() => this.props.navigation.navigate('PreferenceInstr')}>
-                        <Text style={styles.buttonText}>Take vision test</Text>
+                        <Text style={styles.buttonText}>Take test</Text>
                     </TouchableOpacity>
         
                     <TouchableOpacity activeOpacity={0.6}

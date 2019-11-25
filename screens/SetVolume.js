@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import SafeAreaView from 'react-native-safe-area-view';
 import { StackNavigator } from 'react-navigation';
+import { storeAnswer } from '../screens/ResultStorage';
+import {withGlobalContext} from './Context'
 
 let Sound = require('react-native-sound');
 
@@ -73,11 +75,11 @@ class SetVolume extends React.Component {
   	}
   	render() {
     	return(
-            <View style={styles.container}>
-                <Text style={styles.header}>Audio Test</Text>
-                <Text style={styles.question}>Press the "Play Sound" button and adjust the volume on your device until you hear it {'\n'}</Text>
-                <Text style={styles.question}>Click "Next" when you can hear it. {'\n'}</Text>
-                <Text style={styles.question}>If you can't hear it at full volume, then click "Can't Hear Comfotably" {'\n'}</Text>
+		<View style={[styles.container, {backgroundColor: this.props.global.theme}]}>
+                <Text style={[styles.header, {color: this.props.global.textTheme}]}>Audio Test</Text>
+                <Text style={[styles.question, {color: this.props.global.textTheme}]}>Press the "Play Sound" button and adjust the volume on your device until you hear it {'\n'}</Text>
+                <Text style={[styles.question, {color: this.props.global.textTheme}]}>Click "Next" when you can hear it. {'\n'}</Text>
+                <Text style={[styles.question, {color: this.props.global.textTheme}]}>If you can't hear it at full volume, then click "Can't Hear Comfotably" {'\n'}</Text>
                 <TouchableOpacity
                     style={styles.play}
                     onPress={() => this.handlePress()}
@@ -87,7 +89,7 @@ class SetVolume extends React.Component {
 
 				<TouchableOpacity
                     style={styles.hear}
-                    onPress={() => this.handleNext()}
+                    onPress={() => this.handleHear()}
                 >
 					<Text style={styles.buttonText}>Can't Hear Comfortably</Text>
                 </TouchableOpacity>
@@ -132,7 +134,7 @@ class PlayButton extends Component {
     }
 }
 
-export default SetVolume;
+export default withGlobalContext(SetVolume);
 
 const styles = StyleSheet.create({
   container: {

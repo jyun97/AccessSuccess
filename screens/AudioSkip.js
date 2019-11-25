@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import { StackNavigator } from 'react-navigation';
+import {withGlobalContext} from './Context'
 
 class AudioSkip extends React.Component {
   constructor(props) {
@@ -15,12 +16,12 @@ class AudioSkip extends React.Component {
 
   render() {
     return(
-      <View style={styles.container}>
-              <Text style={styles.header}>Audio Test</Text>
-              <Text style={styles.header}>Part 1 Instructions {'\n'}</Text>
-              <Text style={styles.question}>The following questions will ask you how well you can hear certain sounds.
+      <View style={[styles.container, {backgroundColor: this.props.global.theme}]}>
+              <Text style={[styles.header, {color: this.props.global.textTheme}]}>Audio Test</Text>
+              <Text style={[styles.header, {color: this.props.global.textTheme}]}>Part 1 Instructions {'\n'}</Text>
+              <Text style={[styles.question, {color: this.props.global.textTheme}]}>The following questions will ask you how well you can hear certain sounds.
 			  This can be done with or without headphones {'\n'}</Text>
-              <Text style={styles.question}>If you would like to skip this section, click "Skip"</Text>
+              <Text style={[styles.question, {color: this.props.global.textTheme}]}>If you would like to skip this section, click "Skip"</Text>
 
               <TouchableOpacity
                 style={styles.skip}
@@ -47,7 +48,7 @@ class AudioSkip extends React.Component {
     )
   }
 }
-export default AudioSkip;
+export default withGlobalContext(AudioSkip);
 
 
 const styles = StyleSheet.create({

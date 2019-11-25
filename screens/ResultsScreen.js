@@ -86,7 +86,7 @@ const DICT =
     description: 'Display closed captioning or subtitles for the deaf and hard of hearing when available',
     steps: ['1. Settings > Accessibility > Hearing > Subtitles & Captioning',
     '2. Slide to turn on Closed Captions + SDH']
-  }
+  },
   'MonoAudio':
   {
     title: 'Mono Audio',

@@ -41,7 +41,9 @@ class CreateAccount extends React.Component {
 
   async handleSubmit() {
   	if (this.state.name.trim() === '' || this.state.password2.trim == '' || this.state.password1.trim == '') {
-      this.setState(() => ({ inputError: "Please fill out all fields." }));
+	  this.setState(() => ({ inputError: "Please fill out all fields." }));
+	//   const keys = await AsyncStorage.getAllKeys();
+	//   console.log(keys)
     }
     else if(this.state.password1 !== this.state.password2){
       Alert.alert(
@@ -51,7 +53,9 @@ class CreateAccount extends React.Component {
           {text: 'OK'},
         ],
         { cancelable: false }
-      )
+	  )
+	
+
     }
     else {
       this.setState(() => ({ inputError: null }));
