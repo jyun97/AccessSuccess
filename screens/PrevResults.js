@@ -102,8 +102,9 @@ class PrevResults extends React.Component {
     }
     //Else load prev results
     else {
+        let count = 0
         JSON.parse(prevResults).map((result) => {
-        if (result == "N") {
+        if (result == "N" && count == 0) {
             this.setState({noRecs: true});
         }
         else if (result == "I") {
@@ -111,7 +112,8 @@ class PrevResults extends React.Component {
         }
         let match = DICT[result]
         this.state.recs.push(match)
-        this.setState({loading: true})   
+        this.setState({loading: true})  
+        count = count + 1 
       })  
     }
   }

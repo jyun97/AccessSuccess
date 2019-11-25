@@ -11,6 +11,7 @@ export const mapResults = async() => {
   	let protanopia = 0;
   	let deuteranopia = 0;
     let tritanopia = 0;
+    let pref = 0;
 
     let rec = [];
 
@@ -18,26 +19,31 @@ export const mapResults = async() => {
         //Bold
         if (result[0] === "bold" && result[1] === "2") {
            rec.push("bold")
+           pref = pref + 1
         }
 
         //Contrast
         if (result[0] === "contrast" && result[1] === "2") {
            rec.push("contrast")
+           pref = pref + 1
         }
 
         //ReduceTransparency
         if (result[0] === "trans" && result[1] === "2") {
            rec.push("trans")
+           pref = pref + 1
         }
 
         //ButtonShape
         if (result[0] === "button" && result[1] === "2") {
            rec.push("button")
+           pref = pref + 1
         }
 
         //OnOffLabel
         if (result[0] === "onOff" && result[1] === "2") {
            rec.push("onOff")
+           pref = pref + 1
         }
 
         //Plate 1
@@ -141,7 +147,7 @@ export const mapResults = async() => {
     await AsyncStorage.removeItem("Q8")
     await AsyncStorage.removeItem("Q9")
 
-    if (protanopia + deuteranopia + tritanopia + totalBlind === 0) {
+    if (protanopia + deuteranopia + tritanopia + totalBlind + pref === 0) {
           rec.push('N');
     }
   	else if (protanopia > deuteranopia && protanopia > tritanopia && protanopia > totalBlind){
