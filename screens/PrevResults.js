@@ -46,6 +46,12 @@ const DICT =
     steps: ['1. Settings > Accessibility > Display & Text Size > Color Filters',
     '2. Slide to turn on Color Filters and select Grayscale']
   },
+  'I': 
+  { 
+    title: 'Test results inconclusive',
+    description: '',
+    steps: [],
+  },
   'bold': 
   { 
     title: 'Bold Text',
