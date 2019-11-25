@@ -2,13 +2,15 @@ import HomeScreen from './screens/HomeScreen'
 import FirstScreen from './screens/FirstScreen'
 import LoginScreen from './screens/LoginScreen'
 import Settings from './screens/Settings'
+import CreateAccount from './screens/CreateAccount'
+
 import PreferenceInstr from './screens/PreferenceInstr'
 import BoldText from './screens/BoldText'
 import Contrast from './screens/Contrast'
-import CreateAccount from './screens/CreateAccount'
 import ReduceTransparency from './screens/ReduceTransparency'
 import ButtonShape from './screens/ButtonShape'
 import OnOffLabel from './screens/OnOffLabel'
+
 import VisionQ1Instr from './screens/VisionQ1Instr'
 import VisionQ1 from './screens/VisionQ1'
 import VisionQ2 from './screens/VisionQ2'
@@ -20,6 +22,13 @@ import VisionQ7 from './screens/VisionQ7'
 import VisionQ8 from './screens/VisionQ8'
 import VisionQ9Instr from './screens/VisionQ9Instr'
 import VisionQ9 from './screens/VisionQ9'
+
+import AudioSkip from './screens/AudioSkip'
+import CheckAudioInstr from './screens/CheckAudioInstr'
+import SetVolumeInstr from './screens/SetVolumeInstr'
+import SetVolume from './screens/SetVolume'
+import RightSound from './screens/RightSound'
+import LeftSound from './screens/LeftSound'
 
 import ResultsScreen from './screens/ResultsScreen'
 import PrevResults from './screens/PrevResults'
@@ -111,6 +120,24 @@ const MainNavigator = createStackNavigator({
   },
   VisionQ9: {
     screen: VisionQ9,
+  },
+  AudioSkip: {
+    screen: AudioSkip,
+  },
+  SetVolumeInstr: {
+    screen: SetVolumeInstr,
+  },
+  SetVolume: {
+    screen: SetVolume,
+  },
+  CheckAudioInstr: {
+    screen: CheckAudioInstr,
+  },
+  RightSound: {
+    screen: RightSound,
+  },
+  LeftSound: {
+    screen: LeftSound,
   },
   ResultsScreen: {
     screen: ResultsScreen,

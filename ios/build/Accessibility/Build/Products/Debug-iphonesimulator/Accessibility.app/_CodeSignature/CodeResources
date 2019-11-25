@@ -6,19 +6,100 @@
 	<dict>
 		<key>Base.lproj/LaunchScreen.nib/objects-13.0+.nib</key>
 		<data>
-		lJ1bXWVG6Y8UUnVSfdVspF8Wzg4=
+		iK0yml+J54sLlFnPMkDQrW944/0=
 		</data>
 		<key>Base.lproj/LaunchScreen.nib/runtime.nib</key>
 		<data>
-		eZkMqpNE+BjMtzXo93lX7hFzZpw=
+		MOYr8rBSuWyWhfkg9YNPnXZPZaY=
+		</data>
+		<key>Frameworks/XCTAutomationSupport.framework/Info.plist</key>
+		<data>
+		Zb+apFirYLFzWl3DKgehHpx6d4Y=
+		</data>
+		<key>Frameworks/XCTAutomationSupport.framework/XCTAutomationSupport</key>
+		<data>
+		4YzGccrfZmsK+5vkiTU4eZbJgek=
+		</data>
+		<key>Frameworks/XCTAutomationSupport.framework/_CodeSignature/CodeResources</key>
+		<data>
+		Rfk1cUPoXItLY6FPVnxPdTnn2cg=
+		</data>
+		<key>Frameworks/XCTAutomationSupport.framework/version.plist</key>
+		<data>
+		cX36RXdDl3EMAMV0lOhi0RGEkTc=
+		</data>
+		<key>Frameworks/XCTest.framework/Info.plist</key>
+		<data>
+		MkLBcTrGZP0m49TO8MT9Kpg2XvA=
+		</data>
+		<key>Frameworks/XCTest.framework/XCTest</key>
+		<data>
+		vMfIMwmSj/2qw5EHG3a3JxnndiU=
+		</data>
+		<key>Frameworks/XCTest.framework/_CodeSignature/CodeResources</key>
+		<data>
+		/CDR7ItbsxtlIc2/6/P1CG134lY=
+		</data>
+		<key>Frameworks/XCTest.framework/en.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			TuBj57ZP6zBqcL9HttO2Rucaw9E=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Frameworks/XCTest.framework/version.plist</key>
+		<data>
+		cX36RXdDl3EMAMV0lOhi0RGEkTc=
+		</data>
+		<key>Frameworks/libXCTestBundleInject.dylib</key>
+		<data>
+		fB296Ag0IpaSx1cD5EZR/4MmG7k=
+		</data>
+		<key>Frameworks/libXCTestSwiftSupport.dylib</key>
+		<data>
+		rmWK27yJybEJGDK0ycNnvd6CQAA=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		r3sZPtboNi82Jbb1d+bO9EzdQts=
+		IW7zILZTIvL5aztQq+br215EBdI=
 		</data>
 		<key>PkgInfo</key>
 		<data>
 		n57qDP4tZfLD1rCS43W0B4LQjzE=
+		</data>
+		<key>PlugIns/AccessibilityTests.xctest.dSYM/Contents/Info.plist</key>
+		<data>
+		VRXFlKRc+ChLw/wmFbJejUf0ev4=
+		</data>
+		<key>PlugIns/AccessibilityTests.xctest.dSYM/Contents/Resources/DWARF/AccessibilityTests</key>
+		<data>
+		x0M4Y441qREzx2TnZeUtgyMPy0Q=
+		</data>
+		<key>PlugIns/AccessibilityTests.xctest/AccessibilityTests</key>
+		<data>
+		nCKpjuy3XPgzC7keSvvNZN11XvU=
+		</data>
+		<key>PlugIns/AccessibilityTests.xctest/Info.plist</key>
+		<data>
+		v4AL/YnGVrTdJnbAemX+0uvVSNw=
+		</data>
+		<key>PlugIns/AccessibilityTests.xctest/_CodeSignature/CodeResources</key>
+		<data>
+		BpxjMAta/rQ0Aej0Y87Q5W/RkKI=
+		</data>
+		<key>leftSound.mp3</key>
+		<data>
+		WncNMf1ZtEi37jZyDr8aKEK0qqY=
+		</data>
+		<key>rightSound.mp3</key>
+		<data>
+		A0nFLBFB98u72NAv9i8LT+KTCMo=
+		</data>
+		<key>testSound.mp3</key>
+		<data>
+		s2n7DtNHsmyIrkdeBRx8yXFdrs4=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -27,22 +108,233 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			lJ1bXWVG6Y8UUnVSfdVspF8Wzg4=
+			iK0yml+J54sLlFnPMkDQrW944/0=
 			</data>
 			<key>hash2</key>
 			<data>
-			aLQ1MmeQudRO+q2fgwWisAZcgvGOqYCiI/FuSAqHVTI=
+			JrssIXw9C9ysR2DZ2cRfMKft4ft/Gslje8lILSlFJNg=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			eZkMqpNE+BjMtzXo93lX7hFzZpw=
+			MOYr8rBSuWyWhfkg9YNPnXZPZaY=
 			</data>
 			<key>hash2</key>
 			<data>
-			aFP6vSVepSPZ84/1cKRrCK2IKJ5jYOd/4KWbg0G1aic=
+			vV83Saz7pyG+IFHjIqii+KGWCsMTij2Ji24iL55J2Q4=
+			</data>
+		</dict>
+		<key>Frameworks/XCTAutomationSupport.framework/Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Zb+apFirYLFzWl3DKgehHpx6d4Y=
+			</data>
+			<key>hash2</key>
+			<data>
+			mlcCbqQ3H7kz8t6TgQk3KVBU9PhhXAyPDBUnX8OXB24=
+			</data>
+		</dict>
+		<key>Frameworks/XCTAutomationSupport.framework/XCTAutomationSupport</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			4YzGccrfZmsK+5vkiTU4eZbJgek=
+			</data>
+			<key>hash2</key>
+			<data>
+			xlwgvdY0uJcATp76HzTsg6zAqwbDrQIhTLjM00KoOGk=
+			</data>
+		</dict>
+		<key>Frameworks/XCTAutomationSupport.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Rfk1cUPoXItLY6FPVnxPdTnn2cg=
+			</data>
+			<key>hash2</key>
+			<data>
+			k7eZxRWa9BBJKcnLKurg39rmYNdWSb8gJ06lOsWFh0A=
+			</data>
+		</dict>
+		<key>Frameworks/XCTAutomationSupport.framework/version.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			cX36RXdDl3EMAMV0lOhi0RGEkTc=
+			</data>
+			<key>hash2</key>
+			<data>
+			LJGBUe6yDOXNn8XrkeMKS8lRIc3fsgjTGuMvwbVbIMg=
+			</data>
+		</dict>
+		<key>Frameworks/XCTest.framework/Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			MkLBcTrGZP0m49TO8MT9Kpg2XvA=
+			</data>
+			<key>hash2</key>
+			<data>
+			uVJpv1942A2T6rNIuittFKQAfVw6Uue3e+F4hxfzvEw=
+			</data>
+		</dict>
+		<key>Frameworks/XCTest.framework/XCTest</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			vMfIMwmSj/2qw5EHG3a3JxnndiU=
+			</data>
+			<key>hash2</key>
+			<data>
+			5aBCak4iD8oHZg40XESOghUyj67gIu31DlPLDInjoqY=
+			</data>
+		</dict>
+		<key>Frameworks/XCTest.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			/CDR7ItbsxtlIc2/6/P1CG134lY=
+			</data>
+			<key>hash2</key>
+			<data>
+			FwSmW6fzW8XWsh7LYlQmyUhCY45tdc2BKLzbHBENmT8=
+			</data>
+		</dict>
+		<key>Frameworks/XCTest.framework/en.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			TuBj57ZP6zBqcL9HttO2Rucaw9E=
+			</data>
+			<key>hash2</key>
+			<data>
+			89RGkjZaKuewYnjpzwhIswhqfrU8+pcEXqM/DHVrUmo=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Frameworks/XCTest.framework/version.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			cX36RXdDl3EMAMV0lOhi0RGEkTc=
+			</data>
+			<key>hash2</key>
+			<data>
+			LJGBUe6yDOXNn8XrkeMKS8lRIc3fsgjTGuMvwbVbIMg=
+			</data>
+		</dict>
+		<key>Frameworks/libXCTestBundleInject.dylib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			fB296Ag0IpaSx1cD5EZR/4MmG7k=
+			</data>
+			<key>hash2</key>
+			<data>
+			RtvoAiXdlzkUNEz1CHmWHKZADzBhy3bp8nZt88RtFFc=
+			</data>
+		</dict>
+		<key>Frameworks/libXCTestSwiftSupport.dylib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			rmWK27yJybEJGDK0ycNnvd6CQAA=
+			</data>
+			<key>hash2</key>
+			<data>
+			J26tg7W6/N1SB92U5a35RkjGIOa5NLg0AxGShpThn8Y=
+			</data>
+		</dict>
+		<key>PlugIns/AccessibilityTests.xctest.dSYM/Contents/Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			VRXFlKRc+ChLw/wmFbJejUf0ev4=
+			</data>
+			<key>hash2</key>
+			<data>
+			L9kAg4YlNVain+dkt6mprIVgIHaqB/Vl3ndJaOQL1PI=
+			</data>
+		</dict>
+		<key>PlugIns/AccessibilityTests.xctest.dSYM/Contents/Resources/DWARF/AccessibilityTests</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			x0M4Y441qREzx2TnZeUtgyMPy0Q=
+			</data>
+			<key>hash2</key>
+			<data>
+			GRqBpz2K1U57TqiCjLmI0oK+zB6501vki/ej3WvUUik=
+			</data>
+		</dict>
+		<key>PlugIns/AccessibilityTests.xctest/AccessibilityTests</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			nCKpjuy3XPgzC7keSvvNZN11XvU=
+			</data>
+			<key>hash2</key>
+			<data>
+			ZiawRb9X/8SK7XsZuisF3PGTaNgj2JBM2oiA5BBLnzg=
+			</data>
+		</dict>
+		<key>PlugIns/AccessibilityTests.xctest/Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			v4AL/YnGVrTdJnbAemX+0uvVSNw=
+			</data>
+			<key>hash2</key>
+			<data>
+			MNEVpTUbdkqvQVVeKnx1w6G74jw52WaiB++iEW7G+Us=
+			</data>
+		</dict>
+		<key>PlugIns/AccessibilityTests.xctest/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			BpxjMAta/rQ0Aej0Y87Q5W/RkKI=
+			</data>
+			<key>hash2</key>
+			<data>
+			qP8u2e0nHuJpI8eTtozatlryRj6rrrv+1RmWHBWGTKo=
+			</data>
+		</dict>
+		<key>leftSound.mp3</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			WncNMf1ZtEi37jZyDr8aKEK0qqY=
+			</data>
+			<key>hash2</key>
+			<data>
+			7q7Ivjri2hi0PYRRdXk/nAAXgnpyo3mP2D+qCZ7/how=
+			</data>
+		</dict>
+		<key>rightSound.mp3</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			A0nFLBFB98u72NAv9i8LT+KTCMo=
+			</data>
+			<key>hash2</key>
+			<data>
+			pteOv/wWf6w5W86QuVMRUkD8IGPPa1z4DpHkkOMqIiI=
+			</data>
+		</dict>
+		<key>testSound.mp3</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			s2n7DtNHsmyIrkdeBRx8yXFdrs4=
+			</data>
+			<key>hash2</key>
+			<data>
+			gvNM3uNr8S15iT7q/0Irclq3QLjm6d5GUNa9VROJsb4=
 			</data>
 		</dict>
 	</dict>

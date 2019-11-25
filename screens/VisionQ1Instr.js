@@ -26,7 +26,7 @@ class VisionQ1Instr extends React.Component {
 
               <TouchableOpacity
                 style={styles.skip}
-                onPress={() => this.props.navigation.navigate('ResultsScreen')}
+                onPress={() => this.props.navigation.navigate('AudioSkip')}
               >
                 <Text style={styles.buttonText}>Skip</Text>
               </TouchableOpacity>

@@ -53,7 +53,7 @@ class SetVolume extends React.Component {
 			this.setState({playing: false})
 		}
 		storeAnswer("Subtitles", "true");
-    	this.props.navigation.navigate('PreferenceInstr');
+    	this.props.navigation.navigate('ResultsScreen');
 	}
 
   	handleNext() {

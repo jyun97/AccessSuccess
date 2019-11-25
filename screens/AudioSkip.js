@@ -24,14 +24,14 @@ class AudioSkip extends React.Component {
 
               <TouchableOpacity
                 style={styles.skip}
-                onPress={() => this.props.navigation.navigate('PreferenceInstr')}
+                onPress={() => this.props.navigation.navigate('ResultsScreen')}
               >
                 <Text style={styles.buttonText}>Skip</Text>
               </TouchableOpacity>
 
               <TouchableOpacity
                 style={styles.back}
-                onPress={() => this.props.navigation.navigate('HomeScreen')}
+                onPress={() => this.props.navigation.navigate('VisionQ9')}
               >
                 <Text style={styles.buttonText}>Back</Text>
               </TouchableOpacity>

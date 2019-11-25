@@ -54,7 +54,7 @@ class RightSound extends React.Component {
 			this.setState({playing: false})
 		}
 		storeAnswer("MonoAudio", "true");
-    	this.props.navigation.navigate('PreferenceInstr');
+    	this.props.navigation.navigate('ResultsScreen');
 	}
 	
   	handleNext() {
@@ -76,7 +76,7 @@ class RightSound extends React.Component {
   	render() {
     	return(
             <View style={styles.container}>
-                <Text style={styles.header}>Audio Test</Text>
+                <Text style={styles.header}>Audio Test Q1</Text>
                 <Text style={styles.question}>Press the "Play Sound" button and do NOT adjust your volume{'\n'}</Text>
                 <Text style={styles.question}>Click "Next" if you can still hear the sound comfortably{'\n'}</Text>
                 <Text style={styles.question}>If you can't hear it without adjusting your sound, then click "Can't Hear Comfortably" {'\n'}</Text>

@@ -29,7 +29,7 @@ class VisionQ9 extends React.Component {
     else {
       this.setState(() => ({ inputError: null }));
       storeAnswer("Q9", this.state.selectedChoice);
-      this.props.navigation.navigate('ResultsScreen');
+      this.props.navigation.navigate('AudioSkip');
     }
   }
 

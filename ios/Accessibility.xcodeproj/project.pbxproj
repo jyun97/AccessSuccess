@@ -19,6 +19,9 @@
 		2DCD954D1E0B4F2C00145EB5 /* AccessibilityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* AccessibilityTests.m */; };
 		4CBF84AF09CB091BD422DEAF /* libPods-AccessibilityTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DCD9A92EF85DFC69A524A69 /* libPods-AccessibilityTests.a */; };
 		9A0EC8633C7E75E5B20644C5 /* libPods-Accessibility-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C0D08E3C0AF447393DD2F34 /* libPods-Accessibility-tvOSTests.a */; };
+		EFE62AB9238B917D00C08DA9 /* testSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EFE62AB6238B917D00C08DA9 /* testSound.mp3 */; };
+		EFE62ABA238B917D00C08DA9 /* leftSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EFE62AB7238B917D00C08DA9 /* leftSound.mp3 */; };
+		EFE62ABB238B917D00C08DA9 /* rightSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EFE62AB8238B917D00C08DA9 /* rightSound.mp3 */; };
 		F20B217C57C1BFD11D221B98 /* libPods-Accessibility-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD5AD49C8B153B5123CF02FC /* libPods-Accessibility-tvOS.a */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +69,9 @@
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		EF6D665A433D0EE478F48690 /* Pods-Accessibility-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Accessibility-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-Accessibility-tvOSTests/Pods-Accessibility-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		EFE62AB6238B917D00C08DA9 /* testSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = testSound.mp3; sourceTree = "<group>"; };
+		EFE62AB7238B917D00C08DA9 /* leftSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = leftSound.mp3; sourceTree = "<group>"; };
+		EFE62AB8238B917D00C08DA9 /* rightSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rightSound.mp3; sourceTree = "<group>"; };
 		FD5AD49C8B153B5123CF02FC /* libPods-Accessibility-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Accessibility-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -161,7 +167,6 @@
 				58630C3FE0BDAE76F887CC40 /* Pods-AccessibilityTests.debug.xcconfig */,
 				030F8E52384ECEE0135A21D5 /* Pods-AccessibilityTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -175,6 +180,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				EFE62AB7238B917D00C08DA9 /* leftSound.mp3 */,
+				EFE62AB8238B917D00C08DA9 /* rightSound.mp3 */,
+				EFE62AB6238B917D00C08DA9 /* testSound.mp3 */,
 				13B07FAE1A68108700A75B9A /* Accessibility */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* AccessibilityTests */,
@@ -308,6 +316,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -338,6 +347,9 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				EFE62ABB238B917D00C08DA9 /* rightSound.mp3 in Resources */,
+				EFE62AB9238B917D00C08DA9 /* testSound.mp3 in Resources */,
+				EFE62ABA238B917D00C08DA9 /* leftSound.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

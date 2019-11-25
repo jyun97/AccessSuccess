@@ -24,7 +24,7 @@ class SetVolumeInstr extends React.Component {
 
               <TouchableOpacity
                 style={styles.back}
-                onPress={() => this.props.navigation.navigate('HomeScreen')}
+                onPress={() => this.props.navigation.navigate('AudioSkip')}
               >
                 <Text style={styles.buttonText}>Back</Text>
               </TouchableOpacity>
