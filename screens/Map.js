@@ -12,6 +12,7 @@ export const mapResults = async() => {
   	let deuteranopia = 0;
     let tritanopia = 0;
     let pref = 0;
+    let hearing = 0;
 
     let rec = [];
 
@@ -44,6 +45,18 @@ export const mapResults = async() => {
         if (result[0] === "onOff" && result[1] === "2") {
            rec.push("onOff")
            pref = pref + 1
+        }
+
+        //Subtitles
+        if (result[0] === "Subtitles" && result[1] === "true") {
+           rec.push("Subtitles")
+           hearing = hearing + 1
+        }
+
+        //MonoAudio
+        if (result[0] === "MonoAudio" && result[1] === "true") {
+           rec.push("MonoAudio")
+           hearing = hearing + 1
         }
 
         //Plate 1
@@ -137,6 +150,8 @@ export const mapResults = async() => {
     await AsyncStorage.removeItem("trans")
     await AsyncStorage.removeItem("button")
     await AsyncStorage.removeItem("onOff")
+    await AsyncStorage.removeItem("MonoAudio")
+    await AsyncStorage.removeItem("Subtitles")
     await AsyncStorage.removeItem("Q1")
     await AsyncStorage.removeItem("Q2")
     await AsyncStorage.removeItem("Q3")
@@ -147,7 +162,7 @@ export const mapResults = async() => {
     await AsyncStorage.removeItem("Q8")
     await AsyncStorage.removeItem("Q9")
 
-    if (protanopia + deuteranopia + tritanopia + totalBlind + pref === 0) {
+    if (protanopia + deuteranopia + tritanopia + totalBlind + pref + hearing === 0) {
           rec.push('N');
     }
   	else if (protanopia > deuteranopia && protanopia > tritanopia && protanopia > totalBlind){
@@ -163,7 +178,7 @@ export const mapResults = async() => {
           rec.push('G');
   	}
   	else {
-      if (pref === 0) {
+      if (pref === 0 && hearing === 0) {
   		    rec.push('I');
       }
   	}
