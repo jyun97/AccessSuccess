@@ -4,7 +4,7 @@ import SafeAreaView from 'react-native-safe-area-view';
 import { StackNavigator } from 'react-navigation';
 import { storeAnswer } from '../screens/ResultStorage';
 
-let Sound = require('react-native-sound');
+var Sound = require('react-native-sound');
 
 class RightSound extends React.Component {
 	constructor(props) {
@@ -18,7 +18,7 @@ class RightSound extends React.Component {
 	}
 
 	componentDidMount() {
-		music = new Sound('testSound.mp3', Sound.MAIN_BUNDLE, (error) => {
+		rightSound = new Sound('rightSound.mp3', Sound.MAIN_BUNDLE, (error) => {
 			if (error) {
 				console.log('failed to load the sound', error);
 			}
@@ -37,20 +37,20 @@ class RightSound extends React.Component {
 	}
 	  
   	handlePress() {
-		if (music && this.state.playing === false) {
-			music.setNumberOfLoops(-1); //Loops util stop
-			music.play();
+		if (rightSound && this.state.playing === false) {
+			rightSound.setNumberOfLoops(-1); //Loops util stop
+			rightSound.play();
 			this.setState({playing: true})
 		}
-		else if(music && this.state.playing === true){
-			music.stop();
+		else if(rightSound && this.state.playing === true){
+			rightSound.stop();
 			this.setState({playing: false})
 		}
   	}
 	
 	handleHear() {
-        if(music && this.state.playing == true){
-			music.stop();
+        if(rightSound && this.state.playing == true){
+			rightSound.stop();
 			this.setState({playing: false})
 		}
 		storeAnswer("MonoAudio", "true");
@@ -58,8 +58,8 @@ class RightSound extends React.Component {
 	}
 	
   	handleNext() {
-        if(music && this.state.playing == true){
-			music.stop();
+        if(rightSound && this.state.playing == true){
+			rightSound.stop();
 			this.setState({playing: false})
 		}
 		storeAnswer("MonoAudio", "false");
@@ -67,8 +67,8 @@ class RightSound extends React.Component {
   	}
     
     handleBack() {
-        if(music && this.state.playing == true){
-			music.stop();
+        if(rightSound && this.state.playing == true){
+			rightSound.stop();
 			this.setState({playing: false})
 		}
         this.props.navigation.navigate('CheckAudioInstr');
