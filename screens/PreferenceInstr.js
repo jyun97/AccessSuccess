@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import { StackNavigator } from 'react-navigation';
+import {withGlobalContext} from './Context'
+
 
 class PreferenceInstr extends React.Component {
   constructor(props) {
@@ -15,10 +17,10 @@ class PreferenceInstr extends React.Component {
 
   render() {
     return(
-      <View style={styles.container}>
-              <Text style={styles.header}>Vision Test</Text>
+      <View style={[styles.container, {backgroundColor: this.props.global.theme}]}>
+              <Text style={[styles.header, {color: this.props.global.textTheme}]}>Vision Test</Text>
               <Text style={styles.header}>Part 1 Instructions {'\n'}</Text>
-              <Text style={styles.question}>In the following questions, you will be shown two images of different settings.
+              <Text style={[styles.question, {color: this.props.global.textTheme}]}>In the following questions, you will be shown two images of different settings.
               Select the one you prefer. {'\n'}</Text>
               <Text style={styles.question}>If you would like to skip this section, click "Skip"</Text>
 
@@ -47,7 +49,7 @@ class PreferenceInstr extends React.Component {
     )
   }
 }
-export default PreferenceInstr;
+export default withGlobalContext(PreferenceInstr);
 
 
 const styles = StyleSheet.create({

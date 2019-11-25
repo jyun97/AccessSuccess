@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import { StackNavigator } from 'react-navigation';
+import {withGlobalContext} from './Context'
 
 
 class VisionQ1Instr extends React.Component {
@@ -11,15 +12,15 @@ class VisionQ1Instr extends React.Component {
   }
 
   handleSubmit() {
-      this.props.navigation.navigate('VisionQ9');
+      this.props.navigation.navigate('VisionQ1');
   }
 
   render() {
     return(
-      <View style={styles.container}>
-              <Text style={styles.header}>Vision Test</Text>
-              <Text style={styles.header}>Part 2 Instructions {'\n'}</Text>
-              <Text style={styles.question}>In the following questions, you will be shown a circle with a number inside.
+      <View style={[styles.container, {backgroundColor: this.props.global.theme}]}>
+              <Text style={[styles.header, {color: this.props.global.textTheme}]}>Vision Test</Text>
+              <Text style={[styles.header, {color: this.props.global.textTheme}]}>Part 2 Instructions {'\n'}</Text>
+              <Text style={[styles.question, {color: this.props.global.textTheme}]}>In the following questions, you will be shown a circle with a number inside.
               Enter the number you see. If you are unsure, enter 0.  {'\n'} </Text>
               <Text style={styles.question}>If you would like to skip this section, click "Skip"</Text>
 
@@ -48,7 +49,7 @@ class VisionQ1Instr extends React.Component {
     )
   }
 }
-export default VisionQ1Instr;
+export default withGlobalContext(VisionQ1Instr);
 
 
 const styles = StyleSheet.create({

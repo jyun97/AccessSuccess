@@ -10,6 +10,8 @@ import {
 } from 'react-native';
 import { widthPercentageToDP as wp} from "react-native-responsive-screen"; 
 import Accordion from 'react-native-collapsible/Accordion';
+import {withGlobalContext} from './Context'
+
 
 const styles = StyleSheet.create({
   titleText: {
@@ -101,7 +103,7 @@ const SECTIONS = [
     title: 'Display & Text Size',
     description: 'If you have color blindness or other vision challenges, you can customize the display settings to make the screen easier to see',
     content: ['a. Bold Text:',
-    'Displays text in boldface characters for increased legibility',
+    'Adjust brightness and contrast based on ambient light settings',
     'b. Larger text:',
     'Allows you to adjust text size',
     'c. Button Shapes',
@@ -156,12 +158,12 @@ export default class Settings extends Component{
 
   _renderContent = section => {
     return (
-      <View styles={{flex:1}}>
-      <View style={styles.container}>
-      <Text style={styles.descriptionText}>{section.description}</Text>
+      <View styles={[{flex:1}, {backgroundColor: this.props.global.theme}]}>
+      <View style={[styles.container, {backgroundColor: this.props.global.theme}]}>
+      <Text style={[styles.descriptionText, {color: this.props.global.textTheme}]}>{section.description}</Text>
       {
         section.content.map(item => 
-          item[1]==='.' ? <Text style={styles.boldText}>{item}</Text> : <Text style={styles.baseText}>{item}</Text>
+          item[1]==='.' ? <Text style={[styles.boldText, {color: this.props.global.textTheme}]}>{item}</Text> : <Text style={[styles.baseText, {color: this.props.global.textTheme}]}>{item}</Text>
         )
       }
       </View>

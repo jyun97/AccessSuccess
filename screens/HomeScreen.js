@@ -7,6 +7,8 @@ import ExpandableSettings from './ExpandableSettings'
 import { storeAnswer, getAnswer } from '../screens/ResultStorage';
 import { StackActions, NavigationActions } from 'react-navigation';
 import AsyncStorage from '@react-native-community/async-storage';
+import {withGlobalContext} from './Context'
+
 
 class HomeScreenModule extends React.Component {
     async componentDidMount(){
@@ -72,10 +74,10 @@ class HomeScreenModule extends React.Component {
     render() {
           return(
             <SafeAreaView style={{flex:1}}>
-            <View style={styles.container}>
+            <View style={[styles.container, {backgroundColor: this.props.global.theme}]}>
         
                 <View style={{flex:1}}/>
-                <Text style={styles.titleText}>Welcome {this.state.userName}!</Text>
+                <Text style={[styles.titleText, {color: this.props.global.textTheme}]}>Welcome {this.state.userName}!</Text>
         
                     <TouchableOpacity activeOpacity={0.6}
                         style={styles.buttonContainer}
@@ -87,6 +89,12 @@ class HomeScreenModule extends React.Component {
                         style={styles.buttonContainer}
                         onPress={() => this.props.navigation.navigate('PrevResults')}>
                         <Text style={styles.buttonText}>View previous results</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity activeOpacity={0.6}
+                        style={styles.buttonContainer}
+                        onPress={() => this.props.global.toggleTheme()}>
+                        <Text style={styles.buttonText}>Toggle Light/Dark Mode</Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity activeOpacity={0.6}
@@ -190,11 +198,11 @@ class HomeScreenModule extends React.Component {
 
 const HomeScreen = createBottomTabNavigator({
   Main: {
-    screen: HomeScreenModule
-  },
-  Settings: {
-    screen: ExpandableSettings
-  }
+    screen: withGlobalContext(HomeScreenModule)
+},
+Settings: {
+    screen: withGlobalContext(ExpandableSettings)
+}
 });
 
 export default HomeScreen

@@ -7,6 +7,8 @@ import { storeAnswer } from '../screens/ResultStorage';
 import { mapResults } from '../screens/Map';
 import Accordion from 'react-native-collapsible/Accordion';
 import AsyncStorage from '@react-native-community/async-storage';
+import {withGlobalContext} from './Context'
+
 
 const DICT = 
 { 
@@ -125,7 +127,7 @@ class PrevResults extends React.Component {
   _renderContent = rec => {
     return (
       <View styles={{flex:1}}>
-          <View style={styles.container}>
+          <View style={[styles.container, {backgroundColor: this.props.global.theme}]}>
               <Text style={styles.descriptionText}>{rec.description}</Text>
               <Text style={styles.descriptionText}>To turn on:</Text>
                 {
@@ -151,7 +153,7 @@ class PrevResults extends React.Component {
       {
         loading &&
             
-            <View style={styles.container}>
+            <View style={[styles.container, {backgroundColor: this.props.global.theme}]}>
             <ScrollView>
 
                 <View style={{flex:1}}/>
@@ -161,16 +163,16 @@ class PrevResults extends React.Component {
                 </View>
                     {
                         noRecs &&
-                        <Text style={styles.resultText}>{'\n'}No accessibility settings recommended.</Text>
+                        <Text style={[styles.resultText, {color: this.props.global.textTheme}]}>{'\n'}No accessibility settings recommended.</Text>
                     }
                     {
                         inconcl &&
-                        <Text style={styles.resultText}>{'\n'}Test results inconclusive. We recommend retaking the test.</Text>
+                        <Text style={[styles.resultText, {color: this.props.global.textTheme}]}>{'\n'}Test results inconclusive. We recommend retaking the test.</Text>
                     }
                     {
                         noRecs === false && inconcl === false &&
                       <View>
-                      <Text style={styles.text}>{'\n'}Recommended accessibility setting(s) to turn on: </Text>
+                      <Text style={[styles.text, {color: this.props.global.textTheme}]}>{'\n'}Recommended accessibility setting(s) to turn on: </Text>
                       <Accordion
                           sections={this.state.recs}
                           activeSections={this.state.activeSections}
@@ -198,7 +200,7 @@ class PrevResults extends React.Component {
 	  )
   }
 }
-export default PrevResults;
+export default withGlobalContext(PrevResults);
 
 const styles = StyleSheet.create({
     titleText: {

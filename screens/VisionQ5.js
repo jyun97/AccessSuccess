@@ -3,6 +3,7 @@ import { Text, View, Image, TextInput, Button, StyleSheet, Keyboard, TouchableOp
   TouchableWithoutFeedback, KeyboardAvoidingView, SafeAreaView } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import { storeAnswer } from '../screens/ResultStorage';
+import {withGlobalContext} from './Context'
 
 
 class VisionQ5 extends React.Component {
@@ -34,12 +35,12 @@ class VisionQ5 extends React.Component {
         behavior={Platform.OS === "ios" ? "padding" : null}
         style={{ flex: 1 }}
       >
-        <SafeAreaView style={styles.container}>
+        <SafeAreaView style={[styles.container, {backgroundColor: this.props.global.theme}]}>
           <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
             <View style={styles.inner}>
-              <Text style={styles.header}>Vision Test</Text>
-              <Text style={styles.question}>Q10. What number do you see in the circle below?</Text>
-              <Text style={styles.subtext}>(If you are unsure, enter 0)</Text>
+              <Text style={[styles.header, {color: this.props.global.textTheme}]}>Vision Test</Text>
+              <Text style={[styles.question, {color: this.props.global.textTheme}]}>Q5. What number do you see in the circle below?</Text>
+              <Text style={[styles.subtext, {color: this.props.global.textTheme}]}>(If you are unsure, enter 0)</Text>
               <Image
                 source={require('./images/plate5.png')} 
                 style={styles.image}
@@ -47,7 +48,7 @@ class VisionQ5 extends React.Component {
 
               <TextInput
                 placeholder="Enter number"
-                style={styles.input}
+                style={[styles.input, {borderColor: this.props.global.textTheme}, {color: this.props.global.textTheme}]}
                 keyboardType={'number-pad'}
                 padding={10}
                 onChangeText={answer => this.handleAnswer(answer)}
@@ -77,7 +78,7 @@ class VisionQ5 extends React.Component {
     )
   }
 }
-export default VisionQ5;
+export default withGlobalContext(VisionQ5);
 
 
 const styles = StyleSheet.create({

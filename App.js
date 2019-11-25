@@ -32,6 +32,8 @@ import DiffScreen from './screens/DiffScreen'
 import React from 'react';
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
+import {GlobalContextProvider} from './screens/Context'
+
 
 const MainNavigator = createStackNavigator({
   FirstScreen: {
@@ -143,7 +145,14 @@ const MainNavigator = createStackNavigator({
 })
 
 
+const AppContainer = createAppContainer(MainNavigator);
 
-const App = createAppContainer(MainNavigator)
-
-export default App
+export default class App extends React.Component {
+  render () {
+    return (
+      <GlobalContextProvider>
+        <AppContainer/>
+      </GlobalContextProvider>
+      )
+  }
+}

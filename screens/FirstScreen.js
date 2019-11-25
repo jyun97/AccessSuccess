@@ -1,39 +1,49 @@
 import React from 'react';
 import { Text, TouchableOpacity, View, Button, SafeAreaView, StyleSheet, Image} from 'react-native';
 import { widthPercentageToDP as wp} from "react-native-responsive-screen"; 
+import {withGlobalContext} from './Context'
 
-const FirstScreen = ({ navigation }) => (
-    <SafeAreaView style={{flex:1}}>
-    <View style={styles.container}>
+class FirstScreen extends React.Component {
+    constructor(props) {
+        super(props);
+    }
 
-        <View style={{flex:1}}/>
-        <Text style={styles.titleText}>Access Success</Text>
+    render() {
+        return (
+            <SafeAreaView style={{flex:1}}>
+            <View style={styles.container}>
 
-        <View style={styles.ImageContainer}>
+            <View style={{flex:1}}/>
+            <Text style={styles.titleText}>Access Success</Text>
+
+            <View style={styles.ImageContainer}>
             <Image
-                style={{flex:1, height: undefined, width: "100%"}}
-                source={require('./assets/logo.png')}
-                resizeMode="cover"
+            style={{flex:1, height: undefined, width: "100%"}}
+            source={require('./assets/logo.png')}
+            resizeMode="cover"
             /> 
-        </View>
+            </View>
 
-        <Text style={styles.baseText}> Welcome to Access Success, the application that finds custom accessibility settings for you!</Text>
+            <Text style={styles.baseText}> Welcome to Access Success, the application that finds custom accessibility settings for you!</Text>
             <TouchableOpacity activeOpacity={0.6}
-                style={styles.buttonContainer}
-                onPress={() => navigation.navigate('LoginScreen')}>
-                <Text style={styles.buttonText}>Pick an existing account</Text>
+            style={styles.buttonContainer}
+            onPress={() => this.props.navigation.navigate('LoginScreen')}>
+            <Text style={styles.buttonText}>Pick an existing account</Text>
             </TouchableOpacity>
 
             <TouchableOpacity activeOpacity={0.6}
-                style={styles.buttonContainer}
-                onPress={() => navigation.navigate('CreateAccount')}>
-                <Text style={styles.buttonText}>Create a new account</Text>
+            style={styles.buttonContainer}
+            onPress={() => this.props.navigation.navigate('CreateAccount')}>
+            <Text style={styles.buttonText}>Create a new account</Text>
             </TouchableOpacity>
-        <View style={{flex:2}}/>
-        
-    </View>
-    </SafeAreaView>
-  )
+            <View style={{flex:2}}/>
+
+            </View>
+            </SafeAreaView>
+            )
+    }
+    
+}
 const styles = StyleSheet.create({
     titleText: {
         fontSize: 40,
@@ -88,4 +98,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default FirstScreen
+export default withGlobalContext(FirstScreen);

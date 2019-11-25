@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import { StackNavigator } from 'react-navigation';
+import {withGlobalContext} from './Context'
 
 
 class VisionQ9Instr extends React.Component {
@@ -16,10 +17,10 @@ class VisionQ9Instr extends React.Component {
 
   render() {
     return(
-      <View style={styles.container}>
-              <Text style={styles.header}>Vision Test</Text>
-              <Text style={styles.header}>Part 2 Q14 Instructions {'\n'}</Text>
-              <Text style={styles.question}>In the next question, you will be shown a circle.
+      <View style={[styles.container, {backgroundColor: this.props.global.theme}]}>
+              <Text style={[styles.header, {color: this.props.global.textTheme}]}>Vision Test</Text>
+              <Text style={[styles.header, {color: this.props.global.textTheme}]}>Part 2 Q14 Instructions {'\n'}</Text>
+              <Text style={[styles.question, {color: this.props.global.textTheme}]}>In the next question, you will be shown a circle.
               Select what you see inside the circle from the given options. </Text>
               <TouchableOpacity
                 style={styles.back}
@@ -39,7 +40,7 @@ class VisionQ9Instr extends React.Component {
     )
   }
 }
-export default VisionQ9Instr;
+export default withGlobalContext(VisionQ9Instr);
 
 
 const styles = StyleSheet.create({

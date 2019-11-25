@@ -3,6 +3,7 @@ import { Text, View, Image, TextInput, Button, StyleSheet, Keyboard, TouchableOp
   TouchableWithoutFeedback, KeyboardAvoidingView, SafeAreaView, Alert } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import { storeAnswer, getAnswer } from '../screens/ResultStorage';
+import {withGlobalContext} from './Context'
 
 
 class VisionQ9 extends React.Component {
@@ -38,16 +39,16 @@ class VisionQ9 extends React.Component {
         behavior={Platform.OS === "ios" ? "padding" : null}
         style={{ flex: 1 }}
       >
-        <SafeAreaView style={styles.container}>
+        <SafeAreaView style={[styles.container, {backgroundColor: this.props.global.theme}]}>
           <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
             <View style={styles.inner}>
-              <Text style={styles.header}>Vision Test</Text>
-              <Text style={styles.question}>Q14. How many lines can you trace in the circle below?</Text>
+              <Text style={[styles.header, {color: this.props.global.textTheme}]}>Vision Test</Text>
+              <Text style={[styles.question, {color: this.props.global.textTheme}]}>Q9. How many lines can you trace in the circle below?</Text>
               <Image
                 source={require('./images/plate9.png')} 
                 style={styles.image}
               />
-               <Text style={styles.subtext}>Choose one of the following:</Text>
+               <Text style={[styles.subtext, {color: this.props.global.textTheme}]}>Choose one of the following:</Text>
 
               <SelectButton 
                 source={require('./images/Q9_Choice1.png')}
@@ -99,7 +100,7 @@ class VisionQ9 extends React.Component {
     )
   }
 }
-export default VisionQ9;
+export default withGlobalContext(VisionQ9);
 
 
 class SelectButton extends React.Component{
@@ -168,7 +169,7 @@ const styles = StyleSheet.create({
   back: {
     position: 'absolute',
     left: 20,
-    bottom: -`100`,
+    bottom: -20,
     width: '25%',
     height: '10%',
     aspectRatio: 2/1,

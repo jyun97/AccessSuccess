@@ -5,6 +5,8 @@ import { widthPercentageToDP as wp} from "react-native-responsive-screen";
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import SafeAreaView from 'react-native-safe-area-view';
 import { storeAnswer } from '../screens/ResultStorage';
+import {withGlobalContext} from './Context'
+
 
 class MultipleChoice extends React.Component{
     constructor (){
@@ -70,27 +72,29 @@ class SelectButton extends React.Component{
     }
 }
 
-export default function ButtonShape ({ navigation }) {
-    const [value, onChangeText] = React.useState('');
-
+class ButtonShape extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
     return(
-    <SafeAreaView style={{alignItems:"center"}}>
-        <Text style={styles.header}>Vision Test</Text>
+    <SafeAreaView style={[{alignItems:"center"}, {backgroundColor: this.props.global.theme}]}>
+        <Text style={[styles.header, {color: this.props.global.textTheme}]}>Vision Test</Text>
         <ProgressViewIOS progressTintColor="red" progress={0.21}/>
-        <Text style={styles.question}>Q4. Select the option you prefer. </Text>
+        <Text style={[styles.question, {color: this.props.global.textTheme}]}>Q4. Select the option you prefer. </Text>
         <MultipleChoice/>
 
         <View style={styles.rowContainer}>
 
             <TouchableOpacity activeOpacity={0.6}
                     style={styles.buttonContainer}
-                    onPress={() => navigation.navigate('ReduceTransparency')}>
+                    onPress={() => this.props.navigation.navigate('ReduceTransparency')}>
                     <Text style={styles.buttonText}>Back</Text>
             </TouchableOpacity>
             
             <TouchableOpacity activeOpacity={0.6}
                     style={styles.buttonContainer}
-                    onPress={() => navigation.navigate('OnOffLabel')}>
+                    onPress={() => this.props.navigation.navigate('OnOffLabel')}>
                     <Text style={styles.buttonText}>Next</Text>
             </TouchableOpacity>
 
@@ -100,7 +104,12 @@ export default function ButtonShape ({ navigation }) {
 
     </SafeAreaView>
     )
+    }
+
+
 }
+
+export default withGlobalContext(ButtonShape)
 const styles = StyleSheet.create({
     titleText: {
         fontSize: 40,

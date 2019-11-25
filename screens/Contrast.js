@@ -4,6 +4,8 @@ import { StackNavigator } from 'react-navigation';
 import { widthPercentageToDP as wp} from "react-native-responsive-screen"; 
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { storeAnswer } from '../screens/ResultStorage';
+import {withGlobalContext} from './Context'
+
 
 class MultipleChoice extends React.Component{
     constructor (){
@@ -69,35 +71,40 @@ class SelectButton extends React.Component{
     }
 }
 
-export default function Contrast ({ navigation }) {
-    const [value, onChangeText] = React.useState('');
-
-    return(
-    <View style={{alignItems:"center"}}>
-        <Text style={styles.header}>Vision Test</Text>
+class Contrast extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
+     return(
+    <View style={[{alignItems:"center"}, {backgroundColor: this.props.global.theme}]}>
+        <Text style={[styles.header, {color: this.props.global.textTheme}]}>Vision Test</Text>
         <ProgressViewIOS progressTintColor="red" progress={0.07}/>
-        <Text style={styles.question}>Q2. Select the screen you prefer.</Text>
+        <Text style={[styles.question, {color: this.props.global.textTheme}]}>Q2. Select the screen you prefer.</Text>
         <MultipleChoice/>
 
         <View style={styles.rowContainer}>
 
         <TouchableOpacity
                 style={styles.buttonContainer}
-                onPress={() => navigation.navigate('BoldText')}>
+                onPress={() => this.props.navigation.navigate('BoldText')}>
                 <Text style={styles.buttonText}>Back</Text>
         </TouchableOpacity>
 
         <TouchableOpacity activeOpacity={0.6}
                 style={styles.buttonContainer}
-                onPress={() => navigation.navigate('ReduceTransparency')}>
+                onPress={() => this.props.navigation.navigate('ReduceTransparency')}>
                 <Text style={styles.buttonText}>Next</Text>
         </TouchableOpacity>
 
         </View>
 
     </View>
-    )
+  )
 }
+}
+
+export default withGlobalContext(Contrast);
 
 const styles = StyleSheet.create({
     titleText: {

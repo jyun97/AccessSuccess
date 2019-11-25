@@ -163,6 +163,7 @@ export const mapResults = async() => {
     //Get username and store recommendation to user
     const username = await AsyncStorage.getItem("currentUser");
     storeAnswer(JSON.stringify(username), JSON.stringify(rec));
+    // console.log(rec)
     return rec;
   } catch (error) {
         console.log(error, "Could not fetch user results")

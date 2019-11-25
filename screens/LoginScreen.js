@@ -4,6 +4,8 @@ import { widthPercentageToDP as wp} from "react-native-responsive-screen";
 import { storeAnswer, getAnswer } from '../screens/ResultStorage';
 import AsyncStorage from '@react-native-community/async-storage';
 import { ScrollView } from 'react-native-gesture-handler';
+import {withGlobalContext} from './Context'
+
 
 class LoginScreen extends React.Component {
     async componentDidMount(){
@@ -134,7 +136,7 @@ class LoginScreen extends React.Component {
     render() {
         return(
         <SafeAreaView style={{flex:1}}>
-            <View style={styles.container}>
+            <View style={[styles.container, {backgroundColor: this.props.global.theme}]}>
                 <ScrollView>
                     <View style={{flex:1}}/>
                             {this.displayText()}
@@ -197,4 +199,4 @@ class LoginScreen extends React.Component {
         fontSize: 20
     }
 });
-export default LoginScreen
+export default withGlobalContext(LoginScreen)

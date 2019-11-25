@@ -6,6 +6,8 @@ import { StackNavigator } from 'react-navigation';
 import { storeAnswer } from '../screens/ResultStorage';
 import { mapResults } from '../screens/Map';
 import Accordion from 'react-native-collapsible/Accordion';
+import {withGlobalContext} from './Context'
+
 
 const DICT = 
 { 
@@ -43,7 +45,7 @@ const DICT =
     steps: ['1. Settings > Accessibility > Display & Text Size > Color Filters',
     '2. Slide to turn on Color Filters and select Grayscale']
   },
-  'bold': 
+  "bold": 
   { 
     title: 'Bold Text',
     description: 'Displays text in boldface characters for increased legibility',
@@ -85,21 +87,29 @@ class ResultsScreen extends React.Component {
   constructor(props) {
     super(props);
     this.state = {  noRecs: false, loading: false, recs: [], activeSections: [],};
+    // console.log(Object.keys(DICT))
     mapResults()
-      .then((result) => {
+      .then((results) => {
+        results.map(result => { 
+          //consoleß.log(result)
             if (result == "N") {
                 this.setState({noRecs: true});
             }
+            console.log("result", result)
             let match = DICT[result]
             this.state.recs.push(match)
+            // console.log(match)
             this.setState({loading: true})   
+        })
     })
       .catch(err => {
         console.log(err);
     })
+    console.log(this.state.recs)
   }
 
    _renderHeader = rec => {
+    // console.log(rec)
     return (
       <View style={styles.buttonContainer}>
         <Text style={styles.buttonText}>{rec.title}</Text>
@@ -110,7 +120,7 @@ class ResultsScreen extends React.Component {
   _renderContent = rec => {
     return (
       <View styles={{flex:1}}>
-          <View style={styles.container}>
+          <View style={[styles.container, {backgroundColor: this.props.global.theme}]}>
               <Text style={styles.descriptionText}>{rec.description}</Text>
               <Text style={styles.descriptionText}>To turn on:</Text>
                 {
@@ -135,7 +145,7 @@ class ResultsScreen extends React.Component {
       {
         loading &&
             
-            <View style={styles.container}>
+            <View style={[styles.container, {backgroundColor: this.props.global.theme}]}>
             <ScrollView>
 
                 <View style={{flex:1}}/>
@@ -145,12 +155,12 @@ class ResultsScreen extends React.Component {
                 </View>
                     {
                         noRecs &&
-                        <Text style={styles.resultText}>{'\n'}No accessibility settings recommended.</Text>
+                        <Text style={[styles.resultText, {color: this.props.global.textTheme}]}>{'\n'}No accessibility settings recommended.</Text>
                     }
                     {
                         noRecs === false &&
                       <View>
-                      <Text style={styles.text}>{'\n'}Recommended accessibility setting(s) to turn on: </Text>
+                      <Text style={[styles.text, {color: this.props.global.textTheme}]}>{'\n'}Recommended accessibility setting(s) to turn on: </Text>
                       <Accordion
                           sections={this.state.recs}
                           activeSections={this.state.activeSections}
@@ -178,7 +188,7 @@ class ResultsScreen extends React.Component {
 	  )
   }
 }
-export default ResultsScreen;
+export default withGlobalContext(ResultsScreen);
 
 const styles = StyleSheet.create({
     titleText: {
