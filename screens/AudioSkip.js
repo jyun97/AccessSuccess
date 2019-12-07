@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import { StackNavigator } from 'react-navigation';
+import * as Progress from 'react-native-progress';
 import {withGlobalContext} from './Context'
 
 class AudioSkip extends React.Component {
@@ -18,6 +19,7 @@ class AudioSkip extends React.Component {
     return(
       <View style={[styles.container, {backgroundColor: this.props.global.theme}]}>
               <Text style={[styles.header, {color: this.props.global.textTheme}]}>Audio Test</Text>
+              <Progress.Bar progress={0.83} width={300} height={10} />
               <Text style={[styles.header, {color: this.props.global.textTheme}]}>Part 1 Instructions {'\n'}</Text>
               <Text style={[styles.question, {color: this.props.global.textTheme}]}>The following questions will ask you how well you can hear certain sounds.
 			  This can be done with or without headphones {'\n'}</Text>

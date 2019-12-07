@@ -3,6 +3,7 @@ import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import SafeAreaView from 'react-native-safe-area-view';
 import { StackNavigator } from 'react-navigation';
 import { storeAnswer } from '../screens/ResultStorage';
+import * as Progress from 'react-native-progress';
 import {withGlobalContext} from './Context'
 
 let Sound = require('react-native-sound');
@@ -77,6 +78,7 @@ class SetVolume extends React.Component {
     	return(
 		<View style={[styles.container, {backgroundColor: this.props.global.theme}]}>
                 <Text style={[styles.header, {color: this.props.global.textTheme}]}>Audio Test</Text>
+                <Progress.Bar progress={0.83} width={300} height={10} />
                 <Text style={[styles.question, {color: this.props.global.textTheme}]}>Press the "Play Sound" button and adjust the volume on your device until you hear it {'\n'}</Text>
                 <Text style={[styles.question, {color: this.props.global.textTheme}]}>Click "Next" when you can hear it. {'\n'}</Text>
                 <Text style={[styles.question, {color: this.props.global.textTheme}]}>If you can't hear it at full volume, then click "Can't Hear Comfotably" {'\n'}</Text>

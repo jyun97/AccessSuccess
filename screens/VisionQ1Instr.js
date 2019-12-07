@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import { StackNavigator } from 'react-navigation';
+import * as Progress from 'react-native-progress';
 import {withGlobalContext} from './Context'
 
 
@@ -19,6 +20,7 @@ class VisionQ1Instr extends React.Component {
     return(
       <View style={[styles.container, {backgroundColor: this.props.global.theme}]}>
               <Text style={[styles.header, {color: this.props.global.textTheme}]}>Vision Test</Text>
+              <Progress.Bar progress={0.3} width={300} height={10} />
               <Text style={[styles.header, {color: this.props.global.textTheme}]}>Part 2 Instructions {'\n'}</Text>
               <Text style={[styles.question, {color: this.props.global.textTheme}]}>In the following questions, you will be shown a circle with a number inside.
               Enter the number you see. If you are unsure, enter 0.  {'\n'} </Text>

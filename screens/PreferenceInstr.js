@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import { StackNavigator } from 'react-navigation';
+import * as Progress from 'react-native-progress';
 import {withGlobalContext} from './Context'
 
 
@@ -19,6 +20,7 @@ class PreferenceInstr extends React.Component {
     return(
       <View style={[styles.container, {backgroundColor: this.props.global.theme}]}>
               <Text style={[styles.header, {color: this.props.global.textTheme}]}>Vision Test</Text>
+              <Progress.Bar progress={0} width={300} height={10} />
               <Text style={styles.header}>Part 1 Instructions {'\n'}</Text>
               <Text style={[styles.question, {color: this.props.global.textTheme}]}>In the following questions, you will be shown two images of different settings.
               Select the one you prefer. {'\n'}</Text>

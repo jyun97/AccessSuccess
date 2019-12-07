@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import { StackNavigator } from 'react-navigation';
+import * as Progress from 'react-native-progress';
 import {withGlobalContext} from './Context'
 
 class SetVolumeInstr extends React.Component {
@@ -18,7 +19,8 @@ class SetVolumeInstr extends React.Component {
     return(
 		<View style={[styles.container, {backgroundColor: this.props.global.theme}]}>
 		<Text style={[styles.header, {color: this.props.global.textTheme}]}>Audio Test</Text>
-              <Text style={[styles.header, {color: this.props.global.textTheme}]}>Part 1 Instructions {'\n'}</Text>
+    <Progress.Bar progress={0.83} width={300} height={10} />        
+             <Text style={[styles.header, {color: this.props.global.textTheme}]}>Part 1 Instructions {'\n'}</Text>
 			  <Text style={[styles.question, {color: this.props.global.textTheme}]}>The next question will ask you to adjust your volume until you can hear a sound comfortably. {'\n'}</Text>
 			  <Text style={[styles.question, {color: this.props.global.textTheme}]}>If you do not have headphones, please place your phone directly in front of you and center it as much as possible.{'\n'}</Text>
 			  <Text style={[styles.question, {color: this.props.global.textTheme}]}>Press "Next" to begin{'\n'}</Text>

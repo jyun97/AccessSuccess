@@ -3,6 +3,7 @@ import { Text, View, Image, TextInput, Button, StyleSheet, Keyboard, TouchableOp
   TouchableWithoutFeedback, KeyboardAvoidingView, SafeAreaView } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import { storeAnswer } from '../screens/ResultStorage';
+import * as Progress from 'react-native-progress';
 import {withGlobalContext} from './Context'
 
 
@@ -39,6 +40,7 @@ class VisionQ2 extends React.Component {
           <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
             <View style={styles.inner}>
               <Text style={[styles.header, {color: this.props.global.textTheme}]}>Vision Test</Text>
+              <Progress.Bar progress={0.35} width={300} height={10} />
               <Text style={[styles.question, {color: this.props.global.textTheme}]}>Q2. What number do you see in the circle below?</Text>
               <Text style={[styles.subtext, {color: this.props.global.textTheme}]}>(If you are unsure, enter 0)</Text>
               <Image

@@ -4,6 +4,7 @@ import { StackNavigator } from 'react-navigation';
 import { widthPercentageToDP as wp} from "react-native-responsive-screen"; 
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { storeAnswer } from '../screens/ResultStorage';
+import * as Progress from 'react-native-progress';
 import {withGlobalContext} from './Context'
 
 
@@ -79,7 +80,7 @@ class Contrast extends React.Component {
      return(
     <View style={[{alignItems:"center"}, {backgroundColor: this.props.global.theme}]}>
         <Text style={[styles.header, {color: this.props.global.textTheme}]}>Vision Test</Text>
-        <ProgressViewIOS progressTintColor="red" progress={0.07}/>
+        <Progress.Bar progress={0.06} width={300} height={10} />
         <Text style={[styles.question, {color: this.props.global.textTheme}]}>Q2. Select the screen you prefer.</Text>
         <MultipleChoice/>
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import { StackNavigator } from 'react-navigation';
+import * as Progress from 'react-native-progress';
 import {withGlobalContext} from './Context'
 
 class CheckAudioInstr extends React.Component {
@@ -18,6 +19,7 @@ class CheckAudioInstr extends React.Component {
     return(
 		<View style={[styles.container, {backgroundColor: this.props.global.theme}]}>
               <Text style={[styles.header, {color: this.props.global.textTheme}]}>Audio Test</Text>
+              <Progress.Bar progress={0.89} width={300} height={10} />
               <Text style={[styles.header, {color: this.props.global.textTheme}]}>Part 2 Instructions {'\n'}</Text>
               <Text style={[styles.question, {color: this.props.global.textTheme}]}>The next two questions will ask you to listen to a sound and indicate if you can hear it comfortably. {'\n'}</Text>
               <Text style={[styles.question, {color: this.props.global.textTheme}]}>For this to be accurate, do NOT adjust your volume</Text>

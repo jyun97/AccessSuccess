@@ -5,6 +5,7 @@ import { widthPercentageToDP as wp} from "react-native-responsive-screen";
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import SafeAreaView from 'react-native-safe-area-view';
 import { storeAnswer } from '../screens/ResultStorage';
+import * as Progress from 'react-native-progress';
 import {withGlobalContext} from './Context'
 
 
@@ -80,7 +81,7 @@ class ButtonShape extends React.Component {
     return(
     <SafeAreaView style={[{alignItems:"center"}, {backgroundColor: this.props.global.theme}]}>
         <Text style={[styles.header, {color: this.props.global.textTheme}]}>Vision Test</Text>
-        <ProgressViewIOS progressTintColor="red" progress={0.21}/>
+        <Progress.Bar progress={0.18} width={300} height={10} />
         <Text style={[styles.question, {color: this.props.global.textTheme}]}>Q4. Select the option you prefer. </Text>
         <MultipleChoice/>
 
