@@ -9,17 +9,12 @@ const GlobalContext = React.createContext({});
 
 export class GlobalContextProvider extends React.Component {
   state = {
-    isOnline: false,
     theme: "white",
     textTheme: "black"
   }
 
-  switchToOnline = () => {
-    this.setState({ isOnline: true });
-  }
-
-  switchToOffline = () => {
-    this.setState({ isOnline: false });
+  resetTheme = () => {
+    this.setState({ theme: "white", textTheme: "black" });
   }
 
   toggleTheme = () => {
@@ -37,8 +32,7 @@ export class GlobalContextProvider extends React.Component {
       <GlobalContext.Provider
         value={{
           ...this.state,
-          switchToOnline: this.switchToOnline,
-          switchToOffline: this.switchToOffline,
+          resetTheme: this.resetTheme,
           toggleTheme: this.toggleTheme
         }}
       >

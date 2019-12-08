@@ -37,6 +37,7 @@ class HomeScreenModule extends React.Component {
         actions: [NavigationActions.navigate({ routeName: 'FirstScreen' })],
       });
 
+    this.props.global.resetTheme();
     this.props.navigation.dispatch(resetAction);
    }
 
