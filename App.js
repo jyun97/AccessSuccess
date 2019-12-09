@@ -43,6 +43,7 @@ import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import {GlobalContextProvider} from './screens/Context'
 
+console.disableYellowBox = true;
 
 const MainNavigator = createStackNavigator({
   FirstScreen: {

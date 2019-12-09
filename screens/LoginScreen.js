@@ -39,7 +39,7 @@ class LoginScreen extends React.Component {
         }
         catch(exception){
             return false;
-        }
+		}
     }
 
     async handleSubmit(password, data){
@@ -55,10 +55,13 @@ class LoginScreen extends React.Component {
                   {text: 'OK', onPress: () => this.props.navigation.navigate('FirstScreen')},
                 ],
                 { cancelable: false }
-              )
+			  )
+			  
+			  
         }
         else{
-            var realPass = realPassword.replace(/['"]+/g, '');
+			var realPass = realPassword.replace(/['"]+/g, '');
+			// this.removeItemValue("existingAccounts");
 
             if(realPassword !== password){
                 Alert.alert(

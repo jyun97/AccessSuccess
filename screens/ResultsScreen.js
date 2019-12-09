@@ -197,7 +197,7 @@ class ResultsScreen extends React.Component {
                     }
                     
                     <TouchableOpacity activeOpacity={0.6}
-                        style={styles.buttonContainer}
+                        style={styles.homeButton}
                         onPress={() => this.props.navigation.navigate('HomeScreen')}>
                         {/* <Text style={styles.buttonText}>Click here to turn these settings on</Text> */}
                      
@@ -275,12 +275,10 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         alignSelf: 'center',
         justifyContent: 'center',
-        marginTop: 10,
-        marginBottom: 10,
+        //marginTop: 10,
+        //marginBottom: 10,
         marginRight: 10,
-        marginLeft: 10,
-        borderColor: '#147efb',
-        borderWidth: 1
+        marginLeft: 10
     },
     buttonContainer: {
         width: '70%',
@@ -293,6 +291,20 @@ const styles = StyleSheet.create({
         backgroundColor: '#147efb',
         overflow: 'hidden',
         borderColor: '#147efb',
+        margin: 53,
+        flexDirection: 'row'
+	},
+	homeButton: {
+		width: '70%',
+        aspectRatio: 4/1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        alignContent: 'center',
+        borderWidth: 0.5,
+        borderRadius: 15,
+        backgroundColor: 'red',
+        overflow: 'hidden',
+        borderColor: 'red',
         margin: 53,
         flexDirection: 'row'
     },
