@@ -17,7 +17,7 @@ class AudioSkip extends React.Component {
 
   render() {
     return(
-      <View style={[styles.container, {backgroundColor: this.props.global.theme}]}>
+      <View style={[styles.container, {backgroundColor: this.props.global.theme}, {alignItems: "center"}]}>
               <Text style={[styles.header, {color: this.props.global.textTheme}]}>Audio Test</Text>
               <Progress.Bar progress={0.83} width={300} height={10} />
               <Text style={[styles.header, {color: this.props.global.textTheme}]}>Part 1 Instructions {'\n'}</Text>
@@ -27,7 +27,7 @@ class AudioSkip extends React.Component {
 
               <TouchableOpacity
                 style={styles.skip}
-                onPress={() => this.props.navigation.navigate('ResultsScreen')}
+                onPress={() => this.props.navigation.navigate('ConfirmSubmit')}
               >
                 <Text style={styles.buttonText}>Skip</Text>
               </TouchableOpacity>

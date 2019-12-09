@@ -18,7 +18,7 @@ class VisionQ9Instr extends React.Component {
 
   render() {
     return(
-      <View style={[styles.container, {backgroundColor: this.props.global.theme}]}>
+      <View style={[styles.container, {backgroundColor: this.props.global.theme}, {alignItems: "center"}]}>
               <Text style={[styles.header, {color: this.props.global.textTheme}]}>Vision Test</Text>
               <Progress.Bar progress={0.77} width={300} height={10} />
               <Text style={[styles.header, {color: this.props.global.textTheme}]}>Part 2 Q14 Instructions {'\n'}</Text>

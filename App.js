@@ -30,6 +30,8 @@ import SetVolume from './screens/SetVolume'
 import RightSound from './screens/RightSound'
 import LeftSound from './screens/LeftSound'
 
+import ConfirmSubmit from './screens/ConfirmSubmit'
+
 import ResultsScreen from './screens/ResultsScreen'
 import PrevResults from './screens/PrevResults'
 import ZoomScreen from './screens/ZoomScreen'
@@ -139,6 +141,9 @@ const MainNavigator = createStackNavigator({
   },
   LeftSound: {
     screen: LeftSound,
+  },
+  ConfirmSubmit: {
+    screen: ConfirmSubmit,
   },
   ResultsScreen: {
     screen: ResultsScreen,

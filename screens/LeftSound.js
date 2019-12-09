@@ -56,7 +56,7 @@ class LeftSound extends React.Component {
 			this.setState({playing: false})
 		}
 		storeAnswer("MonoAudio", "true");
-    	this.props.navigation.navigate('ResultsScreen');
+    	this.props.navigation.navigate('ConfirmSubmit');
 	}
 	  
   	handleNext() {
@@ -65,7 +65,7 @@ class LeftSound extends React.Component {
 			this.setState({playing: false})
 		}
 		storeAnswer("MonoAudio", "false");
-    	this.props.navigation.navigate('ResultsScreen');
+    	this.props.navigation.navigate('ConfirmSubmit');
   	}
     
     handleBack() {
@@ -77,7 +77,7 @@ class LeftSound extends React.Component {
   	}
   	render() {
     	return(
-			<View style={[styles.container, {backgroundColor: this.props.global.theme}]}>
+			<View style={[styles.container, {backgroundColor: this.props.global.theme}, {alignItems: "center"}]}>
 			<Text style={[styles.header, {color: this.props.global.textTheme}]}>Audio Test Q2</Text>
                 <Progress.Bar progress={0.94} width={300} height={10} />
                 <Text style={[styles.question, {color: this.props.global.textTheme}]}>Press the "Play Sound" button and do NOT adjust your volume{'\n'}</Text>

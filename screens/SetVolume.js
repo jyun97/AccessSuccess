@@ -56,7 +56,7 @@ class SetVolume extends React.Component {
 			this.setState({playing: false})
 		}
 		storeAnswer("Subtitles", "true");
-    	this.props.navigation.navigate('ResultsScreen');
+    	this.props.navigation.navigate('ConfirmSubmit');
 	}
 
   	handleNext() {
@@ -76,7 +76,7 @@ class SetVolume extends React.Component {
   	}
   	render() {
     	return(
-		<View style={[styles.container, {backgroundColor: this.props.global.theme}]}>
+		<View style={[styles.container, {backgroundColor: this.props.global.theme}, {alignItems: "center"}]}>
                 <Text style={[styles.header, {color: this.props.global.textTheme}]}>Audio Test</Text>
                 <Progress.Bar progress={0.83} width={300} height={10} />
                 <Text style={[styles.question, {color: this.props.global.textTheme}]}>Press the "Play Sound" button and adjust the volume on your device until you hear it {'\n'}</Text>
