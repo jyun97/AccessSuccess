@@ -5,6 +5,8 @@ import { StackNavigator } from 'react-navigation';
 import { getAnswer, storeAnswer } from '../screens/ResultStorage';
 import AsyncStorage from '@react-native-community/async-storage';
 
+//
+
 class CreateAccount extends React.Component {
   constructor(props) {
   	super(props);
@@ -41,39 +43,79 @@ class CreateAccount extends React.Component {
 
   async handleSubmit() {
   	if (this.state.name.trim() === '' || this.state.password2.trim == '' || this.state.password1.trim == '') {
-	  this.setState(() => ({ inputError: "Please fill out all fields." }));
-	//   const keys = await AsyncStorage.getAllKeys();
-	//   console.log(keys)
+      this.setState(() => ({ inputError: "Please fill out all fields." }));
     }
-    else if(this.state.password1 !== this.state.password2){
+    else if(this.state.name.trim().indexOf(' ') !== -1){
+      //check to see if there is a space in the username; ^^ check to make sure you used the 
+      //right functions properly
       Alert.alert(
         'Alert',
-        'Passwords do not match, please make sure they are the same.',
+        'Please do not use any spaces in your username.',
         [
           {text: 'OK'},
         ],
         { cancelable: false }
-	  )
-	
-
+      )
     }
-    else {
-      this.setState(() => ({ inputError: null }));
-      storeAnswer("currentUser", this.state.name);
+    else{
+      var sameAccount = this.state.name + "pass"
+      var value = await AsyncStorage.getItem(sameAccount); //may possibly have to JSON.stringify() this
 
-      const accountList = await AsyncStorage.getItem("existingAccounts");
-      var accounts = [];
-      if(accountList != null){
-        accounts = accountList
+      if(this.state.name == "currentUser" || this.state.name == "existingAccounts"){
+        //will mess up code based on how we named things if a user names their account the above two strings
+        Alert.alert(
+          'Alert',
+          'Username already taken. Please choose another name.',
+          [
+            {text: 'OK'},
+          ],
+          { cancelable: false }
+        )
       }
-      accounts = accounts + " " + [this.state.name]
-      storeAnswer("existingAccounts", accounts);
+      else if(value != null){ //should be empty string here??? make sure 
+        //if another user has the same name
+        Alert.alert(
+          'Alert',
+          'Username already taken. Please choose another name.',
+          [
+            {text: 'OK'},
+          ],
+          { cancelable: false }
+        )
+      }
+      else{
+        if(this.state.password1 !== this.state.password2){
+          Alert.alert(
+            'Alert',
+            'Passwords do not match, please make sure they are the same.',
+            [
+              {text: 'OK'},
+            ],
+            { cancelable: false }
+          )
+        }
+        else {
+          this.setState(() => ({ inputError: null }));
+          storeAnswer("currentUser", this.state.name);
+    
+          const accountList = await AsyncStorage.getItem("existingAccounts");
+          var accounts = [];
+          if(accountList != null){
+            accounts = accountList
+          }
+          accounts = accounts + " " + [this.state.name]
+          storeAnswer("existingAccounts", accounts);
+    
+          var updatedName = this.state.name + "pass"
+          storeAnswer(updatedName, this.state.password2);
+    
+          this.props.navigation.navigate('HomeScreen');
+        }
 
-      var updatedName = this.state.name + "pass"
-      storeAnswer(updatedName, this.state.password2);
+      }// if(value != ""){
 
-      this.props.navigation.navigate('HomeScreen');
-    }
+    } //outer if
+
    }
 
   render() {
@@ -90,7 +132,7 @@ class CreateAccount extends React.Component {
                             <Text style={styles.header}> {'\n'} Create Account {'\n'}</Text>
 
                             <TextInput
-                            placeholder="Enter name"
+                            placeholder="Enter username"
                             style={styles.input}
                             maxLength={15}
                             padding={10}
@@ -158,7 +200,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     marginRight: 10,
     marginLeft: 10,
-    borderColor: '#147efb',
+    borderColor: 'white',
     borderWidth: 1
   },
   inner: {

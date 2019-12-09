@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         marginRight: 10,
         marginLeft: 10,
-        borderColor: '#147efb',
+        borderColor: 'white',
         borderWidth: 1
     },
     ImageContainer: {

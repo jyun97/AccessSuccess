@@ -4,7 +4,8 @@ import { widthPercentageToDP as wp} from "react-native-responsive-screen";
 import { storeAnswer, getAnswer } from '../screens/ResultStorage';
 import AsyncStorage from '@react-native-community/async-storage';
 import { ScrollView } from 'react-native-gesture-handler';
-import {withGlobalContext} from './Context'
+import {withGlobalContext} from './Context';
+import { resetStack } from './HomeScreen';
 
 
 class LoginScreen extends React.Component {
@@ -39,7 +40,7 @@ class LoginScreen extends React.Component {
         }
         catch(exception){
             return false;
-		}
+        }
     }
 
     async handleSubmit(password, data){
@@ -55,13 +56,10 @@ class LoginScreen extends React.Component {
                   {text: 'OK', onPress: () => this.props.navigation.navigate('FirstScreen')},
                 ],
                 { cancelable: false }
-			  )
-			  
-			  
+              )
         }
         else{
-			var realPass = realPassword.replace(/['"]+/g, '');
-			// this.removeItemValue("existingAccounts");
+            var realPass = realPassword.replace(/['"]+/g, '');
 
             if(realPassword !== password){
                 Alert.alert(
@@ -100,6 +98,92 @@ class LoginScreen extends React.Component {
             ],
             'secure-text'
           );
+    }
+
+    async confirmDelete(accDelete){
+        var account = accDelete + "pass"
+        const isAccount = await AsyncStorage.getItem(account); //may have to use JSON.stringify() here
+
+        if(isAccount == null){ //or empty string? make sure of this
+            Alert.alert(
+                'Alert',
+                'No account of this name found. Please re-enter account name or cancel.',
+                [
+                //   {text: 'OK', onPress: () => this.deleteAccAlert(data)}, //make sure there is no infinite loops around here
+                ],
+                { cancelable: false }
+              )
+            //   const accounts = await AsyncStorage.getItem("existingAccounts");
+            //   console.log(accounts)
+            //   const nsd = await AsyncStorage.getItem("currentUser");
+            //   console.log(nsd)
+
+
+            //   const keys = await AsyncStorage.getAllKeys();
+            //   console.log(keys)
+            //   var name2 = "Brenda"
+            //   var name3 = "Raykapass"
+            //   var name4 = "existingAccounts"
+            //   var name5 = "Brendapass"
+            //   var name6 = "Raykapass"
+            //   var name7 = "Jim"
+            //   var name8  = "Sam69"
+            //   this.removeItemValue(JSON.stringify(name2));
+            //   this.removeItemValue(name3);
+            //   this.removeItemValue(name4);
+            //   this.removeItemValue(name5);
+            //   this.removeItemValue(JSON.stringify(name7));
+            //   this.removeItemValue("currentUser")
+            //   this.removeItemValue("Sam69pass")
+            //   this.removeItemValue(JSON.stringify(name8));
+
+            //   const keys2 = await AsyncStorage.getAllKeys();
+            //   console.log(keys2)
+
+        }
+        else{
+            //delete account and navigate to first page
+            const accounts = await AsyncStorage.getItem("existingAccounts");
+            var temp = accounts;
+    
+            if(temp != null){
+                if(temp.indexOf(temp) !== -1){
+                    temp = temp.replace(accDelete, '');
+                }
+                storeAnswer("existingAccounts", temp);
+            }
+
+            const keys2 = await AsyncStorage.getAllKeys();
+            console.log(keys2)
+            console.log("nowDelete")
+    
+            const username = await AsyncStorage.getItem("currentUser");
+            this.removeItemValue(JSON.stringify(username));
+            var name = username + "pass";
+            this.removeItemValue(name);
+
+            const keys = await AsyncStorage.getAllKeys();
+            console.log(keys)
+            this.props.navigation.navigate('FirstScreen')
+        }
+    }
+
+    deleteAccAlert(){
+        Alert.prompt(
+            'Please delete your account now and create a new one.',
+            'Enter account name and hit submit to delete.',
+            [
+              {
+                text: 'Cancel',
+                style: 'cancel',
+              },
+              {
+                text: 'Submit',
+                onPress: (accDelete) => this.confirmDelete(accDelete),
+              },
+            ],
+          );
+
     }
 
     displayText(){
@@ -144,6 +228,13 @@ class LoginScreen extends React.Component {
                     <View style={{flex:1}}/>
                             {this.displayText()}
                             {this.accList()}
+
+                            <TouchableOpacity activeOpacity={0.6}
+                                style={styles.otherButton}
+                                onPress={() => this.deleteAccAlert()}>
+                                <Text style={styles.buttonText}> Cannot access account? </Text>
+                            </TouchableOpacity>
+
                     <View style={{flex:2}}/>
                 </ScrollView>
             </View>
@@ -182,7 +273,7 @@ class LoginScreen extends React.Component {
         marginBottom: 10,
         marginRight: 10,
         marginLeft: 10,
-        borderColor: '#147efb',
+        borderColor: 'white',
         borderWidth: 1
     },
     buttonContainer: {
@@ -196,6 +287,19 @@ class LoginScreen extends React.Component {
         overflow: 'hidden',
         borderColor: '#147efb',
         margin: 20,
+    },
+    otherButton:{
+        width: '70%',
+        aspectRatio: 4/1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderWidth: 0.5,
+        borderRadius: 15,
+        backgroundColor: 'black',
+        overflow: 'hidden',
+        borderColor: 'black',
+        margin: 20,
+        marginLeft: 50,
     },
     buttonText:{
         color: 'white',

@@ -37,7 +37,6 @@ class HomeScreenModule extends React.Component {
         actions: [NavigationActions.navigate({ routeName: 'FirstScreen' })],
       });
 
-    this.props.global.resetTheme();
     this.props.navigation.dispatch(resetAction);
    }
 
@@ -66,8 +65,11 @@ class HomeScreenModule extends React.Component {
 
         const username = await AsyncStorage.getItem("currentUser");
         this.removeItemValue(JSON.stringify(username));
-        var name = username + "pass";
-		this.removeItemValue(name);
+        var name = username + "pass"; //make sure this works
+        this.removeItemValue(name);
+
+        const keys = await AsyncStorage.getAllKeys();
+        console.log(keys)
 
         this.resetStack();
    }
@@ -83,7 +85,7 @@ class HomeScreenModule extends React.Component {
                     <TouchableOpacity activeOpacity={0.6}
                         style={styles.buttonContainer}
                         onPress={() => this.props.navigation.navigate('PreferenceInstr')}>
-                        <Text style={styles.buttonText}>Take test</Text>
+                        <Text style={styles.buttonText}>Take vision test</Text>
                     </TouchableOpacity>
         
                     <TouchableOpacity activeOpacity={0.6}
