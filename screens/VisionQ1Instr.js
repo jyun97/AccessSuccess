@@ -33,12 +33,12 @@ class VisionQ1Instr extends React.Component {
                 <Text style={styles.buttonText}>Skip</Text>
               </TouchableOpacity>
 
-              <TouchableOpacity
+              {/* <TouchableOpacity
                 style={styles.back}
                 onPress={() => this.props.navigation.navigate('OnOffLabel')}
               >
                 <Text style={styles.buttonText}>Back</Text>
-              </TouchableOpacity>
+              </TouchableOpacity> */}
 
               <TouchableOpacity
                 style={styles.next}
@@ -98,11 +98,24 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   next: {
+    // position: 'absolute',
+    // right: 20,
+    // bottom: 50,
+    // width: '25%',
+    // height: '8%',
+    // aspectRatio: 2/1,
+    // borderWidth: 0.5,
+    // borderRadius: 15,
+    // backgroundColor: '#147efb',
+    // overflow: 'hidden',
+    // borderColor: '#147efb',
+    // justifyContent: 'center',
     position: 'absolute',
-    right: 20,
-    bottom: 50,
-    width: '25%',
+    left: 115,
+    bottom: 130,
+    width: '40%',
     height: '8%',
+    alignItems: 'center',
     aspectRatio: 2/1,
     borderWidth: 0.5,
     borderRadius: 15,
