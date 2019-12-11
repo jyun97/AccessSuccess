@@ -60,12 +60,12 @@ class VisionQ4 extends React.Component {
                 <Text style={styles.error}>{this.state.inputError}</Text>
               )}
 
-              <TouchableOpacity
+              {/* <TouchableOpacity
                 style={styles.back}
                 onPress={() => this.props.navigation.navigate('VisionQ3')}
               >
                 <Text style={styles.buttonText}>Back</Text>
-              </TouchableOpacity>
+              </TouchableOpacity> */}
 
               <TouchableOpacity
                 style={styles.next}
@@ -141,11 +141,24 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   next: {
-  	position: 'absolute',
-    right: 20,
+  	// position: 'absolute',
+    // right: 20,
+    // bottom: -30,
+    // width: '25%',
+    // height: '10%',
+    // aspectRatio: 2/1,
+    // borderWidth: 0.5,
+    // borderRadius: 15,
+    // backgroundColor: '#147efb',
+    // overflow: 'hidden',
+    // borderColor: '#147efb',
+    // justifyContent: 'center',
+    position: 'absolute',
+    left: 115,
     bottom: -30,
-    width: '25%',
+    width: '40%',
     height: '10%',
+    alignItems: 'center',
     aspectRatio: 2/1,
     borderWidth: 0.5,
     borderRadius: 15,

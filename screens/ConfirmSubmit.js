@@ -27,12 +27,12 @@ class ConfirmSubmit extends React.Component {
                 <Text style={styles.buttonText}>Submit</Text>
               </TouchableOpacity>
 
-              <TouchableOpacity
+              {/* <TouchableOpacity
                 style={styles.back}
                 onPress={() => this.props.navigation.navigate('LeftSound')}
               >
                 <Text style={styles.buttonText}>Back</Text>
-              </TouchableOpacity>
+              </TouchableOpacity> */}
     	</View>
     )
   }

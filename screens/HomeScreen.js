@@ -85,7 +85,7 @@ class HomeScreenModule extends React.Component {
                     <TouchableOpacity activeOpacity={0.6}
                         style={styles.buttonContainer}
                         onPress={() => this.props.navigation.navigate('PreferenceInstr')}>
-                        <Text style={styles.buttonText}>Take vision test</Text>
+                        <Text style={styles.buttonText}>Take test</Text>
                     </TouchableOpacity>
         
                     <TouchableOpacity activeOpacity={0.6}

@@ -88,11 +88,11 @@ class BoldText extends React.Component {
 
         <View style={styles.rowContainer}>
 
-        <TouchableOpacity
+        {/* <TouchableOpacity
                 style={styles.buttonContainer}
                 onPress={() => this.props.navigation.navigate('PreferenceInstr')}>
                 <Text style={styles.buttonText}>Back</Text>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
 
         <TouchableOpacity activeOpacity={0.6}
                 style={styles.buttonContainer}
@@ -131,8 +131,8 @@ const styles = StyleSheet.create({
         margin: 15
     },
     buttonContainer: {
-        width: '50%',
-        aspectRatio: 6/3.5,
+        width: '60%',
+        aspectRatio: 4/2,
         alignItems: 'center',
         justifyContent: 'center',
         borderWidth: 0.5,
@@ -140,7 +140,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#147efb',
         overflow: 'hidden',
         borderColor: '#147efb',
-        margin: 20,
+        justifyContent: 'center',
     },
     rowContainer: {
         flexDirection: 'row',

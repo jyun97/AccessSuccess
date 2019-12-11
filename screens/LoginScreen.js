@@ -113,32 +113,10 @@ class LoginScreen extends React.Component {
                 ],
                 { cancelable: false }
               )
-            //   const accounts = await AsyncStorage.getItem("existingAccounts");
-            //   console.log(accounts)
-            //   const nsd = await AsyncStorage.getItem("currentUser");
-            //   console.log(nsd)
-
 
             //   const keys = await AsyncStorage.getAllKeys();
             //   console.log(keys)
-            //   var name2 = "Brenda"
-            //   var name3 = "Raykapass"
-            //   var name4 = "existingAccounts"
-            //   var name5 = "Brendapass"
-            //   var name6 = "Raykapass"
-            //   var name7 = "Jim"
-            //   var name8  = "Sam69"
             //   this.removeItemValue(JSON.stringify(name2));
-            //   this.removeItemValue(name3);
-            //   this.removeItemValue(name4);
-            //   this.removeItemValue(name5);
-            //   this.removeItemValue(JSON.stringify(name7));
-            //   this.removeItemValue("currentUser")
-            //   this.removeItemValue("Sam69pass")
-            //   this.removeItemValue(JSON.stringify(name8));
-
-            //   const keys2 = await AsyncStorage.getAllKeys();
-            //   console.log(keys2)
 
         }
         else{
